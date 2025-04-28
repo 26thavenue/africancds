@@ -9,7 +9,7 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const { login } = useAuth();
-  const router = useRouter(); // ✅
+  const router = useRouter(); 
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

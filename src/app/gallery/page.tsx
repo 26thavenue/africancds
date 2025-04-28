@@ -108,7 +108,7 @@ const Gallery = () => {
     <div className="min-h-screen flex flex-col">
       
       {/* Hero Section */}
-      <div className="bg-[#0B3D2E] py-16 md:py-24">
+      <div className="bg-[#0B3D2E] py-16 md:p-24">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Summit <span className="text-gold-light">Gallery</span>

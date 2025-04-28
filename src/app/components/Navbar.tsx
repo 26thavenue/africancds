@@ -30,7 +30,7 @@ const Navbar = () => {
           <Link href="/" className="hover:text-yellow-500 transition-colors">Home</Link>
           <Link href="/event" className="hover:text-yellow-500 transition-colors">Event Details</Link>
           <Link href="/gallery" className="hover:text-yellow-500 transition-colors">Gallery</Link>
-          <Link href="/venue" className="hover:text-yellow-500 transition-colors">Location</Link>
+          <Link href="/location" className="hover:text-yellow-500 transition-colors">Location</Link>
           <Link href="/register" className="hover:bg-yellow-500 px-4 py-2 rounded transition-colors">Register</Link>
         </div>
 
@@ -65,7 +65,7 @@ const Navbar = () => {
             <Link href="/" className="hover:text-yellow-500 transition-colors" onClick={toggleMenu}>Home</Link>
             <Link href="/event" className="hover:text-yellow-500 transition-colors" onClick={toggleMenu}>Event Details</Link>
             <Link href="/gallery" className="hover:text-yellow-500 transition-colors" onClick={toggleMenu}>Gallery</Link>
-            <Link href="/venue" className="hover:text-yellow-500 transition-colors" onClick={toggleMenu}>Location</Link>
+            <Link href="/location" className="hover:text-yellow-500 transition-colors" onClick={toggleMenu}>Location</Link>
             <Link href="/register" className="hover:bg-yellow-500 transition-colors" onClick={toggleMenu}>Register</Link>
           </div>
         </>

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link"
 import supabase from "../lib/utils"
 
 const Register = () => {
@@ -41,6 +41,16 @@ const Register = () => {
       if (error) throw error;
       console.log(error)
       setFormSubmitted(true);
+
+       await fetch('/email', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email: data.email,
+            firstName: data.firstName,
+            lastName: data.lastName
+          })
+        });
       
     } catch (err) {
       console.error("Registration error:", err);
@@ -90,7 +100,7 @@ const Register = () => {
                 
               </div>
               <div className="my-8">
-                 <Link to="/" className="underline text-primary text-xl text-center"> Go Home</Link>
+                 <Link href="/" className="underline text-primary text-xl text-center"> Go Home</Link>
               </div>
              
               </>
@@ -147,7 +157,7 @@ const Register = () => {
                         </label>
                         <input
                           type="tel"
-                          id="phone"
+                          id="phone" 
                           name="phone"
                           required
                           className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-navy focus:border-navy"

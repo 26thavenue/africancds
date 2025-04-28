@@ -4,6 +4,7 @@ import supabase from "../lib/utils"
 import { useEffect, useState } from 'react';
 import Papa from 'papaparse'; 
 import toast from 'react-hot-toast';
+import ProtectedRoute from "../components/ProtectedRoute";
 
 
 const AdminDashboard = () => {
@@ -82,7 +83,8 @@ const handleExportCSV = async () => {
 
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col md:flex-row">
+    <ProtectedRoute>
+       <div className="min-h-screen bg-gray-50 flex flex-col md:flex-row">
       {/* Sidebar */}
      
       <aside className="w-full md:w-64 bg-[#0B3D2E]/90 text-white p-6 hidden lg:block">
@@ -206,6 +208,8 @@ const handleExportCSV = async () => {
      
 
     </div>
+    </ProtectedRoute>
+   
   );
 };
 

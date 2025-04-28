@@ -8,7 +8,7 @@ const Hero = () => {
     <div className="relative bg-primary py-20 md:py-32">
       {/* Background pattern */}
       <div className="absolute inset-0 z-0 opacity-10">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/phohref-1469474968028-56623f02e42e')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1469474968028-56623f02e42e')] bg-cover bg-center"></div>
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
