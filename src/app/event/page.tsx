@@ -51,7 +51,7 @@ const Events = () => {
      
 
         <Link href="/register">
-           <button className="px-12 py-4 bg-[#0B3D2E] text-white rounded-md cursor-pointer hover:opacity-90 transition-opacity ">
+           <button className="px-12 py-4 bg-primary text-white rounded-md cursor-pointer hover:opacity-90 transition-opacity ">
               Register For Event
           </button>
         </Link>

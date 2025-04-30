@@ -36,10 +36,10 @@ const Index = () => {
             </h2>
             <div className="prose max-w-none text-gray-700">
               <p className="mb-4">
-                The African Chiefs of Defense Staff (ACDS) Summit is a prestigious gathering of military leaders from across the African continent...
+                The African Chiefs of Defense Staff (ACDS) Summit is a prestigious gathering of military leaders from across the African continent. This landmark event brings together the top defense officials from all 55 African nations to discuss critical security challenges, foster cooperation, and develop joint strategies for ensuring peace and stability across Africa.
               </p>
               <p>
-                The 2025 summit represents a significant opportunity for strengthening military diplomacy...
+                The 2025 summit represents a significant opportunity for strengthening military diplomacy, sharing expertise, and building a unified approach to continental security. Through collaborative dialogue and strategic partnerships, the ACDS Summit aims to enhance the capacity of African nations to address both traditional and emerging security threats.
               </p>
             </div>
           </div>

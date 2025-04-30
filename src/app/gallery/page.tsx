@@ -108,7 +108,7 @@ const Gallery = () => {
     <div className="min-h-screen flex flex-col">
       
       {/* Hero Section */}
-      <div className="bg-[#0B3D2E] py-16 md:p-24">
+      <div className="bg-primary py-16 md:p-24">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Summit <span className="text-gold-light">Gallery</span>
@@ -127,7 +127,7 @@ const Gallery = () => {
               onClick={() => setActiveCategory("all")}
               className={`px-6 py-2 rounded-full transition-colors ${
                 activeCategory === "all" 
-                  ? "bg-[#0B3D2E] text-white" 
+                  ? "bg-primary text-white" 
                   : "bg-gray-100 hover:bg-gray-200 text-gray-700"
               }`}
             >
@@ -137,7 +137,7 @@ const Gallery = () => {
               onClick={() => setActiveCategory("officials")}
               className={`px-6 py-2 rounded-full transition-colors ${
                 activeCategory === "officials" 
-                  ? "bg-[#0B3D2E] text-white" 
+                  ? "bg-primary text-white" 
                   : "bg-gray-100 hover:bg-gray-200 text-gray-700"
               }`}
             >
@@ -147,7 +147,7 @@ const Gallery = () => {
               onClick={() => setActiveCategory("venues")}
               className={`px-6 py-2 rounded-full transition-colors ${
                 activeCategory === "venues" 
-                  ? "bg-[#0B3D2E] text-white" 
+                  ? "bg-primary text-white" 
                   : "bg-gray-100 hover:bg-gray-200 text-gray-700"
               }`}
             >
@@ -157,7 +157,7 @@ const Gallery = () => {
               onClick={() => setActiveCategory("planning")}
               className={`px-6 py-2 rounded-full transition-colors ${
                 activeCategory === "planning" 
-                  ? "bg-[#0B3D2E] text-white" 
+                  ? "bg-primary text-white" 
                   : "bg-gray-100 hover:bg-gray-200 text-gray-700"
               }`}
             >

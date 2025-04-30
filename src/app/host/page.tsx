@@ -153,7 +153,7 @@ const handleSendConfirmationMail = async(email:string, id:string) =>{
        <div className="min-h-screen bg-gray-50 flex flex-col md:flex-row">
       {/* Sidebar */}
      
-      <aside className="w-full md:w-64 bg-[#0B3D2E]/90 text-white p-6 hidden lg:block">
+      <aside className="w-full md:w-64 bg-primary/90 text-white p-6 hidden lg:block">
         <h2 className="text-2xl font-bold mb-6">Admin Panel</h2>
         <nav>
           <ul className="space-y-4 ">
@@ -230,7 +230,7 @@ const handleSendConfirmationMail = async(email:string, id:string) =>{
         {/* Table */}
         <div className="overflow-auto rounded-lg shadow bg-white">
           <table className="min-w-full text-sm">
-            <thead className="bg-[#0B3D2E] text-white">
+            <thead className="bg-primary text-white">
               <tr>
                 <th className="px-4 py-3 text-left font-medium">Name</th>
                 <th className="px-4 py-3 text-left font-medium">Email</th>

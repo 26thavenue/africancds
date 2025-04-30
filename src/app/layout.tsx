@@ -12,13 +12,20 @@ interface LayoutProps {
 }
 
 const dm = DM_Sans({ subsets: ['latin'] })
+const instrument = Instrument_Serif({ subsets: ['latin'], weight: ['400'] });
 
 const Layout = ({ children }: LayoutProps) => {
   return (
     <html>
+      <style jsx global>{`
+        h1 {
+          font-family: ${instrument.style.fontFamily};
+        }
+      `}</style>
       <AuthProvider>
         <body className={dm.className}>
           <div className="flex flex-col font-primary">
+            
           <Navbar />
           <main className="flex-1 min-h-screen">
             {children}
