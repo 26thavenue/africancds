@@ -135,7 +135,7 @@ const handleSubmit = async(e: React.FormEvent) => {
       
       
       {/* Hero Section */}
-      <div className="bg-[#0B3D2E] py-16 md:py-24">
+      <div className="bg-primary py-16 md:py-24">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Summit <span className="text-gold-light">Registration</span>
