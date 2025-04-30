@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import Link from "next/link"
 import supabase from "../lib/utils"
 
@@ -9,20 +9,62 @@ const Register = () => {
   const [delgeateOption, setDelegateOption] = useState<string>("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  
-  const handleSubmit = async(e: React.FormEvent) => {
-    e.preventDefault();
 
-    setLoading(true);
-    setError(null);
+const createPaystackPayment = async(data: any) => {
+  try {
+    const { default: PaystackPop } = await import("@paystack/inline-js");
+    const paystackInstance = new PaystackPop();
 
-    const form = e.target as HTMLFormElement;
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
+    const payload = {
+      key: process.env.NEXT_PUBLIC_PAYSTACK_KEY!,
+      email: data.email,
+      amount: 3000 * 100,
+      currency: "NGN",
+      firstName: data?.firstName,
+      lastName: data?.lastName,
+      onCancel: () => alert("Payment window closed."),
+      onSuccess: async (response: any) => {
+        console.log("Payment Success:", response);
+        await addToDB(data);
+        await submitEmail(data, "vendor");
+        setFormSubmitted(true);
+      }
+    };
+
+    paystackInstance.newTransaction(payload);
+  } catch (err) {
+    console.error("Paystack Error:", err);
+    setError("Payment failed. Please try again.");
+    setLoading(false);
+  }
+};
 
 
-    try {
-      const { data: _, error } = await supabase
+const submitEmail = async (data: any, type: "standard" | "vendor" ) => {
+  try {
+    const endpoint = type === "standard" ? "/api/standard-email" : "/api/vendor-email";
+    const res = await fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: data.email }),
+    });
+
+    if (!res.ok) {
+      setError("An error occurred")
+
+    }
+
+  } catch (err) {
+    console.error("Email Error:", err);
+    setError("Failed to send confirmation email.");
+  }
+};
+
+
+const addToDB = async(data:any) => {
+  try {
+
+      const { error } = await supabase
         .from('registrations')
         .insert([{
           first_name: data.firstName,
@@ -38,19 +80,10 @@ const Register = () => {
           created_at: new Date().toISOString()
         }])
         .select();
-      if (error) throw error;
+      if (error) {
+        setError("An error occurred" +  error);
+      }
       console.log(error)
-      setFormSubmitted(true);
-
-       await fetch('/email', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            email: data.email,
-            firstName: data.firstName,
-            lastName: data.lastName
-          })
-        });
       
     } catch (err) {
       console.error("Registration error:", err);
@@ -58,13 +91,47 @@ const Register = () => {
     } finally {
       setLoading(false);
     }
+}
+
+  
+const handleSubmit = async(e: React.FormEvent) => {
+    e.preventDefault();
+
+    setLoading(true);
+    setError(null);
+
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    const delegationType = data.delegationType?.toString().toLowerCase();
+
+  try {
     
-  };
+
+    if (delegationType === "standard") {
+      await addToDB(data);
+      await submitEmail(data, "standard");
+      setFormSubmitted(true)
+    } else if (delegationType === "vendor") {
+      if (typeof window !== "undefined") {
+        createPaystackPayment(data); 
+      }    
+    }
+    
+  } catch (err) {
+    console.error("Error handling submission:", err);
+    setLoading(false)
+    setError("An error occurred. Please try again.");
+  }
+    
+};
 
  
   
   return (
     <div className="min-h-screen flex flex-col">
+     
       
       
       {/* Hero Section */}

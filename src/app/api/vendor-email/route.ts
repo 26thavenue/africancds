@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import {Resend} from "resend";
-import { standardTicketEmail } from "@/app/components/StandardEmailTemplate";
+import { vendorTicketPendingEmail } from "@/app/components/VendorEmailTemplate";
 
 const resend = new Resend(process.env.NEXT_RESEND_API_KEY!); 
 
@@ -11,8 +11,8 @@ export async function POST(request: Request) {
     const emailResponse = await resend.emails.send({
       from: 'Obinna <no-reply@acdss.com.ng>',  
       to: email,
-      subject: standardTicketEmail.subject,
-      html: standardTicketEmail.html,
+      subject: vendorTicketPendingEmail.subject,
+      html: vendorTicketPendingEmail.html,
     });
 
     return NextResponse.json({ success: true, emailResponse });
