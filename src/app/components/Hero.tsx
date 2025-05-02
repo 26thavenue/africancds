@@ -5,9 +5,9 @@ import Link from "next/link"
 
 const Hero = () => {
   return (
-    <div className="relative bg-primary/90 py-20 md:py-32">
+    <div className="relative bg-black/90 py-20 md:py-32">
       {/* Background pattern */}
-      <div className="absolute inset-0 z-0 opacity-10">
+      <div className="absolute inset-0 z-0   opacity-10">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1500252185289-40ca85eb23a7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1pbGl0YXJ5fGVufDB8fDB8fHww')] bg-cover bg-center"></div>
       </div>
       

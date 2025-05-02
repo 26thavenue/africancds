@@ -304,9 +304,9 @@ const handleSubmit = async(e: React.FormEvent) => {
                       </div>
 
                       {delgeateOption === 'Vendor' && (
-                        <div className="mt-4 p-4 bg-gray-50 border rounded-md">
-                          <p className="text-sm text-gray-700">
-                            As a vendor, you are required to pay $2799+ 5% Tax = $2938.95.
+                        <div className="mt-4 p-4 bg-gray-50 border border-primary rounded-md md:col-span-2 text-center">
+                          <p className="text-lg font-bold text-primary">
+                            Vendorship fee is $3000
                           </p>
                          
                         </div>
@@ -335,7 +335,7 @@ const handleSubmit = async(e: React.FormEvent) => {
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gold mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  <span>For any registration inquiries, please contact: registration@acdssummit2025.org</span>
+                  <span>For any registration inquiries, please contact: no-reply@acdss.com.ng</span>
                 </li>
               </ul>
                   </div>
@@ -349,7 +349,7 @@ const handleSubmit = async(e: React.FormEvent) => {
                       type="submit"
                       className="bg-primary cursor-pointer hover:bg-primary/90 text-white font-medium px-8 py-3 rounded-lg transition-colors inline-block"
                     >
-                      {loading ? 'Submitting...' : 'Submit Registration'}
+                      {loading ? 'Submitting...' : 'Payment and Registration'}
                     </button>
                   </div>
                 </form>
