@@ -2,96 +2,57 @@
 
 import { useState } from "react";
 import Banner from "../components/Banner";
+import MinisterJson from "../ministers.json"
 
 const Gallery = () => {
   const [activeCategory, setActiveCategory] = useState("all");
 
   const galleryImages = [
     {
-      id: 1,
+      id: 61,
       category: "officials",
       title: "Chief of Defense Staff - Nigeria",
-      subtitle: "General Samuel Olatunde",
-      imageUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5",
+      subtitle: "General Christopher Musa",
+      imageUrl: "https://africacdssummit.com/wp-content/uploads/2025/03/image006.png",
       country: "Nigeria"
     },
     {
-      id: 2,
-      category: "officials",
-      title: "Chief of Defense Staff - Ghana",
-      subtitle: "Vice Admiral Seth Amoama",
-      imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
-      country: "Ghana"
-    },
-    {
-      id: 3,
-      category: "officials",
-      title: "Chief of Defense Staff - South Africa",
-      subtitle: "General Rudzani Maphwanya",
-      imageUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a",
-      country: "South Africa"
-    },
-    {
-      id: 4,
-      category: "officials",
-      title: "Chief of Defense Staff - Egypt",
-      subtitle: "General Mohammed Zaki",
-      imageUrl: "https://images.unsplash.com/photo-1607990281513-2c110a25bd8c",
-      country: "Egypt"
-    },
-    {
-      id: 5,
-      category: "officials",
-      title: "Chief of Defense Staff - Kenya",
-      subtitle: "General Robert Kibochi",
-      imageUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
-      country: "Kenya"
-    },
-    {
-      id: 6,
-      category: "officials",
-      title: "Chief of Defense Staff - Algeria",
-      subtitle: "General Said Chengriha",
-      imageUrl: "https://images.unsplash.com/photo-1531384441138-2736e62e0919",
-      country: "Algeria"
-    },
-    {
-      id: 7,
+      id: 67,
       category: "venues",
       title: "Transcorp Hotel - Exterior",
       subtitle: "Summit Venue",
       imageUrl: "https://images.unsplash.com/photo-1566073771259-6a8506099945",
     },
     {
-      id: 8,
+      id: 68,
       category: "venues",
       title: "Main Conference Hall",
       subtitle: "Plenary Sessions Venue",
       imageUrl: "https://images.unsplash.com/photo-1431540015161-0bf868a2d407",
     },
     {
-      id: 9,
+      id: 69,
       category: "venues",
       title: "Exhibition Area",
       subtitle: "Defense Technology Showcase",
       imageUrl: "https://images.unsplash.com/photo-1497366811353-6870744d04b2",
     },
     {
-      id: 10,
+      id: 60,
       category: "planning",
       title: "Planning Committee Meeting",
       subtitle: "Inaugural Session",
       imageUrl: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf",
     },
     {
-      id: 11,
+      id: 71,
       category: "planning",
       title: "Site Inspection",
       subtitle: "Venue Preparation",
       imageUrl: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0",
     },
     {
-      id: 12,
+      id: 72,
       category: "planning",
       title: "Press Conference",
       subtitle: "Summit Announcement",
@@ -99,10 +60,12 @@ const Gallery = () => {
     }
   ];
 
+  const arr = [...galleryImages,...MinisterJson]
+
   // Filter images based on active category
   const filteredImages = activeCategory === "all" 
-    ? galleryImages 
-    : galleryImages.filter(image => image.category === activeCategory);
+    ? arr 
+    : arr.filter(image => image.category === activeCategory);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -189,7 +152,7 @@ const Gallery = () => {
               >
                 <div className="h-64 overflow-hidden">
                   <img 
-                    src={image.imageUrl} 
+                    src={image.imageUrl == "" ? "https://media.istockphoto.com/id/1337144146/vector/default-avatar-profile-icon-vector.jpg?s=612x612&w=0&k=20&c=BIbFwuv7FxTWvh5S3vB6bkT0Qv8Vn8N5Ffseq84ClGI=" :image.imageUrl } 
                     alt={image.title} 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />

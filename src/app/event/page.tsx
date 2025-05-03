@@ -20,13 +20,13 @@ const Events = () => {
       </div>
 
       <section className="px-8 lg:px-24">
-          <div className='bg-green-100 h-[70dvh] w-[90dvw] mx-auto rounded-3xl'>
-
+          <div className=' h-[90dvh] w-[90dvw] mx-auto rounded-3xl '>
+            <img src="/africancs.jpg" className="w-full h-full object-cover rounded-3xl"/>
         </div>
 
 
         <div className='my-8 flex flex-col gap-4'>
-            <h4 className='text-lg text-gray-500'> Wednesday 9th  - Friday 11th July, 2025.</h4>
+            <h4 className='text-lg text-gray-600'> Tuesday 27th  - Wednesday 28th August, 2025.</h4>
             <h1 className='text-5xl font-bold  text-[#0B3D2E]'>
                 AFRICAN CHIEFS OF DEFENSE CONFERENCE 2024
             </h1>
@@ -36,7 +36,7 @@ const Events = () => {
             {/* <h2 className="text-2xl font-bold">About this Event</h2> */}
             <div className="flex gap-4 items-center">
                 <CalendarDays size={20} stroke="gray" className=" " />
-                <p className="text-sm">Event Lasts for 3 days</p>
+                <p className="text-sm">Event Lasts for 2 days</p>
             </div>
 
             <p className="my-2 text-lg">
@@ -70,7 +70,7 @@ const Events = () => {
               <div className="bg-primary p-4">
                 <div className="flex items-center">
                   <CalendarDays size={20} className="text-yellow-500  mr-2" />
-                  <h3 className="text-xl font-semibold text-yellow-500 ">Day 1 - July 9, 2025</h3>
+                  <h3 className="text-xl font-semibold text-yellow-500 ">Day 1 - August 27th, 2025</h3>
                 </div>
               </div>
               <div className="p-6 space-y-4">
@@ -127,7 +127,7 @@ const Events = () => {
               <div className="bg-primary p-4">
                 <div className="flex items-center">
                   <CalendarDays size={20} className="text-yellow-500  mr-2" />
-                  <h3 className="text-xl font-semibold text-yellow-500 ">Day 2 - July 10, 2025</h3>
+                  <h3 className="text-xl font-semibold text-yellow-500 ">Day 2 - August 28th, 2025</h3>
                 </div>
               </div>
               <div className="p-6 space-y-4">
@@ -179,7 +179,7 @@ const Events = () => {
               </div>
             </div>
             
-            {/* Day 3 */}
+            {/* Day 3
             <div className="bg-gray-100 rounded-lg overflow-hidden">
               <div className="bg-primary p-4">
                 <div className="flex items-center">
@@ -233,7 +233,7 @@ const Events = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -254,7 +254,7 @@ const Events = () => {
               </div>
               <div>
                 <h3 className="text-2xl font-semibold text-primary mb-2">
-                  General Samuel Olatunde
+                  General Christopher Musa
                 </h3>
                 <p className="text-gray-600 mb-4">Chief of Defense Staff, Federal Republic of Nigeria</p>
                 <p className="text-navy">

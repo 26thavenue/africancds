@@ -1,0 +1,428 @@
+[
+  {
+    "id": 1,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Algeria",
+    "subtitle": "General Saïd Chengriha",
+    "imageUrl": "",
+    "country": "Algeria"
+  },
+  {
+    "id": 2,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Angola",
+    "subtitle": "General Altino Carlos José dos Santos",
+    "imageUrl": "",
+    "country": "Angola"
+  },
+  {
+    "id": 3,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Benin",
+    "subtitle": "Brigadier General Fructueux Candide Ahodegnon Gbaguidi",
+    "imageUrl": "",
+    "country": "Benin"
+  },
+  {
+    "id": 4,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Botswana",
+    "subtitle": "Lieutenant General Placid Diratsagae Segokgo",
+    "imageUrl": "",
+    "country": "Botswana"
+  },
+  {
+    "id": 5,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Burkina Faso",
+    "subtitle": "Brigadier General Moussa Diallo",
+    "imageUrl": "",
+    "country": "Burkina Faso"
+  },
+  {
+    "id": 6,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Burundi",
+    "subtitle": "General Prime Niyongabo",
+    "imageUrl": "",
+    "country": "Burundi"
+  },
+  {
+    "id": 7,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Cabo Verde",
+    "subtitle": "Rear Admiral António Duarte Monteiro",
+    "imageUrl": "",
+    "country": "Cabo Verde"
+  },
+  {
+    "id": 8,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Cameroon",
+    "subtitle": "General René Claude Meka",
+    "imageUrl": "",
+    "country": "Cameroon"
+  },
+  {
+    "id": 9,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Central African Republic",
+    "subtitle": "Major General Zephirin Mamadou",
+    "imageUrl": "",
+    "country": "Central African Republic"
+  },
+  {
+    "id": 10,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Chad",
+    "subtitle": "General Abakar Abdelkerim Daoud",
+    "imageUrl": "",
+    "country": "Chad"
+  },
+  {
+    "id": 11,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Comoros",
+    "subtitle": "Colonel Youssouf Idjihadi",
+    "imageUrl": "",
+    "country": "Comoros"
+  },
+  {
+    "id": 12,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Democratic Republic of the Congo",
+    "subtitle": "Lieutenant General Jules Banza Mwilambwe",
+    "imageUrl": "",
+    "country": "Democratic Republic of the Congo"
+  },
+  {
+    "id": 13,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Republic of the Congo",
+    "subtitle": "General Guy Blanchard Okoï",
+    "imageUrl": "",
+    "country": "Republic of the Congo"
+  },
+  {
+    "id": 14,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Côte d'Ivoire",
+    "subtitle": "General Lassina Doumbia",
+    "imageUrl": "",
+    "country": "Côte d'Ivoire"
+  },
+  {
+    "id": 15,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Djibouti",
+    "subtitle": "General Zakaria Chiek Ibrahim",
+    "imageUrl": "",
+    "country": "Djibouti"
+  },
+  {
+    "id": 16,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Egypt",
+    "subtitle": "Lieutenant General Ahmed Fathy Khalifa",
+    "imageUrl": "",
+    "country": "Egypt"
+  },
+  {
+    "id": 17,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Equatorial Guinea",
+    "subtitle": "Colonel Juan Moisés Anda Elo",
+    "imageUrl": "",
+    "country": "Equatorial Guinea"
+  },
+  {
+    "id": 18,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Eritrea",
+    "subtitle": "General Filipos Woldeyohannes",
+    "imageUrl": "",
+    "country": "Eritrea"
+  },
+  {
+    "id": 19,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Eswatini",
+    "subtitle": "Lieutenant General Hulumende Mashikilisane Fakudze",
+    "imageUrl": "",
+    "country": "Eswatini"
+  },
+  {
+    "id": 20,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Ethiopia",
+    "subtitle": "Field Marshal Birhanu Jula Gelelcha",
+    "imageUrl": "",
+    "country": "Ethiopia"
+  },
+  {
+    "id": 21,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Gabon",
+    "subtitle": "Major General Claude Ella-Ekogha",
+    "imageUrl": "",
+    "country": "Gabon"
+  },
+  {
+    "id": 22,
+    "category": "officials",
+    "title": "Chief of Defense Staff - The Gambia",
+    "subtitle": "Major General Mamat O.A. Cham",
+    "imageUrl": "",
+    "country": "The Gambia"
+  },
+  {
+    "id": 23,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Ghana",
+    "subtitle": "Major General William Agyapong",
+    "imageUrl": "",
+    "country": "Ghana"
+  },
+  {
+    "id": 24,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Guinea",
+    "subtitle": "General Ibrahima Sory Bangoura",
+    "imageUrl": "",
+    "country": "Guinea"
+  },
+  {
+    "id": 25,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Guinea-Bissau",
+    "subtitle": "General Biague Na Ntan",
+    "imageUrl": "",
+    "country": "Guinea-Bissau"
+  },
+  {
+    "id": 26,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Kenya",
+    "subtitle": "General Charles Muriu Kahariri",
+    "imageUrl": "",
+    "country": "Kenya"
+  },
+  {
+    "id": 27,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Lesotho",
+    "subtitle": "Lieutenant General Mojalefa Letsoela",
+    "imageUrl": "",
+    "country": "Lesotho"
+  },
+  {
+    "id": 28,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Liberia",
+    "subtitle": "Brigadier General Davidson Forleh",
+    "imageUrl": "",
+    "country": "Liberia"
+  },
+  {
+    "id": 29,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Libya",
+    "subtitle": "Lieutenant General Muhammed Al-Haddad",
+    "imageUrl": "",
+    "country": "Libya"
+  },
+  {
+    "id": 30,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Madagascar",
+    "subtitle": "General Lala Monja Delphin Sahivelo",
+    "imageUrl": "",
+    "country": "Madagascar"
+  },
+  {
+    "id": 31,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Malawi",
+    "subtitle": "General Paul Valentino Phiri",
+    "imageUrl": "",
+    "country": "Malawi"
+  },
+  {
+    "id": 32,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Mali",
+    "subtitle": "Major General Oumar Diarra",
+    "imageUrl": "",
+    "country": "Mali"
+  },
+  {
+    "id": 33,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Mauritania",
+    "subtitle": "General Mohamed Vall Ould Rais",
+    "imageUrl": "",
+    "country": "Mauritania"
+  },
+  {
+    "id": 34,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Mauritius",
+    "subtitle": "Lieutenant General B. Bhima",
+    "imageUrl": "",
+    "country": "Mauritius"
+  },
+  {
+    "id": 35,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Morocco",
+    "subtitle": "Major General Mohammed Berrid",
+    "imageUrl": "",
+    "country": "Morocco"
+  },
+  {
+    "id": 36,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Mozambique",
+    "subtitle": "Admiral Joaquim Rivas Mangrasse",
+    "imageUrl": "",
+    "country": "Mozambique"
+  },
+  {
+    "id": 37,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Namibia",
+    "subtitle": "Air Marshal Martin Pinehas",
+    "imageUrl": "",
+    "country": "Namibia"
+  } ,
+ {
+    "id": 38,
+    "category": "officials",
+    "title": "Chief of Defence Staff - Niger",
+    "subtitle": "Brigadier General Moussa Salaou Barmou",
+    "imageUrl": "",
+    "location": "Niamey, Niger"
+  },
+  {
+    "id": 39,
+    "category": "officials",
+    "title": "Chief of Defence Staff - Rwanda",
+    "subtitle": "General Mubarakh Muganga",
+    "imageUrl": "",
+    "location": "Kigali, Rwanda"
+  },
+  {
+    "id": 40,
+    "category": "officials",
+    "title": "Chief of Staff - Sao Tome and Principe",
+    "subtitle": "Brigadier General Idalecio Pachire",
+    "imageUrl": "",
+    "location": null
+  },
+  {
+    "id": 41,
+    "category": "officials",
+    "title": "Chief of Defense Staff - Senegal",
+    "subtitle": "General of Air Corps Mbaye CISSE",
+    "imageUrl": "",
+    "location": "Dakar, Senegal"
+  },
+  {
+    "id": 42,
+    "category": "officials",
+    "title": "Chief - Seychelles",
+    "subtitle": "Major General Michael Rosette",
+    "imageUrl": "",
+    "location": "Victoria, Seychelles"
+  },
+  {
+    "id": 43,
+    "category": "officials",
+    "title": "Chief of Defence Staff - Sierra Leone",
+    "subtitle": "Brigadier General Amara Idara Bangura",
+    "imageUrl": "",
+    "location": "Freetown, Sierra Leone"
+  },
+  {
+    "id": 44,
+    "category": "officials",
+    "title": "Chief of the Defence Force - Somalia",
+    "subtitle": "Major General Odowa Yusuf Rageh",
+    "imageUrl": "",
+    "location": "Mogadishu, Somalia"
+  },
+  {
+    "id": 45,
+    "category": "officials",
+    "title": "Chief - South Africa",
+    "subtitle": "General Rudzani Maphwanya SM, MMM",
+    "imageUrl": "",
+    "location": "Pretoria, Gauteng, South Africa"
+  },
+  {
+    "id": 46,
+    "category": "officials",
+    "title": "Chief of Defence Force - South Sudan",
+    "subtitle": "General (Dr.) Paul Nang Majok",
+    "imageUrl": "",
+    "location": "Bilpam, Juba, South Sudan"
+  },
+  {
+    "id": 47,
+    "category": "officials",
+    "title": "Chief of Staff - Sudan",
+    "subtitle": "Lieutenant General Muhammed Othman al-Hussein",
+    "imageUrl": "",
+    "location": "Khartoum, Sudan"
+  },
+  {
+    "id": 48,
+    "category": "officials",
+    "title": "Chief - Tanzania",
+    "subtitle": "General Jacob John Mkunda",
+    "imageUrl": "",
+    "location": "Dodoma, Tanzania"
+  },
+  {
+    "id": 49,
+    "category": "officials",
+    "title": "Chief of Defence Staff - Togo",
+    "subtitle": "Brigadier General Dimini Allahare",
+    "imageUrl": "",
+    "location": "Lomé, Togo"
+  },
+  {
+    "id": 50,
+    "category": "officials",
+    "title": "Chief of Defense - Tunisia",
+    "subtitle": "General Abdel Moneim Belati",
+    "imageUrl": "",
+    "location": "Tunis, Tunisia"
+  },
+  {
+    "id": 51,
+    "category": "officials",
+    "title": "Chief of Defence - Uganda People’s Defence Force",
+    "subtitle": "General Muhoozi Kainerugaba",
+    "imageUrl": "",
+    "location": "Mbuya Hill, Kampala, Uganda"
+  },
+  {
+    "id": 52,
+    "category": "officials",
+    "title": "Commander - Zambia Army",
+    "subtitle": "Lieutenant General Geoffrey Zyeele",
+    "imageUrl": "",
+    "location": "Lusaka, Zambia"
+  },
+  {
+    "id": 53,
+    "category": "officials",
+    "title": "Chief of Defence - Zimbabwe Defence Forces",
+    "subtitle": "General Philip Valerio Sibanda",
+    "imageUrl": "",
+    "location": "Harare, Zimbabwe"
+  }
+
+]
+ 

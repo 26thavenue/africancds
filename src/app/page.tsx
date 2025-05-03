@@ -55,7 +55,7 @@ const Index = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Info Cards */}
-            {[{ icon: Calendar, title: "Date", detail: "July 9-11, 2025", sub: "Three days of collaboration and strategic dialogue" },
+            {[{ icon: Calendar, title: "Date", detail: "August 27-28, 2025", sub: "Three days of collaboration and strategic dialogue" },
               { icon: MapPin, title: "Venue", detail: "Transcorp Hotel, Abuja", sub: "A premier venue in Nigeria's capital city" },
               { icon: Users, title: "Participants", detail: "Defense Staff Chiefs from 55 Countries", sub: "Representing all African nations" },
               { icon: Target, title: "Focus", detail: "Continental Security & Cooperation", sub: "Building a safer Africa through collaboration" }
