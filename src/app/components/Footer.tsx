@@ -13,7 +13,7 @@ const Footer = () => {
             <p className="text-gray-300 mb-4">
               African Chiefs of Defense Staff Summit 2025
             </p>
-            <p className="text-gray-300">July 9-11, 2025</p>
+            <p className="text-gray-300">August 25th- 27th 2025</p>
             <p className="text-gray-300">Transcorp Hotel, Abuja</p>
           </div>
           
@@ -51,10 +51,10 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4 text-gold-light">Contact Information</h3>
             <div className="space-y-3">
-              <div className="flex items-center">
+              {/* <div className="flex items-center">
                 <Phone size={18} className="text-gold-light mr-3" />
                 <span className="text-gray-300">+234 123 456 7890</span>
-              </div>
+              </div> */}
               <div className="flex items-center">
                 <Mail size={18} className="text-gold-light mr-3" />
                 <span className="text-gray-300">secretariat@acdss.com.ng</span>

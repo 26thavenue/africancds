@@ -26,7 +26,7 @@ const Events = () => {
 
 
         <div className='my-8 flex flex-col gap-4'>
-            <h4 className='text-lg text-gray-600'> Tuesday 27th  - Wednesday 28th August, 2025.</h4>
+            <h4 className='text-lg text-gray-600'> Sunday 25th  - Tuesday 27th August, 2025.</h4>
             <h1 className='text-5xl font-bold  text-[#0B3D2E]'>
                 AFRICAN CHIEFS OF DEFENSE CONFERENCE 2024
             </h1>
@@ -36,7 +36,7 @@ const Events = () => {
             {/* <h2 className="text-2xl font-bold">About this Event</h2> */}
             <div className="flex gap-4 items-center">
                 <CalendarDays size={20} stroke="gray" className=" " />
-                <p className="text-sm">Event Lasts for 2 days</p>
+                <p className="text-sm">Event Lasts for 3 days</p>
             </div>
 
             <p className="my-2 text-lg">
@@ -70,7 +70,7 @@ const Events = () => {
               <div className="bg-primary p-4">
                 <div className="flex items-center">
                   <CalendarDays size={20} className="text-yellow-500  mr-2" />
-                  <h3 className="text-xl font-semibold text-yellow-500 ">Day 1 - August 27th, 2025</h3>
+                  <h3 className="text-xl font-semibold text-yellow-500 ">Day 1 - August 25th, 2025</h3>
                 </div>
               </div>
               <div className="p-6 space-y-4">
@@ -127,7 +127,7 @@ const Events = () => {
               <div className="bg-primary p-4">
                 <div className="flex items-center">
                   <CalendarDays size={20} className="text-yellow-500  mr-2" />
-                  <h3 className="text-xl font-semibold text-yellow-500 ">Day 2 - August 28th, 2025</h3>
+                  <h3 className="text-xl font-semibold text-yellow-500 ">Day 2 - August 26th, 2025</h3>
                 </div>
               </div>
               <div className="p-6 space-y-4">
@@ -179,12 +179,12 @@ const Events = () => {
               </div>
             </div>
             
-            {/* Day 3
+            {/* Day 3 */}
             <div className="bg-gray-100 rounded-lg overflow-hidden">
               <div className="bg-primary p-4">
                 <div className="flex items-center">
                   <CalendarDays size={20} className="text-yellow-500 mr-2" />
-                  <h3 className="text-xl font-semibold text-yellow-500 ">Day 3 - July 11, 2025</h3>
+                  <h3 className="text-xl font-semibold text-yellow-500 ">Day 3 - August 27th, 2025</h3>
                 </div>
               </div>
               <div className="p-6 space-y-4">
@@ -233,7 +233,7 @@ const Events = () => {
                   </div>
                 </div>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </section>

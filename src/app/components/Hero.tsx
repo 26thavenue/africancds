@@ -24,7 +24,7 @@ const Hero = () => {
           <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-8 mb-10">
             <div className="flex items-center justify-center text-yellow-500">
               <Calendar size={20} className="mr-2" />
-              <span>August 27-28th 2025</span>
+              <span>August 25-27th 2025</span>
             </div>
             <div className="flex items-center justify-center text-yellow-500">
               <MapPin size={20} className="mr-2" />
