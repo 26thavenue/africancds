@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Banner from "../components/Banner";
 import MinisterJson from "../ministers.json"
+import VenueMap from "../components/VenueMap"
 
 const Gallery = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -185,7 +186,7 @@ const Gallery = () => {
       </section>
       
      
-      
+     <VenueMap/>
      <Banner/>
     </div>
   );

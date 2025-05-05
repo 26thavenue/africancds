@@ -3,8 +3,20 @@
 import { CalendarDays} from "lucide-react"
 import Banner from "../components/Banner"
 import Link from "next/link"
+import toast from "react-hot-toast"
+import VenueMap from "../components/VenueMap"
 
 const Events = () => {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/eventSchedule.pdf"; 
+    link.download = "eventSchedule.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    toast.success("Event Schedule has been downloaded!");
+  };
   return (
     <main className='mb-16 '>
 
@@ -14,8 +26,9 @@ const Events = () => {
             Event <span className="text-gold-light">Details</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Transcorp Hilton Hotel, Abuja, Nigeria
+            Advancing Africa’s Security with Strategic Defence Procurement & Cooperation
           </p>
+           
         </div>
       </div>
 
@@ -55,10 +68,17 @@ const Events = () => {
               Register For Event
           </button>
         </Link>
+
+        <button 
+              onClick={handleDownload}
+              className="border border-primary cursor-pointer  ml-4 text-primary hover:bg-primary/40 font-medium px-8 py-3 rounded transition-colors"
+            >
+              Download Schedule
+        </button>
        
       </section>
 
-       <section className="py-16 bg-white my-16">
+       <section className="py-16 bg-white mt-16">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-primary mb-10 text-center">
             Summit Schedule
@@ -212,6 +232,7 @@ const Events = () => {
                   </div>
                   <div>
                     <p className="font-medium text-primary">Lunch Break</p>
+                    <p className="text-gray-600 text-sm">Networking Opportunity</p>
                   </div>
                 </div>
                 <div className="flex">
@@ -243,9 +264,9 @@ const Events = () => {
       {/* CDS Statement */}
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-primary mb-10 text-center">
+          <h1 className="text-4xl font-bold text-primary mb-10 text-center">
             Statement from the Chief of Defense Staff
-          </h2>
+          </h1>
           
           <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md">
             <div className="mb-8 flex flex-col md:flex-row gap-8 items-center">
@@ -286,6 +307,9 @@ const Events = () => {
           </div>
         </div>
       </section>
+
+
+      <VenueMap/>
 
       <Banner/>
 

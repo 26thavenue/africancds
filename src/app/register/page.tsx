@@ -9,6 +9,7 @@ const Register = () => {
   const [delgeateOption, setDelegateOption] = useState<string>("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  
 
 const createPaystackPayment = async(data: any) => {
   try {
@@ -349,7 +350,7 @@ const handleSubmit = async(e: React.FormEvent) => {
                       type="submit"
                       className="bg-primary cursor-pointer hover:bg-primary/90 text-white font-medium px-8 py-3 rounded-lg transition-colors inline-block"
                     >
-                      {loading ? 'Submitting...' : 'Payment and Registration'}
+                      {loading ? 'Submitting...' : delgeateOption == "Vendor" ?  "Payment and Registration" : "Register for Event"}
                     </button>
                   </div>
                 </form>
@@ -360,7 +361,9 @@ const handleSubmit = async(e: React.FormEvent) => {
           </div>
         </div>
       </section>
-      
+
+
+    
     </div>
   );
 };

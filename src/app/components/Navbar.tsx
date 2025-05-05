@@ -20,10 +20,15 @@ const Navbar = () => {
     <nav className="bg-primary text-white py-8 px-6 lg:px-24 relative z-50">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <Link href="/" className="flex items-center space-x-2">
+        <div className="flex items-center gap-2">
+          <Link href="/" className="flex items-center space-x-2">
           <span className="text-yellow-500 font-bold text-2xl">ACDS</span>
           <span className="hidden md:inline-block font-semibold">Summit</span>
         </Link>
+        <p className="mx-2">x </p>
+        <img src="defense.png"  className="w-10 h-10" alt="nigerianDefenseLogo"/>
+        </div>
+        
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex space-x-8 items-center text-white font-medium">

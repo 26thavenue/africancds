@@ -2,8 +2,19 @@
 
 import { Calendar, MapPin } from "lucide-react";
 import Link from "next/link"
+import toast from "react-hot-toast"
 
 const Hero = () => {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/eventSchedule.pdf"; 
+    link.download = "eventSchedule.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    toast.success("Event Schedule has been downloaded!");
+  };
   return (
     <div className="relative bg-black/90 py-20 md:py-32">
       {/* Background pattern */}
@@ -39,12 +50,13 @@ const Hero = () => {
             >
               Register Now
             </Link>
-            <Link 
-              href="/event" 
-              className="border border-yellow-700 text-white hover:bg-yellow-700 font-medium px-8 py-3 rounded transition-colors"
+            
+             <button 
+              onClick={handleDownload}
+              className="border border-yellow-700 cursor-pointer rounded   text-white hover:bg-yellow-800 font-medium px-8 py-3  transition-colors"
             >
-              Learn More
-            </Link>
+              Download Schedule
+            </button>
           </div>
         </div>
       </div>
