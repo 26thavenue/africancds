@@ -1,7 +1,7 @@
 const Banner = () => {
   return (
    
-         <section className="py-24 bg-primary text-white my-24 w-[80dvw] mx-auto rounded-2xl">
+         <section className="py-16 lg:py-24 bg-primary text-white my-24 w-[80dvw] mx-auto rounded-2xl">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-2xl lg:text-4xl font-bold mb-6">
             Join Us in Abuja

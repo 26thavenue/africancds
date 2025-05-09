@@ -4,9 +4,22 @@ import { useState } from "react";
 import Banner from "../components/Banner";
 import MinisterJson from "../ministers.json"
 import VenueMap from "../components/VenueMap"
+import Navbar from "../components/Navbar";
+import { useRef, useEffect } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
+
 
 const Gallery = () => {
   const [activeCategory, setActiveCategory] = useState("all");
+
+  const titleRef = useRef<HTMLHeadingElement | null>(null)
+  const paragraphRef = useRef<HTMLParagraphElement | null>(null)
+  const filterRef = useRef<HTMLDivElement | null>(null)
+  const galleryRef = useRef<HTMLDivElement | null>(null)
+
 
   const galleryImages = [
     {
@@ -63,23 +76,96 @@ const Gallery = () => {
 
   const arr = [...galleryImages,...MinisterJson]
 
-  // Filter images based on active category
   const filteredImages = activeCategory === "all" 
     ? arr 
     : arr.filter(image => image.category === activeCategory);
 
+  useEffect(() => {
+    const titleWords = titleRef.current?.querySelectorAll('.word') || []
+    const paraWords = paragraphRef.current?.querySelectorAll('.word') || []
+
+    gsap.from(titleWords, {
+      y: 40,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.1,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: titleRef.current,
+        start: 'top 80%',
+      },
+    })
+
+    gsap.from(paraWords, {
+      y: 30,
+      opacity: 0,
+      duration: 0.6,
+      stagger: 0.08,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: paragraphRef.current,
+        start: 'top 80%',
+      },
+    })
+
+    gsap.from(filterRef.current, {
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: filterRef.current,
+        start: 'top 85%',
+      },
+    })
+
+    gsap.from(galleryRef.current, {
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: galleryRef.current,
+        start: 'top 85%',
+      },
+    })
+  }, [])
+
+
   return (
     <div className="min-h-screen flex flex-col">
-      
       {/* Hero Section */}
-      <div className="bg-primary py-16 md:p-24">
-        <div className="container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Summit <span className="text-gold-light">Gallery</span>
+      <div style={{
+          backgroundImage: "url('/pic1.png')",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center"
+        }}
+        className="bg-[#0B3D2E] relative w-full min-h-[90dvh] mx-auto rounded flex flex-col">
+           <div className="absolute inset-0 bg-black/10  z-0"></div>
+           <Navbar />
+        <div className="flex-1 flex flex-col items-center justify-center text-center px-6 container mx-auto">
+          <h1
+            ref={titleRef}
+            className="text-4xl md:text-6xl font-bold text-white mb-6 flex flex-wrap justify-center gap-2"
+          >
+            {"Summit Gallery".split(" ").map((word, i) => (
+              <span key={i} className="word inline-block">
+                {word}
+              </span>
+            ))}
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Meet the Defense Staff Chiefs and explore summit preparations
-          </p>
+         <p
+        ref={paragraphRef}
+        className="text-xl lg:text-2xl text-gray-200 max-w-3xl mx-auto flex flex-wrap justify-center gap-2"
+      >
+        {"Meet the Defense Staff Chiefs and explore summit preparations".split(" ").map((word, i) => (
+          <span key={i} className="word inline-block">
+            {word}
+          </span>
+        ))}
+      </p>
+
         </div>
       </div>
       

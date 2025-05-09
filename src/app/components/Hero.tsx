@@ -1,67 +1,150 @@
 'use client'
 
-import { Calendar, MapPin } from "lucide-react";
+import { useEffect, useRef } from 'react'
+import { gsap } from 'gsap'
+import { Calendar, MapPin } from "lucide-react"
 import Link from "next/link"
 import toast from "react-hot-toast"
+import Navbar from "./Navbar"
 
 const Hero = () => {
-  const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = "/eventSchedule.pdf"; 
-    link.download = "eventSchedule.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const bgRef = useRef(null)
+  const headlineRef = useRef<HTMLHeadingElement | null>(null)
+  const paragraphRef = useRef(null)
+  const infoRef = useRef(null)
+  const buttonsRef = useRef(null)
 
-    toast.success("Event Schedule has been downloaded!");
-  };
+  useEffect(() => {
+    if(!headlineRef.current ) return 
+    const words = headlineRef.current.querySelectorAll(".word")
+
+    const tl = gsap.timeline()
+
+    tl.from(bgRef.current, {
+      opacity: 0,
+      duration: 1,
+      ease: "power2.out"
+    })
+
+    tl.from(words, {
+      y: 50,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.12,
+      ease: "power3.out"
+    }, "-=0.4")
+
+    // 3. Paragraph
+    tl.from(paragraphRef.current, {
+      y: 30,
+      opacity: 0,
+      duration: 0.6,
+      ease: "power2.out"
+    }, "-=0.3")
+
+    // 4. Info section
+    tl.from(infoRef.current, {
+      y: 30,
+      opacity: 0,
+      duration: 0.6,
+      ease: "power2.out"
+    }, "-=0.4")
+
+    // 5. Buttons
+    tl.from(buttonsRef.current, {
+      y: 20,
+      opacity: 0,
+      duration: 0.6,
+      ease: "power2.out"
+    }, "-=0.4")
+  }, [])
+
+  const handleDownload = () => {
+    const link = document.createElement("a")
+    link.href = "/eventSchedule.pdf"
+    link.download = "eventSchedule.pdf"
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+    toast.success("Event Schedule has been downloaded!")
+  }
+
+  const headline = "African Chiefs of Defense Staff Summit"
+
   return (
-    <div className="relative bg-black/90 py-20 md:py-32">
+    <div className="relative bg-black/85 min-h-[60dvh] lg:min-h-[90dvh]">
       {/* Background pattern */}
-      <div className="absolute inset-0 z-0   opacity-10">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1500252185289-40ca85eb23a7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1pbGl0YXJ5fGVufDB8fDB8fHww')] bg-cover bg-center"></div>
+      <div ref={bgRef} className="absolute inset-0 z-0 opacity-30">
+        <div
+          style={{
+            backgroundImage: "url('/Image.jpeg')",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center"
+          }}
+          className="absolute inset-0"
+        />
       </div>
-      
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            African Chiefs of <span className="text-gold-light">Defense Staff</span> Summit
+
+      <div className="container mx-auto relative z-10 flex flex-col h-full min-h-[85dvh]">
+        <Navbar />
+        <div className="flex-1 max-w-4xl mx-auto text-center flex flex-col items-center justify-center h-full">
+
+          {/* HEADLINE */}
+          <h1
+            ref={headlineRef}
+            className="text-3xl md:text-6xl lg:text-6xl font-bold text-white mb-6 flex flex-wrap justify-center gap-2"
+          >
+            {headline.split(" ").map((word, idx) => (
+              <span key={idx} className="word inline-block">
+                {word}
+              </span>
+            ))}
           </h1>
-          
-          <p className="text-xl md:text-2xl text-gray-300 mb-8">
+
+          {/* PARAGRAPH */}
+          <p ref={paragraphRef} className="text-lg md:text-2xl text-gray-300 mb-8">
             Strengthening Continental Security Cooperation and Defense Coordination
           </p>
-          
-          <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-8 mb-10">
+
+          {/* INFO */}
+          <div
+            ref={infoRef}
+            className="flex flex-col md:flex-row justify-center gap-4 md:gap-8 mb-10"
+          >
             <div className="flex items-center justify-center text-yellow-500">
               <Calendar size={20} className="mr-2" />
-              <span>August 25-27th 2025</span>
+              <span>August 25–27th 2025</span>
             </div>
             <div className="flex items-center justify-center text-yellow-500">
               <MapPin size={20} className="mr-2" />
               <span>Transcorp Hotel, Abuja</span>
             </div>
           </div>
-          
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link 
-              href="/register" 
-              className="bg-yellow-500  hover:bg-yellow-700 text-navy-dark font-medium px-8 py-3 rounded transition-colors"
+
+          {/* BUTTONS */}
+          <div
+            ref={buttonsRef}
+            className="flex flex-col sm:flex-row justify-center gap-4"
+          >
+            <Link
+              href="/register"
+              className="bg-yellow-500 hover:bg-yellow-700 text-navy-dark font-medium px-8 py-3 rounded transition-colors"
             >
               Register Now
             </Link>
-            
-             <button 
+            <button
               onClick={handleDownload}
-              className="border border-yellow-700 cursor-pointer rounded   text-white hover:bg-yellow-800 font-medium px-8 py-3  transition-colors"
+              className="border border-yellow-700 cursor-pointer rounded text-white hover:bg-yellow-800 font-medium px-8 py-3 transition-colors"
             >
               Download Schedule
             </button>
           </div>
+
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

@@ -5,8 +5,21 @@ import { Calendar, Users, Target, MapPin } from "lucide-react";
 import Link from "next/link"; 
 import Banner from "./components/Banner";
 import VenueMap from "./components/VenueMap"
+import { useRef, useEffect } from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
 
 const Index = () => {
+
+  gsap.registerPlugin(ScrollTrigger)
+
+  const introRef = useRef(null)
+  const infoRef = useRef(null)
+  const objectivesRef = useRef(null)
+  const thematicRef = useRef(null)
+  const statementRef = useRef(null)
+
   const thematicAreas = [
     "Regional Security Cooperation",
     "Counter-Terrorism Strategies",
@@ -24,22 +37,50 @@ const Index = () => {
     "Enhance capacity building for defense institutions"
   ];
 
+  useEffect(() => {
+    const sections = [
+      introRef.current,
+      infoRef.current,
+      objectivesRef.current,
+      thematicRef.current,
+      statementRef.current
+    ]
+
+  sections.forEach((section) => {
+    if (section) {
+      gsap.from(section, {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: section,
+          start: 'top 80%', 
+          toggleActions: 'play none none none',
+        }
+      })
+    }
+  })
+}, [])
+
+
+
   return (
     <div className="min-h-screen flex flex-col">
       <Hero />
       
       {/* Introduction Section */}
-      <section className="py-16 bg-white">
+      <section className=" py-16 lg:py-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-navy-dark mb-6 text-center">
+            <h2 className="text-2xl lg:text-3xl font-bold text-navy-dark mb-6 text-center">
               Welcome to the African Chiefs of Defense Staff Summit
             </h2>
             <div className="prose max-w-none text-gray-700">
-              <p className="mb-4">
+              <p className="mb-4 text-base lg:text-xl">
                 The African Chiefs of Defense Staff (ACDS) Summit is a prestigious gathering of military leaders from across the African continent. This landmark event brings together the top defense officials from all 55 African nations to discuss critical security challenges, foster cooperation, and develop joint strategies for ensuring peace and stability across Africa.
               </p>
-              <p>
+              <p className="text-base lg:text-xl">
                 The 2025 summit represents a significant opportunity for strengthening military diplomacy, sharing expertise, and building a unified approach to continental security. Through collaborative dialogue and strategic partnerships, the ACDS Summit aims to enhance the capacity of African nations to address both traditional and emerging security threats.
               </p>
             </div>
@@ -47,10 +88,17 @@ const Index = () => {
         </div>
       </section>
       
-      {/* Key Information Section */}
-      <section className="py-24 bg-gray-100">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-navy-dark mb-12 text-center">
+      
+      <section ref={introRef} className="relative py-24 bg-gray-100  ">
+        {/* <div className="absolute inset-0 z-0 ">
+          <div 
+          style ={{
+            backgroundImage:"url('bgg.png')"
+          }}
+          className="absolute inset-0  bg-cover bg-center"></div>
+        </div> */}
+        <div className="container mx-auto px-6 z-30">
+          <h2 className="text-2xl lg:text-3xl font-bold text-primary mb-12 text-center ">
             Summit Information
           </h2>
           
@@ -64,9 +112,9 @@ const Index = () => {
               <Link key={idx} href={item.to} className="">
                 <div  className="bg-white min-h-[250px]  p-6 rounded-lg shadow-md flex flex-col items-center text-center">
                 <div className="bg-yellow-500 text-black p-3 rounded-full mb-4">
-                  <item.icon size={32} className="text-gold" />
+                  <item.icon size={32} className="" />
                 </div>
-                <h3 className="text-xl font-semibold text-navy-dark mb-2">{item.title}</h3>
+                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                 <p className="text-gray-700">{item.detail}</p>
                 <p className="text-gray-600 text-sm mt-2">{item.sub}</p>
               </div>
@@ -76,7 +124,7 @@ const Index = () => {
           </div>
 
           <div className="mt-10 text-center">
-            <Link href="/event" className="hover:underline   inline-flex items-center text-navy-dark font-medium hover:text-navy transition-colors">
+            <Link href="/event" className="hover:underline   inline-flex items-center text-white font-medium hover:text-navy transition-colors">
               Learn more about the event
               <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -87,7 +135,7 @@ const Index = () => {
       </section>
 
       {/* Objectives Section */}
-      <section className="py-24 bg-primary text-white">
+      <section ref={objectivesRef} className="py-24 bg-primary text-white">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-yellow-500 mb-12 text-center">
             Summit Objectives
@@ -106,7 +154,10 @@ const Index = () => {
       </section>
 
       {/* Thematic Areas Section */}
-      <section className="py-24 bg-white">
+      <section
+      ref={thematicRef}
+       
+      className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-primary mb-12 text-center">
             Thematic Areas
@@ -121,9 +172,16 @@ const Index = () => {
         </div>
       </section>
 
-       <section className="py-16 bg-gray-100">
+       <section
+       ref={statementRef} 
+       style={{
+        backgroundImage: "url('/pattern2.png')",
+        backgroundRepeat: "repeat",
+        backgroundSize: "auto"
+      }} 
+       className="py-16 bg-primary">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-primary mb-10 text-center">
+          <h2 className="text-3xl font-bold text-white mb-10 text-center">
             Statement from the Chief of Defense Staff
           </h2>
           

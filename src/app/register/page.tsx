@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link"
 import supabase from "../lib/utils"
+import Navbar from "../components/Navbar";
 
 const Register = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -136,12 +137,19 @@ const handleSubmit = async(e: React.FormEvent) => {
       
       
       {/* Hero Section */}
-      <div className="bg-primary py-16 md:py-24">
-        <div className="container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Summit <span className="text-gold-light">Registration</span>
+      <div 
+      style={{
+        backgroundImage: "url('/pattern2.png')",
+        backgroundRepeat: "repeat",
+        backgroundSize: "auto"
+      }} 
+      className="bg-primary mb-16 min-h-[60dvh] lg:min-h-[90dvh] flex flex-col items-center justify-center">
+        <Navbar/>
+        <div className="flex-1 container mx-auto px-6 text-center min-h-[70dvh] flex flex-col items-center justify-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Summit <span className="text-yellow-500">Registration</span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg lg:text-2xl text-gray-300 max-w-3xl mx-auto">
             Register to attend the African Chiefs of Defense Staff Summit 2025
           </p>
         </div>

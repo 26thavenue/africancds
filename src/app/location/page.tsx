@@ -1,15 +1,25 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import gsap from 'gsap'
 import { MapPin, Car, Plane } from "lucide-react";
 import Banner from '../components/Banner';
+import Navbar from '../components/Navbar';
+import Link from 'next/link';
+import { MoveUpRight } from 'lucide-react';
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+
+
+gsap.registerPlugin(ScrollTrigger)
+
 
 
 
 const ImageSlider = () => {
   const containerRef = useRef(null)
   const slideRefs = useRef<(HTMLDivElement | null)[]>([])
+
   const images=[
     "https://i0.wp.com/www.transcorphotels.com/wp-content/uploads/2022/12/HHC_6876.jpg?fit=1500%2C1001&amp;ssl=1",
     "https://i0.wp.com/www.transcorphotels.com/wp-content/uploads/2021/05/ABUHI_0317.jpg?fit=1199%2C786&ssl=1",
@@ -30,6 +40,8 @@ const ImageSlider = () => {
       }, `+=2`) 
     })
   }, [])
+
+ 
 
   return (
     <div className=" overflow-hidden mx-auto relative">
@@ -58,59 +70,124 @@ const ImageSlider = () => {
   )
 }
 
-
-
-
-
 const Venue = () => {
+  const titleRef = useRef<HTMLHeadingElement | null>(null)
+  const subtitleRef = useRef<HTMLParagraphElement | null>(null)
+  const sectionRefs = useRef<HTMLDivElement[]>([])
+  sectionRefs.current = [] 
+
+  const addToSectionRefs = (el: HTMLDivElement | null) => {
+    if (el && !sectionRefs.current.includes(el)) {
+      sectionRefs.current.push(el)
+    }
+  }
+
+   useEffect(() => {
+    const titleWords = titleRef.current?.querySelectorAll('.word') || []
+    const subtitleWords = subtitleRef.current?.querySelectorAll('.word') || []
+
+    gsap.from(titleWords, {
+      y: 40,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.1,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: titleRef.current,
+        start: 'top 80%',
+      },
+    })
+
+    gsap.from(subtitleWords, {
+      y: 30,
+      opacity: 0,
+      duration: 0.6,
+      stagger: 0.08,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: subtitleRef.current,
+        start: 'top 80%',
+      },
+    })
+
+    sectionRefs.current.forEach((section) => {
+      gsap.from(section, {
+        opacity: 0,
+        y: 50,
+        duration: 0.8,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: section,
+          start: 'top 85%',
+        },
+      })
+    })
+  }, [])
+
   return (
     <main className=''>
-       <div className="bg-primary py-16 md:py-24 mb-16">
-        <div className="container mx-auto px-6 text-center">
-          <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
-            Event <span className="text-gold-light">Location</span>
+       <div
+       style = {{
+        backgroundImage:"url('/transcorp.png')",
+       }} 
+       className=" min-h-[90dvh] mb-16 bg-cover bg-no-repeat bg-center">
+        <Navbar/>
+        <div className="flex-1 flex flex-col justify-center items-center container mx-auto px-6 text-center h-full  min-h-[75dvh] ">
+         <h1
+            ref={titleRef}
+            className="text-3xl md:text-6xl font-bold text-white mb-6 flex flex-wrap justify-center gap-2"
+          >
+            {"Event Location".split(" ").map((word, i) => (
+              <span key={i} className="word inline-block">{word}</span>
+            ))}
           </h1>
-          <p className="text-l lg:text-xl text-gray-300 max-w-3xl mx-auto">
-            Transcorp Hilton Hotel, Abuja, Nigeria
-          </p>
+          <p
+          ref={subtitleRef}
+          className="text-xl lg:text-2xl text-gray-200 max-w-3xl mx-auto flex flex-wrap justify-center gap-2"
+        >
+          {"Transcorp Hilton Hotel, Abuja, Nigeria".split(" ").map((word, i) => (
+            <span key={i} className="word inline-block">{word}</span>
+          ))}
+        </p>
         </div>
       </div>
 
-          <img 
+          {/* <img 
               className="h-[400px] lg:h-[70dvh] w-[90dvw] mx-auto rounded-3xl object-cover"
               loading="lazy" 
-              src="https://i0.wp.com/www.transcorphotels.com/wp-content/uploads/2022/12/HHC_6876.jpg?fit=1500%2C1001&amp;ssl=1"  alt="" />
+              src="https://i0.wp.com/www.transcorphotels.com/wp-content/uploads/2022/12/HHC_6876.jpg?fit=1500%2C1001&amp;ssl=1"  alt="" /> */}
        
-         <div className="my-16 px-8 lg:px-24 ">
-            <h2 className="text-3xl font-bold mb-4">Transcorp Hotels</h2>
-      <p className="mb-6">
-        Transcorp Hotels Plc is one of Nigeria’s leading hospitality companies, known for delivering
-        excellent guest experiences and world-class service. It is a subsidiary of Transnational Corporation
-        of Nigeria (Transcorp) and operates premium hotels that cater to both business and leisure travelers.
-      </p>
-      <p className="mb-6">
-        The Transcorp Hilton Hotel in Abuja stands as one of Nigeria's premier luxury hotels and a landmark in the capital city. As the host venue for the African Chiefs of Defense Staff Summit 2025, it offers world-class facilities that meet international standards for high-level diplomatic and military gatherings.
+         <div  ref={addToSectionRefs} className="my-16 px-8 lg:px-24 ">
+            <h2 className="text-4xl font-bold mb-4">Transcorp Hilton Hotel</h2>
+              <p className="mb-6 text-base lg:text-xl leading-8">
+                Transcorp Hotels Plc is one of Nigeria’s leading hospitality companies, known for delivering
+                excellent guest experiences and world-class service. It is a subsidiary of Transnational Corporation
+                of Nigeria (Transcorp) and operates premium hotels that cater to both business and leisure travelers.
+              </p>
+              <p className="mb-6 text-base lg:text-xl  leading-8">
+                The Transcorp Hilton Hotel in Abuja stands as one of Nigeria's premier luxury hotels and a landmark in the capital city. As the host venue for the African Chiefs of Defense Staff Summit 2025, it offers world-class facilities that meet international standards for high-level diplomatic and military gatherings.
 
-Located in the heart of Nigeria's federal capital territory, the hotel is situated in close proximity to key government buildings, embassies, and international organizations, making it an ideal venue for this prestigious continental event.
+        Located in the heart of Nigeria's federal capital territory, the hotel is situated in close proximity to key government buildings, embassies, and international organizations, making it an ideal venue for this prestigious continental event.
 
-The summit will utilize the hotel's extensive conference facilities, including the Congress Hall for plenary sessions, multiple executive meeting rooms for breakout discussions, and expansive exhibition spaces for technology displays and national delegations.
-      </p>
+        The summit will utilize the hotel's extensive conference facilities, including the Congress Hall for plenary sessions, multiple executive meeting rooms for breakout discussions, and expansive exhibition spaces for technology displays and national delegations.
+              </p>
 
-     
+              <Link  href="https://www.transcorphotels.com/">
+                <p className=' flex gap-2 rounded-full items-center hover:bg-green-100 cursor-pointer max-w-fit max-h-fit px-6 py-3 transition-colors ease-in-out text-xl my-16 text-primary font-medium'>Visit Hotel
+                <span>  <MoveUpRight  className='text-primary'/> </span>
+                </p>
+              
+              </Link>
+              
+                </div>  
 
-      <p className="mt-6">
-        Transcorp Hotels is committed to redefining hospitality in Africa through innovation, sustainability,
-        and guest satisfaction.
-      </p>
-        </div>
-
-        <div className="my-8">
+        <div ref={addToSectionRefs} className="my-8">
             <ImageSlider/>
         </div>
 
-        <section className="py-16 bg-gray-100">
+        <section ref={addToSectionRefs} className="py-16 lg:py-24 bg-primary">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-navy-dark mb-10 text-center">
+          <h2 className="text-3xl font-bold text-navy-dark mb-10 text-center text-white">
             Getting to the Venue
           </h2>
           
@@ -118,8 +195,8 @@ The summit will utilize the hotel's extensive conference facilities, including t
             {/* From Airport */}
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="flex items-center mb-4">
-                <div className="bg-primary-light p-3 rounded-full mr-4">
-                  <Plane size={24} className="text-gold" />
+                <div className="bg-primary p-3 rounded-full mr-4">
+                  <Plane size={24} className="text-yellow-500" />
                 </div>
                 <h3 className="text-xl font-semibold text-navy-dark">From Nnamdi Azikiwe International Airport</h3>
               </div>
@@ -146,8 +223,8 @@ The summit will utilize the hotel's extensive conference facilities, including t
             {/* By Car */}
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="flex items-center mb-4">
-                <div className="bg-primary-light p-3 rounded-full mr-4">
-                  <Car size={24} className="text-gold" />
+                <div className="bg-primary p-3 rounded-full mr-4">
+                  <Car size={24} className="text-yellow-500" />
                 </div>
                 <h3 className="text-xl font-semibold text-navy-dark">By Car</h3>
               </div>
@@ -174,8 +251,8 @@ The summit will utilize the hotel's extensive conference facilities, including t
             {/* Local Transportation */}
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="flex items-center mb-4">
-                <div className="bg-primary-light p-3 rounded-full mr-4">
-                  <MapPin size={24} className="text-gold" />
+                <div className="bg-primary p-3 rounded-full mr-4">
+                  <MapPin size={24} className="text-yellow-500" />
                 </div>
                 <h3 className="text-xl font-semibold text-navy-dark">Local Information</h3>
               </div>
@@ -202,29 +279,29 @@ The summit will utilize the hotel's extensive conference facilities, including t
         </div>
       </section>
 
-      <section className="py-16 bg-white p-8 lg:px-24">
+      <section ref={addToSectionRefs} className="py-16 bg-gray-100 p-8 lg:px-24">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-navy-dark mb-10 text-center">
             About Abuja
           </h2>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="text-base lg:text-xl  grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="prose max-w-none text-gray-700">
-                <p className="mb-4">
+                <p className="mb-4 text-base lg:text-xl ">
                   As the capital city of Nigeria, Abuja is a planned modern city located in the center of the country. Designed in the 1980s and officially becoming Nigeria's capital in 1991, it represents one of Africa's most organized urban centers.
                 </p>
-                <p className="mb-4">
+                <p className="mb-4 text-base lg:text-xl ">
                   Abuja features a unique blend of modern architecture, carefully planned districts, and natural landscapes. The city is home to numerous government buildings, diplomatic missions, cultural landmarks, and business centers.
                 </p>
-                <p>
+                <p className='text-base lg:text-xl '>
                   With its central location within Nigeria and excellent international connections through the Nnamdi Azikiwe International Airport, Abuja serves as an ideal host city for continental gatherings like the African Chiefs of Defense Staff Summit.
                 </p>
               </div>
               
               <div className="mt-8">
-                <h3 className="text-xl font-semibold text-navy-dark mb-4">Notable Landmarks Near the Venue</h3>
-                <ul className="space-y-2">
+                <h3 className="text-xl lg:text-2xl font-semibold text-navy-dark mb-4">Notable Landmarks Near the Venue</h3>
+                <ul className="space-y-2 text-base lg:text-xl ">
                   <li className="flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gold mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
