@@ -130,7 +130,7 @@ const Venue = () => {
        style = {{
         backgroundImage:"url('/transcorp.png')",
        }} 
-       className=" min-h-[90dvh] mb-16 bg-cover bg-no-repeat bg-center">
+       className=" min-h-[90dvh] mb-16 bg-cover bg-no-repeat bg-center bg-primary ">
         <Navbar/>
         <div className="flex-1 flex flex-col justify-center items-center container mx-auto px-6 text-center h-full  min-h-[75dvh] ">
          <h1

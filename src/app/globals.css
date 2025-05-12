@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 
-
 @theme {
   --color-midnight: #121063;
   --color-tahiti: #3ab7bf;
   --color-bermuda: #78dcca;
   --color-primary: #0B3D2E;
+  --font-instrument-serif: "Instrument Serif"
 }
 
 
@@ -14,3 +14,6 @@ body {
   font-family: 'DM Sans', sans-serif;
 }
 
+h1 {
+  font-family: var(--font-instrument-serif), serif;
+}

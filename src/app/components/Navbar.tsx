@@ -1,20 +1,30 @@
 'use client'
 
-import Link from "next/link"; // Correct import
-import { Menu, X } from "lucide-react";
-import { useState, useEffect } from "react";
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { Menu, X } from "lucide-react"
+import { useState, useEffect } from "react"
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
-    document.body.style.overflow = isOpen ? "hidden" : "";
+    document.body.style.overflow = isOpen ? "hidden" : ""
     return () => {
-      document.body.style.overflow = "";
-    };
-  }, [isOpen]);
+      document.body.style.overflow = ""
+    }
+  }, [isOpen])
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleMenu = () => setIsOpen(!isOpen)
+
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/event", label: "Event Details" },
+    { href: "/gallery", label: "Gallery" },
+    { href: "/location", label: "Location" },
+    { href: "/register", label: "Register" },
+  ]
 
   return (
     <nav className="bg-black/40 text-white py-8 px-6 lg:px-24 relative z-50 w-full">
@@ -22,21 +32,28 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center space-x-2">
-          <span className="text-yellow-500 font-bold text-2xl">ACDS</span>
-          <span className="hidden md:inline-block font-semibold">Summit</span>
-        </Link>
-        <p className="mx-2">x </p>
-        <img src="defense.png"  className="w-10 h-10" alt="nigerianDefenseLogo"/>
+            <span className="text-yellow-500 font-bold text-2xl">ACDS</span>
+            <span className="hidden md:inline-block font-semibold">Summit</span>
+          </Link>
+          <p className="mx-2">x</p>
+          <img src="defense.png" className="w-10 h-10" alt="Nigerian Defense Logo" />
         </div>
-        
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex space-x-8 items-center text-white font-medium">
-          <Link href="/" className="hover:text-yellow-500 transition-colors">Home</Link>
-          <Link href="/event" className="hover:text-yellow-500 transition-colors">Event Details</Link>
-          <Link href="/gallery" className="hover:text-yellow-500 transition-colors">Gallery</Link>
-          <Link href="/location" className="hover:text-yellow-500 transition-colors">Location</Link>
-          <Link href="/register" className="hover:bg-yellow-500 px-4 py-2 rounded transition-colors">Register</Link>
+          {navLinks.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className={`transition-colors ${
+                pathname === href
+                  ? "text-yellow-500"
+                  : "hover:text-yellow-300"
+              } ${label === "Register" ? "px-4 py-2 rounded hover:bg-yellow-500" : ""}`}
+            >
+              {label}
+            </Link>
+          ))}
         </div>
 
         {/* Mobile Menu Button */}
@@ -46,14 +63,14 @@ const Navbar = () => {
           className="md:hidden w-10 h-10 flex justify-end items-center cursor-pointer z-50"
         >
           {isOpen ? (
-            <X size={32} className="bg-primary " />
+            <X size={32} className="bg-primary" />
           ) : (
             <Menu size={32} className="text-white" />
           )}
         </button>
       </div>
 
-      {/* Mobile Menu Overlay and Drawer */}
+      {/* Mobile Menu */}
       {isOpen && (
         <>
           <div className="fixed inset-0 bg-black opacity-50 z-40" onClick={toggleMenu} />
@@ -67,16 +84,25 @@ const Navbar = () => {
                 <X size={32} />
               </button>
             </div>
-            <Link href="/" className="hover:text-yellow-500 transition-colors" onClick={toggleMenu}>Home</Link>
-            <Link href="/event" className="hover:text-yellow-500 transition-colors" onClick={toggleMenu}>Event Details</Link>
-            <Link href="/gallery" className="hover:text-yellow-500 transition-colors" onClick={toggleMenu}>Gallery</Link>
-            <Link href="/location" className="hover:text-yellow-500 transition-colors" onClick={toggleMenu}>Location</Link>
-            <Link href="/register" className="hover:bg-yellow-500 transition-colors" onClick={toggleMenu}>Register</Link>
+            {navLinks.map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                onClick={toggleMenu}
+                className={`transition-colors ${
+                  pathname === href
+                    ? "text-yellow-500"
+                    : "hover:text-yellow-500"
+                }`}
+              >
+                {label}
+              </Link>
+            ))}
           </div>
         </>
       )}
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
