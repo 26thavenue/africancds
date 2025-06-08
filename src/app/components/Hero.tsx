@@ -61,20 +61,20 @@ const Hero = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a")
-    link.href = "/eventSchedule.pdf"
-    link.download = "eventSchedule.pdf"
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
+    // link.href = "/eventSchedule.pdf"
+    // link.download = "eventSchedule.pdf"
+    // document.body.appendChild(link)
+    // link.click()
+    // document.body.removeChild(link)
     toast.success("Event Schedule has been downloaded!")
   }
 
-  const headline = "African Chiefs of Defense Staff Summit"
+  const headline = "African Chiefs of Defence Staff Summit"
 
   return (
     <div className="relative bg-black/85 min-h-[60dvh] lg:min-h-[90dvh]">
       {/* Background pattern */}
-      <div ref={bgRef} className="absolute inset-0 z-0 opacity-30">
+      <div ref={bgRef} className="absolute inset-0 z-0 opacity-55">
         <div
           style={{
             backgroundImage: "url('/Image.jpeg')",
@@ -104,7 +104,7 @@ const Hero = () => {
 
           {/* PARAGRAPH */}
           <p ref={paragraphRef} className="text-lg md:text-2xl text-gray-300 mb-8">
-            Strengthening Continental Security Cooperation and Defense Coordination
+            Combating Contemporary Threats to Regional Peace and Security in Africa: The Role of Strategic Defence Collaboration.
           </p>
 
           {/* INFO */}
@@ -118,7 +118,7 @@ const Hero = () => {
             </div>
             <div className="flex items-center justify-center text-yellow-500">
               <MapPin size={20} className="mr-2" />
-              <span>Transcorp Hotel, Abuja</span>
+              <span>Transcorp Hilton Hotel, Abuja</span>
             </div>
           </div>
 

@@ -2,10 +2,10 @@ export const vendorTicketPendingEmail = {
   subject: "Vendor Ticket Order Received – ACDS Summit 2025",
   html: `
     <h2 style="font-size: 24px; font-weight: bold; color: #1a2e4f; text-align: center;">
-      Welcome to the African Chiefs of Defense Staff Summit
+      Welcome to the African Chiefs of Defence Staff Summit
     </h2>
     <p>
-      Thank you for choosing to participate as a vendor at the African Chiefs of Defense Staff (ACDS) Summit 2025.
+      Thank you for choosing to participate as a vendor at the African Chiefs of Defence Staff (ACDS) Summit 2025.
     </p>
     <p>
       We have received your request for a <strong>Vendor Ticket</strong>. The vendor ticket fee is <strong>$3,000</strong>.

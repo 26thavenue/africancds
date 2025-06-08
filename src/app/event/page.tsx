@@ -72,11 +72,11 @@ const Events = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/eventSchedule.pdf"; 
-    link.download = "eventSchedule.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // link.href = "/eventSchedule.pdf"; 
+    // link.download = "eventSchedule.pdf";
+    // document.body.appendChild(link);
+    // link.click();
+    // document.body.removeChild(link);
 
     toast.success("Event Schedule has been downloaded!");
   };
@@ -122,7 +122,7 @@ const Events = () => {
         <div className='my-8 flex flex-col gap-4'>
             <h4 className='text-base lg:text-lg text-gray-600'> Sunday 25th  - Tuesday 27th August, 2025.</h4>
             <h1 className='text-2xl lg:text-5xl font-bold  text-[#0B3D2E]'>
-                AFRICAN CHIEFS OF DEFENSE CONFERENCE 2024
+                AFRICAN CHIEFS OF DEFENCE CONFERENCE 2024
             </h1>
         </div>
 
@@ -134,11 +134,11 @@ const Events = () => {
             </div>
 
             <p className="my-2 text-base lg:text-lg">
-                 Get ready to connect and engage with Africa’s Defence Chiefs at the Africa Chiefs of Defence Summit to be held from 18-19th June 2025 in Abuja, Nigeria. This landmark event marks a historic first-of-a-kind gathering that brings together Chiefs of Defence from across the continent and defence industry experts and contractors towards reshaping the future of defence procurement and cooperation in the region. This exclusive gathering will serve as an important platform for defence leaders to engage in high-level discussions on shared security challenges, exchange strategic insights, and strengthen regional and global cooperation.
+                 Get ready to connect and engage with Africa’s Defence Chiefs at the Africa Chiefs of Defence Summit to be held from 25-27th of August 2025 in Abuja, Nigeria. This landmark event marks a historic first-of-a-kind gathering that brings together Chiefs of Defence from across the continent and defence industry experts and contractors towards reshaping the future of defence procurement and cooperation in the region. This exclusive gathering will serve as an important platform for defence leaders to engage in high-level discussions on shared security challenges, exchange strategic insights, and strengthen regional and global cooperation.
             </p>
 
             <p className="my-2 text-base lg:text-lg">
-                With growing security complexities in Africa, the summit aims to highlight latest advancements and innovations shaping defense landscape by providing a platform for international and regional defence solution providers to showcase modern equipment and technologies with the capabilities to support African defence forces in achieving their respective national security and defence objectives.
+                With growing security complexities in Africa, the summit aims to highlight latest advancements and innovations shaping defence landscape by providing a platform for international and regional defence solution providers to showcase modern equipment and technologies with the capabilities to support African defence forces in achieving their respective national security and defence objectives.
             </p>
         </div>
 
@@ -181,7 +181,7 @@ const Events = () => {
                   </div>
                   <div>
                     <p className="font-medium text-primary">Registration and Welcome</p>
-                    <p className="text-gray-600 text-sm">Transcorp Hotel Main Hall</p>
+                    <p className="text-gray-600 text-sm">Transcorp Hilton Hotel Main Hall</p>
                   </div>
                 </div>
                 <div className="flex">
@@ -217,7 +217,7 @@ const Events = () => {
                   </div>
                   <div>
                     <p className="font-medium text-primary">Welcome Reception</p>
-                    <p className="text-gray-600 text-sm">Hosted by the Chief of Defense Staff</p>
+                    <p className="text-gray-600 text-sm">Hosted by the Chief of Defence Staff</p>
                   </div>
                 </div>
               </div>
@@ -256,7 +256,7 @@ const Events = () => {
                   </div>
                   <div>
                     <p className="font-medium text-primary">Technology Exhibition</p>
-                    <p className="text-gray-600 text-sm">Defense Innovation Showcase</p>
+                    <p className="text-gray-600 text-sm">Defence Innovation Showcase</p>
                   </div>
                 </div>
                 <div className="flex">
@@ -265,7 +265,7 @@ const Events = () => {
                   </div>
                   <div>
                     <p className="font-medium text-primary">Strategic Planning Session</p>
-                    <p className="text-gray-600 text-sm">Continental Defense Coordination</p>
+                    <p className="text-gray-600 text-sm">Continental Defence Coordination</p>
                   </div>
                 </div>
                 <div className="flex">
@@ -353,7 +353,7 @@ const Events = () => {
        className="py-16 bg-primary">
         <div className="container mx-auto px-6">
           <h1 className="text-4xl font-bold text-primary mb-10 text-center">
-            Statement from the Chief of Defense Staff
+            Statement from the Chief of Defence Staff
           </h1>
           
           <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md">
@@ -363,11 +363,11 @@ const Events = () => {
               </div>
               <div>
                 <h3 className="text-2xl font-semibold text-primary mb-2">
-                  General Christopher Musa
+                  General Christopher Gwabin Musa
                 </h3>
-                <p className="text-gray-600 mb-0 lg:mb-4">Chief of Defense Staff, Federal Republic of Nigeria</p>
+                <p className="text-gray-600 mb-0 lg:mb-4">Chief of Defence Staff, Federal Republic of Nigeria</p>
                 {/* <p className="text-navy">
-                  Statement on the Inauguration of the Planning Committee for the African Chiefs of Defense Staff Summit 2025
+                  Statement on the Inauguration of the Planning Committee for the African Chiefs of Defence Staff Summit 2025
                 </p> */}
               </div>
             </div>
@@ -377,19 +377,19 @@ const Events = () => {
                 Distinguished colleagues, esteemed officers, and members of the Planning Committee,
               </p>
               <p className="mb-4">
-                It is with great honor and a profound sense of responsibility that I address you today at the inauguration of the Planning Committee for the upcoming African Chiefs of Defense Staff Summit 2025. This summit represents a pivotal moment for our continent's collective security architecture.
+                It is with great honor and a profound sense of responsibility that I address you today at the inauguration of the Planning Committee for the upcoming African Chiefs of Defence Staff Summit 2025. This summit represents a pivotal moment for our continent's collective security architecture.
               </p>
               <p className="mb-4">
                 Africa faces unique security challenges that transcend national borders. From transnational terrorism to maritime insecurity, from ethnic conflicts to climate-induced crises, the threats to our people's safety and wellbeing demand a unified and coordinated response. No single nation, regardless of its military strength or economic resources, can effectively address these challenges in isolation.
               </p>
               {/* <p className="mb-4">
-                The African Chiefs of Defense Staff Summit is conceived as a platform where we, as military leaders responsible for our nations' defense, can forge stronger bonds of cooperation, share critical intelligence, develop joint capability frameworks, and harmonize our strategic approaches to continental security.
+                The African Chiefs of Defence Staff Summit is conceived as a platform where we, as military leaders responsible for our nations' defence, can forge stronger bonds of cooperation, share critical intelligence, develop joint capability frameworks, and harmonize our strategic approaches to continental security.
               </p> */}
               <p className="mb-4">
                 To the distinguished members of the Planning Committee, I charge you with the important task of organizing a summit that will not merely be a gathering of military officials, but a transformative event that produces tangible outcomes for Africa's security landscape. I have full confidence in your abilities to deliver on this mandate.
               </p>
               <p>
-                Together, we shall work towards a more secure Africa, where peace enables prosperity, and where our defense institutions serve as pillars of stability for generations to come.
+                Together, we shall work towards a more secure Africa, where peace enables prosperity, and where our defence institutions serve as pillars of stability for generations to come.
               </p>
             </div>
           </div>

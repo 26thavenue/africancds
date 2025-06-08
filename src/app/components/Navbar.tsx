@@ -36,7 +36,7 @@ const Navbar = () => {
             <span className="hidden md:inline-block font-semibold">Summit</span>
           </Link>
           <p className="mx-2">x</p>
-          <img src="defense.png" className="w-10 h-10" alt="Nigerian Defense Logo" />
+          <img src="defense.png" className="w-10 h-10" alt="Nigerian Defence Logo" />
         </div>
 
         {/* Desktop Menu */}
@@ -49,7 +49,7 @@ const Navbar = () => {
                 pathname === href
                   ? "text-yellow-500"
                   : "hover:text-yellow-300"
-              } ${label === "Register" ? "px-4 py-2 rounded hover:bg-yellow-500" : ""}`}
+              } ${label === "Register" ? "px-4 py-2 rounded hover:bg-yellow-500 hover:text-white" : ""}`}
             >
               {label}
             </Link>

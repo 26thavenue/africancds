@@ -25,15 +25,15 @@ const Gallery = () => {
     {
       id: 61,
       category: "officials",
-      title: "Chief of Defense Staff - Nigeria",
-      subtitle: "General Christopher Musa",
+      title: "Chief of Defence Staff - Nigeria",
+      subtitle: "General Christopher Gwabin Musa",
       imageUrl: "https://africacdssummit.com/wp-content/uploads/2025/03/image006.png",
       country: "Nigeria"
     },
     {
       id: 67,
       category: "venues",
-      title: "Transcorp Hotel - Exterior",
+      title: "Transcorp Hilton Hotel - Exterior",
       subtitle: "Summit Venue",
       imageUrl: "https://images.unsplash.com/photo-1566073771259-6a8506099945",
     },
@@ -48,7 +48,7 @@ const Gallery = () => {
       id: 69,
       category: "venues",
       title: "Exhibition Area",
-      subtitle: "Defense Technology Showcase",
+      subtitle: "Defence Technology Showcase",
       imageUrl: "https://images.unsplash.com/photo-1497366811353-6870744d04b2",
     },
     {
@@ -159,7 +159,7 @@ const Gallery = () => {
         ref={paragraphRef}
         className="text-xl lg:text-2xl text-gray-200 max-w-3xl mx-auto flex flex-wrap justify-center gap-2"
       >
-        {"Meet the Defense Staff Chiefs and explore summit preparations".split(" ").map((word, i) => (
+        {"Meet the Defence Staff Chiefs and explore summit preparations".split(" ").map((word, i) => (
           <span key={i} className="word inline-block">
             {word}
           </span>
@@ -191,7 +191,7 @@ const Gallery = () => {
                   : "bg-gray-100 hover:bg-gray-200 text-gray-700"
               }`}
             >
-              Defense Staff Chiefs
+              Defence Staff Chiefs
             </button>
             <button 
               onClick={() => setActiveCategory("venues")}
@@ -218,10 +218,10 @@ const Gallery = () => {
           {activeCategory === "officials" && (
             <div className="text-center mb-8">
               <h2 className="text-2xl font-semibold text-navy-dark">
-                Chiefs of Defense Staff
+                Chiefs of Defence Staff
               </h2>
               <p className="text-gray-600">
-                Representing the 55 African Nations
+                Representing the 54 African Nations
               </p>
             </div>
           )}
@@ -264,7 +264,7 @@ const Gallery = () => {
           {activeCategory === "officials" && filteredImages.length < 10 && (
             <div className="mt-12 text-center">
               <p className="text-gray-600">
-                More profiles of Chiefs of Defense Staff will be added as confirmations are received.
+                More profiles of Chiefs of Defence Staff will be added as confirmations are received.
               </p>
             </div>
           )}

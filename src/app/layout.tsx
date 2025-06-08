@@ -27,13 +27,13 @@ export const metadata = {
     default: "ACDS Summit 2025",
     template: "%s | ACDS Summit",
   },
-  description: "Africa's top defense summit connecting military leaders across the continent.",
+  description: "Africa's top defence summit connecting military leaders across the continent.",
   icons: {
     icon: "/logo.PNG", 
   },
   openGraph: {
     title: "ACDS Summit 2025",
-    description: "Explore event details, gallery and logistics for Africa’s premier defense summit.",
+    description: "Explore event details, gallery and logistics for Africa’s premier defence summit.",
     url: "https://japa.run",
     siteName: "ACDS Summit",
     images: [
@@ -50,7 +50,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "ACDS Summit 2025",
-    description: "Join Africa’s defense leaders in Abuja, Nigeria for a historic summit.",
+    description: "Join Africa’s defence leaders in Abuja, Nigeria for a historic summit.",
     images: ["/logo.PNG"],
   },
 }

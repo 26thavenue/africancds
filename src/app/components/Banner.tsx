@@ -7,7 +7,7 @@ const Banner = () => {
             Join Us in Abuja
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto mb-8 text-base lg:text-lg">
-            Register now to secure your participation in this landmark event for African defense and security.
+            Register now to secure your participation in this landmark event for African defence and security.
           </p>
           <a href="/register" className="bg-white hover:bg-gray-100 text-primary font-medium px-8 py-3 rounded-lg transition-colors inline-block">
             Register for the Summit

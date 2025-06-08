@@ -150,7 +150,7 @@ const handleSubmit = async(e: React.FormEvent) => {
             Summit <span className="text-yellow-500">Registration</span>
           </h1>
           <p className="text-lg lg:text-2xl text-gray-300 max-w-3xl mx-auto">
-            Register to attend the African Chiefs of Defense Staff Summit 2025
+            Register to attend the African Chiefs of Defence Staff Summit 2025
           </p>
         </div>
       </div>
@@ -167,7 +167,7 @@ const handleSubmit = async(e: React.FormEvent) => {
                 </svg>
                 <h2 className="text-2xl font-bold text-primary mb-4">Registration Submitted Successfully!</h2>
                 <p className="text-primary mb-6">
-                  Thank you for registering for the African Chiefs of Defense Staff Summit 2025. We have received your registration and will be in touch shortly with confirmation details.
+                  Thank you for registering for the African Chiefs of Defence Staff Summit 2025. We have received your registration and will be in touch shortly with confirmation details.
                 </p>
                 <p className="text-primary">
                   A confirmation email has been sent to the address you provided.
@@ -253,20 +253,67 @@ const handleSubmit = async(e: React.FormEvent) => {
                           id="country"
                           name="country"
                           required
-                          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-navy focus:border-navy"
+                          
+                          className="w-full  px-4 py-2 border border-gray-300 rounded-md focus:ring-navy focus:border-navy"
                         >
                           <option value="">Select your country</option>
-                          <option value="Algeria">Algeria</option>
+                          
                           <option value="Angola">Angola</option>
-                          <option value="Benin">Benin</option>
-                          <option value="Botswana">Botswana</option>
-                          <option value="Burkina Faso">Burkina Faso</option>
-                          {/* Add all 55 African countries in a real implementation */}
-                          <option value="Nigeria">Nigeria</option>
-                          <option value="South Africa">South Africa</option>
-                          <option value="Egypt">Egypt</option>
-                          <option value="Kenya">Kenya</option>
-                          <option value="Ghana">Ghana</option>
+                         <option value="Algeria">Algeria</option>
+<option value="Angola">Angola</option>
+<option value="Benin">Benin</option>
+<option value="Botswana">Botswana</option>
+<option value="Burkina Faso">Burkina Faso</option>
+<option value="Burundi">Burundi</option>
+<option value="Cabo Verde">Cabo Verde</option>
+<option value="Cameroon">Cameroon</option>
+<option value="Central African Republic">Central African Republic</option>
+<option value="Chad">Chad</option>
+<option value="Comoros">Comoros</option>
+<option value="Democratic Republic of the Congo">Democratic Republic of the Congo</option>
+<option value="Republic of the Congo">Republic of the Congo</option>
+<option value="Côte d'Ivoire">Côte d'Ivoire</option>
+<option value="Djibouti">Djibouti</option>
+<option value="Egypt">Egypt</option>
+<option value="Equatorial Guinea">Equatorial Guinea</option>
+<option value="Eritrea">Eritrea</option>
+<option value="Eswatini">Eswatini</option>
+<option value="Ethiopia">Ethiopia</option>
+<option value="Gabon">Gabon</option>
+<option value="Gambia">Gambia</option>
+<option value="Ghana">Ghana</option>
+<option value="Guinea">Guinea</option>
+<option value="Guinea-Bissau">Guinea-Bissau</option>
+<option value="Kenya">Kenya</option>
+<option value="Lesotho">Lesotho</option>
+<option value="Liberia">Liberia</option>
+<option value="Libya">Libya</option>
+<option value="Madagascar">Madagascar</option>
+<option value="Malawi">Malawi</option>
+<option value="Mali">Mali</option>
+<option value="Mauritania">Mauritania</option>
+<option value="Mauritius">Mauritius</option>
+<option value="Morocco">Morocco</option>
+<option value="Mozambique">Mozambique</option>
+<option value="Namibia">Namibia</option>
+<option value="Niger">Niger</option>
+<option value="Nigeria">Nigeria</option>
+<option value="Rwanda">Rwanda</option>
+<option value="Sao Tome and Principe">Sao Tome and Principe</option>
+<option value="Senegal">Senegal</option>
+<option value="Seychelles">Seychelles</option>
+<option value="Sierra Leone">Sierra Leone</option>
+<option value="Somalia">Somalia</option>
+<option value="South Africa">South Africa</option>
+<option value="South Sudan">South Sudan</option>
+<option value="Sudan">Sudan</option>
+<option value="Tanzania">Tanzania</option>
+<option value="Togo">Togo</option>
+<option value="Tunisia">Tunisia</option>
+<option value="Uganda">Uganda</option>
+<option value="Zambia">Zambia</option>
+<option value="Zimbabwe">Zimbabwe</option>
+
                         </select>
                       </div>
                       <div>

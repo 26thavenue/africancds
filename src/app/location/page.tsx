@@ -165,7 +165,7 @@ const Venue = () => {
                 of Nigeria (Transcorp) and operates premium hotels that cater to both business and leisure travelers.
               </p>
               <p className="mb-6 text-base lg:text-xl  leading-8">
-                The Transcorp Hilton Hotel in Abuja stands as one of Nigeria's premier luxury hotels and a landmark in the capital city. As the host venue for the African Chiefs of Defense Staff Summit 2025, it offers world-class facilities that meet international standards for high-level diplomatic and military gatherings.
+                The Transcorp Hilton Hotel in Abuja stands as one of Nigeria's premier luxury hotels and a landmark in the capital city. As the host venue for the African Chiefs of Defence Staff Summit 2025, it offers world-class facilities that meet international standards for high-level diplomatic and military gatherings.
 
         Located in the heart of Nigeria's federal capital territory, the hotel is situated in close proximity to key government buildings, embassies, and international organizations, making it an ideal venue for this prestigious continental event.
 
@@ -295,7 +295,7 @@ const Venue = () => {
                   Abuja features a unique blend of modern architecture, carefully planned districts, and natural landscapes. The city is home to numerous government buildings, diplomatic missions, cultural landmarks, and business centers.
                 </p>
                 <p className='text-base lg:text-xl '>
-                  With its central location within Nigeria and excellent international connections through the Nnamdi Azikiwe International Airport, Abuja serves as an ideal host city for continental gatherings like the African Chiefs of Defense Staff Summit.
+                  With its central location within Nigeria and excellent international connections through the Nnamdi Azikiwe International Airport, Abuja serves as an ideal host city for continental gatherings like the African Chiefs of Defence Staff Summit.
                 </p>
               </div>
               
@@ -318,7 +318,7 @@ const Venue = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gold mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    Defense Headquarters
+                    Defence Headquarters
                   </li>
                   <li className="flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gold mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
