@@ -74,7 +74,7 @@ const Hero = () => {
   return (
     <div className="relative bg-black/85 min-h-[60dvh] lg:min-h-[90dvh]">
       {/* Background pattern */}
-      <div ref={bgRef} className="absolute inset-0 z-0 opacity-55">
+      <div ref={bgRef} className="absolute inset-0 z-0 opacity-30">
         <div
           style={{
             backgroundImage: "url('/Image.jpeg')",
