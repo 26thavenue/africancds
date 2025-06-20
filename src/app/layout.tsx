@@ -29,16 +29,16 @@ export const metadata = {
   },
   description: "Africa's top defence summit connecting military leaders across the continent.",
   icons: {
-    icon: "/logo.PNG", 
+    icon: "/ACDSS.svg", 
   },
   openGraph: {
     title: "ACDS Summit 2025",
-    description: "Explore event details, gallery and logistics for Africa’s premier defence summit.",
-    url: "https://japa.run",
+    description: "Africa's top defence summit connecting military leaders across the continent.",
+    url: "https://www.acdss.com.ng/",
     siteName: "ACDS Summit",
     images: [
       {
-        url: "/logo.PNG", 
+        url: "/ACDSS.svg", 
         width: 1200,
         height: 630,
         alt: "ACDS Summit Banner",
@@ -51,7 +51,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "ACDS Summit 2025",
     description: "Join Africa’s defence leaders in Abuja, Nigeria for a historic summit.",
-    images: ["/logo.PNG"],
+    images: ["/ACDSS.svg"],
   },
 }
 

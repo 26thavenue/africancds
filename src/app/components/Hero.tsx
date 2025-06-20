@@ -86,7 +86,7 @@ const Hero = () => {
         />
       </div>
 
-      <div className="container mx-auto relative z-10 flex flex-col h-full min-h-[85dvh]">
+      <div className=" mx-auto relative z-10 flex flex-col h-full min-h-[85dvh]">
         <Navbar />
         <div className="flex-1 max-w-4xl mx-auto text-center flex flex-col items-center justify-center h-full">
 

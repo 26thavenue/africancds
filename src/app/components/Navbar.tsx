@@ -27,13 +27,12 @@ const Navbar = () => {
   ]
 
   return (
-    <nav className="bg-black/40 text-white py-8 px-6 lg:px-24 relative z-50 w-full">
-      <div className="container mx-auto flex justify-between items-center">
+    <nav className="bg-black/40 py-8 px-6 lg:px-24 text-white  relative z-50 w-full">
+      <div className="  mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center space-x-2">
-            <span className="text-yellow-500 font-bold text-2xl">ACDS</span>
-            <span className="hidden md:inline-block font-semibold">Summit</span>
+           <img src="/ACDSS.svg" alt="ACDSS logo" className="object-cover w-10 h-10 bg-white rounded-full"/>
           </Link>
           <p className="mx-2">x</p>
           <img src="defense.png" className="w-10 h-10" alt="Nigerian Defence Logo" />
