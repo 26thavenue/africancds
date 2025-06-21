@@ -61,11 +61,11 @@ const Hero = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a")
-    // link.href = "/eventSchedule.pdf"
-    // link.download = "eventSchedule.pdf"
-    // document.body.appendChild(link)
-    // link.click()
-    // document.body.removeChild(link)
+   link.href = "/Brochure.doc"; 
+    link.download = "Brochure.doc";
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
     toast.success("Event Schedule has been downloaded!")
   }
 
