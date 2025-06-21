@@ -274,13 +274,8 @@ const Events = () => {
       10:35 AM – 10:55 AM
     </div>
     <div>
-      <p className="text-gray-600">Goodwill Messages by:</p>
-      <ul className="list-disc list-inside text-gray-600 text-sm space-y-1">
-        <li>Amina Mohammed, Dy SG United Nations</li>
-        <li>Mahamoud Ali Youssouf, President AU Commission</li>
-        <li>Prof Akinwumi Adesina, President ADB</li>
-        <li>Nuhu Ribadu, NSA</li>
-      </ul>
+      <p className="text-gray-600">Goodwill Messages</p>
+      
     </div>
   </div>
 
@@ -400,13 +395,8 @@ const Events = () => {
       10:10 AM - 12:10 PM
     </div>
     <div>
-      <p className="text-gray-600">Second Plenary:</p>
-      <ul className="text-gray-600 text-sm list-disc list-inside">
-        <li>Guest Speaker</li>
-        <li>Panel Discussion</li>
-        <li>Interactive Session</li>
-        <li>Moderator sum-up</li>
-      </ul>
+      <p className="text-gray-600">Second Plenary</p>
+      
     </div>
   </div>
 
@@ -433,13 +423,8 @@ const Events = () => {
       1:15 PM - 3:45 PM
     </div>
     <div>
-      <p className="text-gray-600">Third Plenary:</p>
-      <ul className="text-gray-600 text-sm list-disc list-inside">
-        <li>Guest Speaker</li>
-        <li>Panel Discussion</li>
-        <li>Interactive Session</li>
-        <li>Moderator sum-up</li>
-      </ul>
+      <p className="text-gray-600">Third Plenary</p>
+      
     </div>
   </div>
 
@@ -482,7 +467,7 @@ const Events = () => {
 
             </div>
             
-            {/* Day 4 */}
+            {/* Day 3 */}
             <div className="bg-gray-100 rounded-lg overflow-hidden">
               <div className="bg-primary p-4">
                 <div className="flex items-center">
@@ -505,13 +490,8 @@ const Events = () => {
       10:10 AM - 12:10 PM
     </div>
     <div>
-      <p className="text-gray-600">Fourth Plenary:</p>
-      <ul className="text-gray-600 text-sm list-disc list-inside">
-        <li>Guest Speaker</li>
-        <li>Panel Discussion</li>
-        <li>Interactive Session</li>
-        <li>Moderator Sum-up</li>
-      </ul>
+      <p className="text-gray-600">Fourth Plenary</p>
+      
     </div>
   </div>
 
@@ -529,13 +509,8 @@ const Events = () => {
       12:45 PM - 2:45 PM
     </div>
     <div>
-      <p className="text-gray-600">Fifth Plenary:</p>
-      <ul className="text-gray-600 text-sm list-disc list-inside">
-        <li>Guest Speaker</li>
-        <li>Panel Discussion</li>
-        <li>Interactive Session</li>
-        <li>Moderator Sum-up</li>
-      </ul>
+      <p className="text-gray-600">Fifth Plenary</p>
+     
     </div>
   </div>
 
