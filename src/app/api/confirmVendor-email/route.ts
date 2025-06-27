@@ -9,7 +9,7 @@ export async function POST(request: Request) {
 
   try {
     const emailResponse = await resend.emails.send({
-      from: 'Obinna <no-reply@acdss.com.ng>',  
+      from: 'ACDSS <no-reply@acdss.com.ng>',  
       to: email,
       subject: vendorTicketConfirmedEmail.subject,
       html: vendorTicketConfirmedEmail.html,
