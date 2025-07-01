@@ -24,6 +24,7 @@ const Navbar = () => {
     { href: "/gallery", label: "Gallery" },
     { href: "/location", label: "Location" },
     { href: "/register", label: "Register" },
+    { href: "/news", label: "News" },
   ]
 
   return (
@@ -32,10 +33,10 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center space-x-2">
-           <img src="/ACDSS.svg" alt="ACDSS logo" className="object-cover w-10 h-10 bg-white rounded-full"/>
+           <img src="/ACDSS.svg" alt="ACDSS logo" className="object-cover w-16 h-16 bg-white rounded-full"/>
           </Link>
           <p className="mx-2">x</p>
-          <img src="defense.png" className="w-10 h-10" alt="Nigerian Defence Logo" />
+          <img src="defense.png" className="w-16 h-16" alt="Nigerian Defence Logo" />
         </div>
 
         {/* Desktop Menu */}

@@ -8,6 +8,8 @@ import VenueMap from "./components/VenueMap"
 import { useRef, useEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import ParticipatingCountries from "./components/ParticipatingCountries";
+import Media from "./components/Media";
 
 
 const Index = () => {
@@ -88,15 +90,21 @@ const Index = () => {
       
       
       <section ref={introRef} className="relative py-24 bg-gray-100  ">
-        {/* <div className="absolute inset-0 z-0 ">
+        <div className="absolute inset-0 z-0">
+          {/* Background Image */}
           <div 
-          style ={{
-            backgroundImage:"url('bgg.png')"
-          }}
-          className="absolute inset-0  bg-cover bg-center"></div>
-        </div> */}
-        <div className="container mx-auto px-6 z-30">
-          <h2 className="text-2xl lg:text-3xl font-bold text-primary mb-12 text-center ">
+            // style={{
+            //   backgroundImage: `url("https://images.unsplash.com/photo-1723088672765-3c6da5aee020?w=1200&auto=format&fit=crop&q=80")`
+            // }}
+            className="absolute inset-0 bg-cover bg-center z-0"
+          ></div>
+
+          {/* Dark Overlay */}
+          {/* <div className="absolute inset-0 bg-black opacity-40"></div> */}
+        </div>
+
+        <div className="container mx-auto px-6 z-50 ">
+          <h2 className="text-2xl text-primary lg:text-3xl font-bold  mb-12 text-center ">
             Summit Information
           </h2>
           
@@ -222,6 +230,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <ParticipatingCountries/>
+      <Media/>
 
       <VenueMap/>
       <Banner />

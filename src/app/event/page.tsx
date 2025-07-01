@@ -170,7 +170,7 @@ const Events = () => {
               <div className="bg-primary p-4">
                 <div className="flex items-center">
                   <CalendarDays size={20} className="text-yellow-500  mr-2" />
-                  <h3 className=" text-base lg:text-xl font-semibold text-yellow-500 ">Day 0 - August 24th, 2025</h3>
+                  <h3 className=" text-base lg:text-xl font-semibold text-yellow-500 ">Arrival - August 24th, 2025</h3>
                 </div>
               </div>
               <div className="p-6 space-y-4">
