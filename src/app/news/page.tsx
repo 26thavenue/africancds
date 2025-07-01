@@ -129,7 +129,7 @@ export default function NewsPage() {
       <section className="l mx-auto p-6 lg:p-12">
         <h2 className="text-3xl font-semibold mb-6">Latest News</h2>
         <div className="space-y-8">
-          {newsData.map((news) => (
+          {newsData?.map((news) => (
             <article key={news.id} className="border-b pb-6 max-w-fit">
               <img src={news.imgAddress} alt={news.title} className="h-[400px] w-[800px] object-cover"/>
               <h3 className="text-xl font-bold text-gray-800 my-6">
