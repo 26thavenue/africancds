@@ -20,13 +20,13 @@ export default function MediaGallery() {
           A visual glimpse into the powerful conversations, connections, and collaborations from the summit.
         </p>
 
-        <div className="grid grid-cols-2  gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2  gap-4">
           {mediaImages.map((src, idx) => (
             <div key={idx} className="overflow-hidden rounded-lg shadow">
               <img
                 src={src}
                 alt={`Summit Highlight ${idx + 1}`}
-                className=" min-w-[500px] w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                className=" lg:min-w-[500px] w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
           ))}
