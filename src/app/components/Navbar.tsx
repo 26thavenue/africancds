@@ -23,7 +23,6 @@ const Navbar = () => {
     { href: "/event", label: "Event Details" },
     { href: "/gallery", label: "Gallery" },
     { href: "/location", label: "Location" },
-    { href: "/register", label: "Register" },
     { href: "/news", label: "News" },
   ]
 

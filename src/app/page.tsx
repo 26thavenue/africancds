@@ -89,56 +89,52 @@ const Index = () => {
       </section>
       
       
-      <section ref={introRef} className="relative py-24 bg-gray-100  ">
-        <div className="absolute inset-0 z-0">
-          {/* Background Image */}
-          <div 
-            // style={{
-            //   backgroundImage: `url("https://images.unsplash.com/photo-1723088672765-3c6da5aee020?w=1200&auto=format&fit=crop&q=80")`
-            // }}
-            className="absolute inset-0 bg-cover bg-center z-0"
-          ></div>
+      <section ref={introRef} className="relative py-24">
+      <div 
+        style={{
+          backgroundImage: `url("/bgg.png")`,
+          opacity: 0.35
+        }}
+        className="absolute inset-0 bg-cover bg-center"
+      ></div>
+      
 
-          {/* Dark Overlay */}
-          {/* <div className="absolute inset-0 bg-black opacity-40"></div> */}
-        </div>
-
-        <div className="container mx-auto px-6 z-50 ">
-          <h2 className="text-2xl text-primary lg:text-3xl font-bold  mb-12 text-center ">
-            Summit Information
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Info Cards */}
-            {[{ icon: Calendar, to:"/event", title: "Date", detail: "August 25-27th 2025", sub: "Three days of collaboration and strategic dialogue" },
-              { icon: MapPin, to:"/location", title: "Venue", detail: "Transcorp Hilton Hotel, Abuja", sub: "A premier venue in Nigeria's capital city" },
-              { icon: Users, to:"/gallery", title: "Participants", detail: "Chiefs of Defence Staff from 54 Countries in Africa", sub: "Defence Industries Exhibitors amongst others" },
-              { icon: Target,to:"/event", title: "Focus", detail: "Continental Security & Cooperation", sub: "Building a safer Africa through collaboration" }
-            ].map((item, idx) => (
-              <Link key={idx} href={item.to} className="">
-                <div  className="bg-white min-h-[250px]  p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-                <div className="bg-yellow-500 text-black p-3 rounded-full mb-4">
-                  <item.icon size={32} className="" />
-                </div>
-                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                <p className="text-gray-700">{item.detail}</p>
-                <p className="text-gray-600 text-sm mt-2">{item.sub}</p>
-              </div>
-              </Link>
-              
-            ))}
+  {/* Content Layer - Full opacity, sits above background */}
+  <div className="container mx-auto px-6 relative z-10">
+    <h2 className="text-2xl text-white lg:text-3xl font-bold mb-12 text-center">
+      Summit Information
+    </h2>
+    
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {/* Your cards will be fully opaque and readable */}
+      {[{ icon: Calendar, to:"/event", title: "Date", detail: "August 25-27th 2025", sub: "Three days of collaboration and strategic dialogue" },
+        { icon: MapPin, to:"/location", title: "Venue", detail: "Transcorp Hilton Hotel, Abuja", sub: "A premier venue in Nigeria's capital city" },
+        { icon: Users, to:"/gallery", title: "Participants", detail: "Chiefs of Defence Staff from 54 Countries in Africa", sub: "Defence Industries Exhibitors amongst others" },
+        { icon: Target,to:"/event", title: "Focus", detail: "Continental Security & Cooperation", sub: "Building a safer Africa through collaboration" }
+      ].map((item, idx) => (
+        <Link key={idx} href={item.to} className="">
+          <div className="bg-white min-h-[250px] p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+            <div className="bg-yellow-500 text-black p-3 rounded-full mb-4">
+              <item.icon size={32} className="" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+            <p className="text-gray-700">{item.detail}</p>
+            <p className="text-gray-600 text-sm mt-2">{item.sub}</p>
           </div>
+        </Link>
+      ))}
+    </div>
 
-          <div className="mt-10 text-center">
-            <Link href="/event" className="hover:underline   inline-flex items-center text-white font-medium hover:text-navy transition-colors">
-              Learn more about the event
-              <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </section>
+    <div className="mt-10 text-center">
+      <Link href="/event" className="hover:underline text-white inline-flex items-center  font-medium hover:text-navy transition-colors">
+        Learn more about the event
+        <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </Link>
+    </div>
+  </div>
+</section>
 
       {/* Objectives Section */}
       <section ref={objectivesRef} className="py-24 bg-primary text-white">
