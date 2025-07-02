@@ -93,10 +93,12 @@ const Index = () => {
       <div 
         style={{
           backgroundImage: `url("/bgg.png")`,
-          opacity: 0.35
+          opacity: 0.50
         }}
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center "
       ></div>
+
+      <div className="absolute inset-0 bg-primary opacity-70 z-10" />
       
 
   {/* Content Layer - Full opacity, sits above background */}
