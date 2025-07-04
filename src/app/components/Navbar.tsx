@@ -20,11 +20,11 @@ const Navbar = () => {
 
   const navLinks = [
     { href: "/", label: "Home" },
+    { href: "/register", label: "Register" },
     { href: "/event", label: "Event Details" },
     { href: "/gallery", label: "Gallery" },
     { href: "/location", label: "Location" },
     { href: "/news", label: "News" },
-    { href: "/register", label: "Register" },
   ]
 
   return (
