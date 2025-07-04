@@ -89,16 +89,18 @@ const Index = () => {
       </section>
       
       
-      <section ref={introRef} className="relative py-24">
-      <div 
+      <section ref={introRef} className="relative py-24 lg:py-28">
+      
+
+      <div className="absolute inset-0 bg-primary  z-10" >
+        <div 
         style={{
           backgroundImage: `url("/bgg.png")`,
-          opacity: 0.50
+          opacity: 0.30
         }}
         className="absolute inset-0 bg-cover bg-center "
       ></div>
-
-      <div className="absolute inset-0 bg-primary opacity-70 z-10" />
+      </div>
       
 
   {/* Content Layer - Full opacity, sits above background */}
