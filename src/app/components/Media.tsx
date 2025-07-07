@@ -51,7 +51,7 @@ export default function NewsSection() {
   const featuredNews = newsData?.slice(0, 2) || [];
 
   return (
-    <section className="bg-primary py-16 lg:py-24">
+    <section className="bg-white py-16 lg:py-24">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="text-center mb-16">
           <h2 className="text-2xl lg:text-4xl font-bold text-white mb-4">Latest News</h2>
