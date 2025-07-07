@@ -54,7 +54,7 @@ export default function NewsSection() {
     <section className="bg-white py-16 lg:py-24">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="text-center mb-16">
-          <h2 className="text-2xl lg:text-4xl font-bold text-white mb-4">Latest News</h2>
+          <h2 className="text-2xl lg:text-4xl font-bold text-black mb-4">Latest News</h2>
           <div className="w-24 h-1 bg-white mx-auto rounded-full"></div>
         </div>
         
@@ -116,7 +116,7 @@ export default function NewsSection() {
         <div className="text-center mt-16">
           <Link 
             href="/news" 
-            className="inline-flex items-center gap-2 bg-white text-primary px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-semibold  transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
             Read All News
             <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
