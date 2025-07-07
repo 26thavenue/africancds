@@ -5,7 +5,7 @@ import { useParams, notFound } from 'next/navigation'
 import Link from 'next/link'
 import Navbar from "../../components/Navbar"
 import newsData from '../../lib/news'
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import gsap from 'gsap'
 import Banner from '@/app/components/Banner'
 import toast from 'react-hot-toast'
@@ -19,10 +19,30 @@ const newsImages = [
 
 export default function NewsArticle() {
   const params = useParams()
-  const { id } = params
+  const [isLoading, setIsLoading] = useState(true)
+  const id = params?.id
   const titleRef = useRef(null)
   const contentRef = useRef(null)
   const imageRef = useRef(null)
+
+  //  useEffect(() => {
+  //   // Add a small delay to ensure params are loaded
+  //   if (id) {
+  //     setIsLoading(false)
+  //   }
+  // }, [id])
+
+  // // Show loading state while params are being resolved
+  // if (isLoading || !id) {
+  //   return (
+  //     <div className="bg-gray-50 min-h-screen flex items-center justify-center">
+  //       <div className="text-center">
+  //         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+  //         <p className="text-gray-600">Loading article...</p>
+  //       </div>
+  //     </div>
+  //   )
+  // }
 
   
   const article = newsData.find(news => news.id === id)
