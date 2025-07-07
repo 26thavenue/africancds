@@ -164,7 +164,7 @@ export default function NewsArticle() {
                     </div>
                     <div>
                       <p className="font-semibold text-gray-900">ACDSS Committee</p>
-                      <p className="text-gray-600 text-sm">Defense & Security News</p>
+                      <p className="text-gray-600 text-sm"> & Security News</p>
                     </div>
                   </div>
                   
