@@ -41,7 +41,7 @@ export default function ParticipatingCountries() {
           Participating Countries
         </h2>
         <p className="text-gray-600 max-w-2xl mx-auto mb-12">
-          Leaders and defense representatives from across Africa will be in attendance, collaborating on strategies for a safer and more united continent.
+          Leaders and defence representatives from across Africa will be in attendance, collaborating on strategies for a safer and more united continent.
         </p>
 
         <div className="overflow-hidden mb-6">

@@ -1,7 +1,7 @@
 const newsData = [
   {
     id: 'acdss-committee-strategic-meeting',
-    title: 'ACDSS Committee Convenes Strategic Yes Meeting to Address Continental Defence Priorities',
+    title: 'ACDSS Committee Convenes Strategic Meeting to Address Continental Defence Priorities',
     summary: 'The African Continental Defence and Security Summit (ACDSS) committee held a comprehensive strategic meeting in Abuja, bringing together defence experts, military strategists, and security analysts from across the continent to discuss emerging threats and collaborative defence mechanisms.',
     content: `The African Continental Defence and Security Summit (ACDSS) committee convened for a landmark strategic meeting at the International Conference Centre in Abuja, Nigeria, marking a pivotal moment in African defence cooperation. The comprehensive session, which lasted three days, brought together over 150 distinguished participants including defence ministers, military chiefs of staff, intelligence directors, and security experts from 42 African nations.
 

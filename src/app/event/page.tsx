@@ -122,7 +122,7 @@ const Events = () => {
         <div className='my-8 flex flex-col gap-4'>
             <h4 className='text-base lg:text-lg text-gray-600'> Monday 25th  - Tuesday 27th August, 2025.</h4>
             <h1 className='text-2xl lg:text-5xl font-bold  text-[#0B3D2E]'>
-                AFRICAN CHIEFS OF DEFENCE CONFERENCE 2024
+                AFRICAN CHIEFS OF DEFENCE SUMMIT 2025
             </h1>
         </div>
 

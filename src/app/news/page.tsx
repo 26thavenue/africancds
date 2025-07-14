@@ -116,7 +116,7 @@ export default function NewsPage() {
             </h1>
             
             <p ref={paragraphRef} className="text-xl lg:text-2xl text-blue-100 max-w-4xl mx-auto flex flex-wrap justify-center gap-2 leading-relaxed font-light">
-              {"Stay updated with the latest developments in African defense ".split(" ").map((word, i) => (
+              {"Stay updated with the latest developments in African defence ".split(" ").map((word, i) => (
                 <span key={i} className="word inline-block">
                   {word}
                 </span>
