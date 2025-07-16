@@ -118,7 +118,7 @@ const Hero = () => {
             </div>
             <div className="flex items-center justify-center text-yellow-500">
               <MapPin size={20} className="mr-2" />
-              <span>Transcorp Hilton Hotel, Abuja</span>
+              <span>Bola Ahmed Tinubu International Conference Centre</span>
             </div>
           </div>
 

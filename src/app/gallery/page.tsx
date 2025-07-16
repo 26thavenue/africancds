@@ -33,16 +33,16 @@ const Gallery = () => {
     {
       id: 67,
       category: "venues",
-      title: "Transcorp Hilton Hotel - Exterior",
+      title: "Bola Ahmed Tinubu International Conference Centre - Exterior",
       subtitle: "Summit Venue",
-      imageUrl: "https://i0.wp.com/www.transcorphotels.com/wp-content/uploads/2022/12/HHC_6876.jpg?fit=1500%2C1001&amp;ssl=1",
+      imageUrl: "https://www.julius-berger.com/fileadmin/_processed_/f/f/csm_25.06.13_news_release_commissioning_of_bola_ahmed_tinubu_international_conference_centre_790a022547.jpg",
     },
     {
       id: 68,
       category: "venues",
-      title: "Transcorp Hilton Hotel - Exterior",
+      title: "Bola Ahmed Tinubu International Conference Centre - Interior",
       subtitle: "Plenary Sessions Venue",
-      imageUrl: "https://i0.wp.com/www.transcorphotels.com/wp-content/uploads/2025/04/Transcorp_eventcenter-4-scaled.jpg?fit=2560%2C1707&ssl=1",
+      imageUrl: "https://www.julius-berger.com/fileadmin/_processed_/a/9/csm_25.06.13_news_release_commissioning_of_bola_ahmed_tinubu_international_conference_centre_2_5f30719d85.jpg",
     },
     {
       id: 69,

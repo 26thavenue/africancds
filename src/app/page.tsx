@@ -112,7 +112,7 @@ const Index = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       {/* Your cards will be fully opaque and readable */}
       {[{ icon: Calendar, to:"/event", title: "Date", detail: "August 25-27th 2025", sub: "Three days of collaboration and strategic dialogue" },
-        { icon: MapPin, to:"/location", title: "Venue", detail: "Transcorp Hilton Hotel, Abuja", sub: "A premier venue in Nigeria's capital city" },
+        { icon: MapPin, to:"/location", title: "Venue", detail: "Bola Ahmed Tinubu International Conference Centre", sub: "A premier venue in Nigeria's capital city" },
         { icon: Users, to:"/gallery", title: "Participants", detail: "Chiefs of Defence Staff from 54 Countries in Africa", sub: "Defence Industries Exhibitors amongst others" },
         { icon: Target,to:"/event", title: "Focus", detail: "Continental Security & Cooperation", sub: "Building a safer Africa through collaboration" }
       ].map((item, idx) => (

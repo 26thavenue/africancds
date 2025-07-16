@@ -2,7 +2,7 @@ const VenueMap = () => (
   <div className="w-full h-full lg:h-[450px] my-8 lg:flex-row flex-col flex items-center bg-primary">
     <div className="lg:w-1/2 w-full py-12 lg:py-0  text-white flex justify-center items-center flex-col space-y-3">
         <h1 className="lg:text-6xl text-3xl  mb-4">Venue</h1>
-        <p className="lg:text-lg text-yellow-500">Location: Transcorp Hilton Hotel Abuja</p>
+        <p className="lg:text-lg text-yellow-500">Location: Bola Ahmed Tinubu International Conference Centre</p>
         <p className="lg:text-lg text-yellow-500">Date: 25th-27th August 2025</p>
     </div>
     <iframe 

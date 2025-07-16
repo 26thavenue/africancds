@@ -14,7 +14,7 @@ const Footer = () => {
               African Chiefs of Defence Staff Summit 2025
             </p>
             <p className="text-gray-300">August 25th- 27th 2025</p>
-            <p className="text-gray-300">Transcorp Hilton Hotel, Abuja</p>
+            <p className="text-gray-300">Bola Ahmed Tinubu International Conference Centre</p>
           </div>
           
           <div>
@@ -61,7 +61,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center">
                 <MapPin size={18} className="text-gold-light mr-3" />
-                <span className="text-gray-300">Transcorp Hilton Hotel, Abuja, Nigeria</span>
+                <span className="text-gray-300">Bola Ahmed Tinubu International Conference Centre, Nigeria</span>
               </div>
             </div>
           </div>

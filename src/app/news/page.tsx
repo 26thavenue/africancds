@@ -93,20 +93,12 @@ export default function NewsPage() {
           }} 
           className="bg-primary overflow-hidden min-h-[60dvh] lg:min-h-[90dvh] absolute inset-0  opacity-50">
           
-          <div></div>
-          
         </div>
         <div className=" mx-auto relative z-10 flex flex-col h-full min-h-[60dvh] lg:min-h-[85dvh]">
           <Navbar/>
         
         <div className="flex-1 flex items-center justify-center text-center px-6 container mx-auto relative z-10">
-          <div className="container mx-auto px-6 text-center">
-            {/* <div className="inline-block  bg-primary rounded-full mb-8">
-              <div className=" rounded-full px-6 py-2">
-                <span className="text-white/90 text-sm font-medium">🔥 Breaking News Updates</span>
-              </div>
-            </div> */}
-            
+          <div className="container mx-auto px-6 text-center">      
             <h1 ref={titleRef} className="text-4xl md:text-6xl  font-black text-white mb-8 flex flex-wrap justify-center gap-4">
               {"ACDSS News".split(" ").map((word, i) => (
                 <span key={i} className="word inline-block bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent drop-shadow-2xl">
@@ -122,13 +114,6 @@ export default function NewsPage() {
                 </span>
               ))}
             </p>
-            
-            {/* <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-whiteple-600 bg-white px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-2xl">
-                Scroll Down
-              </button>
-             
-            </div> */}
           </div>
         </div>  
         </div>

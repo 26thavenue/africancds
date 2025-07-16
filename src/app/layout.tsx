@@ -24,7 +24,7 @@ const instrumentSerif = Instrument_Serif({
 
 export const metadata = {
   title: {
-    default: "ACDS Summit 2025",
+    default: "ACDSS Summit 2025",
     template: "%s | ACDS Summit",
   },
   description: "Africa's top defence summit connecting military leaders across the continent.",
