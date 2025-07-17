@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { MoveUpRight } from 'lucide-react';
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import VenueMap from '../components/VenueMap';
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -366,6 +367,7 @@ const Venue = () => {
       </section>
 
       <Banner />
+      <VenueMap />
     </main>
   )
 }

@@ -6,7 +6,7 @@ const VenueMap = () => (
         <p className="lg:text-lg text-yellow-500">Date: 25th-27th August 2025</p>
     </div>
     <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.8845047082264!2d7.492405974672892!3d9.07428539098889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104dd42594163dd1%3A0x2b97d2308e5f8ee1!2sTranscorp%20Hilton%20Abuja!5e0!3m2!1sen!2sng!4v1746470061997!5m2!1sen!2sng" 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.2193892069677!2d7.4921611!3d9.043742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0b1f8e5b1765%3A0x96688ea11a2ac825!2sAbuja%20International%20Conference%20Centre!5e0!3m2!1sen!2sng!4v1752781441272!5m2!1sen!2sng" 
       width="100%" 
       height="100%" 
       allowFullScreen
