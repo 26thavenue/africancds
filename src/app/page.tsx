@@ -10,6 +10,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import ParticipatingCountries from "./components/ParticipatingCountries";
 import Media from "./components/Media";
+import Exhibition from "./components/Exhibition";
 
 
 const Index = () => {
@@ -267,6 +268,8 @@ const Index = () => {
 </section>
 
       <ParticipatingCountries/>
+
+      <Exhibition />
       <Media/>
 
       <VenueMap/>
