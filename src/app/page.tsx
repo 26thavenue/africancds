@@ -235,7 +235,7 @@ const Index = () => {
       {/* Partners Section */}
 <section className="py-16 lg:py-24 bg-gray-50">
   <div className="container mx-auto px-6">
-    <h2 className="text-3xl font-bold text-primary mb-12 text-center">
+    <h2 className="text-2xl lg:text-3xl font-bold text-primary mb-12 text-center">
       Our Partners
     </h2>
     
@@ -246,18 +246,18 @@ const Index = () => {
       {/* Supporting Organizations */}
       <div className="text-center">
 
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {[
             { name: "African Business Roundtable", imageUrl: "AfricanBusinessRoundtable.jpg" },
-            { name: "Nigerian Airforce", imageUrl: "NigerianAirforce.jpg" },
-            { name: "Nigerian Army", imageUrl: "NigerianArmy.jpg" },
+            { name: "Nigerian Airforce", imageUrl: "NigerianAirforce2.jpg" },
+            { name: "Nigerian Army", imageUrl: "NigerianArmy2.jpg" },
             { name: "Nigerian Navy", imageUrl: "NigerianNavy.jpg" },
           ].map((partner, index) => (
-            <div key={index} className="bg-white border-l-4 border-yellow-500 p-6 rounded-r-lg hover:shadow-md transition-shadow">
-              <div className="w-64 h-64 rounded mb-4 flex items-center justify-center">
-                <img src={partner.imageUrl || "/placeholder.png"} alt={partner.name} className="h-48 w-48 object-contain " />
+            <div key={index} className="bg-white  p-6 rounded-lg hover:shadow-md transition-shadow">
+              <div className="w-32 h-32 lg:w-64 lg:h-64 rounded mb-4 flex items-center justify-center">
+                <img src={partner.imageUrl || "/placeholder.png"} alt={partner.name} className=" w-24 h-24 lg:h-48 lg:w-48 object-contain " />
               </div>
-              <h4 className="font-semibold text-primary mb-1">{partner.name}</h4>
+              <h4 className="font-semibold text-sm lg:text-lg text-primary mb-1">{partner.name}</h4>
             </div>
           ))}
         </div>
