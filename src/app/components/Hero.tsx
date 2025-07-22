@@ -69,7 +69,7 @@ const Hero = () => {
     toast.success("Event Schedule has been downloaded!")
   }
 
-  const headline = "African Chiefs of Defence Staff Summit"
+  const headline = "African Chiefs of Defence Summit"
 
   return (
     <div className="relative bg-black/85 min-h-[60dvh] lg:min-h-[90dvh]">
