@@ -76,9 +76,9 @@ const Exhibition = () => {
           </p>
           <a 
             href="mailto:secretariat@acdss.com.ng" 
-            className="bg-yellow-500 text-primary px-8 py-4 rounded-lg font-bold hover:bg-yellow-400 transition-colors inline-flex items-center text-xl"
+            className="bg-yellow-500 text-primary px-8 py-4 rounded-lg font-bold hover:bg-yellow-400 transition-colors inline-flex items-center text-sm lg:text-lg"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 lg:h-6 lg:w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 7.89a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
             secretariat@acdss.com.ng
