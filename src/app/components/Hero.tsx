@@ -61,8 +61,8 @@ const Hero = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a")
-   link.href = "/Brochure.doc"; 
-    link.download = "Brochure.doc";
+   link.href = "/eventSchedule2.jpg"; 
+    link.download = "eventSchedule2.jpg";
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
