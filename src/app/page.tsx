@@ -249,7 +249,7 @@ const Index = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {[
             { name: "African Business Roundtable", imageUrl: "AfricanBusinessRoundtable.jpg" },
-            { name: "Nigerian Airforce", imageUrl: "NigerianAirforce.jpg" },
+            { name: "Nigerian Airforce", imageUrl: "NAirforce2.jpg" },
             { name: "Nigerian Army", imageUrl: "NigerianArmy2.jpg" },
             { name: "Nigerian Navy", imageUrl: "NigerianNavy.jpg" },
           ].map((partner, index) => (
