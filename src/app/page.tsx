@@ -75,11 +75,11 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl lg:text-3xl font-bold text-navy-dark mb-6 text-center">
-              Welcome to the African Chiefs of Defence Staff Summit
+              Welcome to the African Chiefs of Defence Summit
             </h2>
             <div className="prose max-w-none text-gray-700">
               <p className="mb-4 text-base lg:text-xl">
-                The African Chiefs of Defence Staff (ACDS) Summit is a prestigious gathering of military leaders from across the African continent. This landmark event brings together the top defence officials from all 54 African nations to discuss critical security challenges, foster cooperation, and develop joint strategies for ensuring peace and stability across Africa.
+                The African Chiefs of Defence Summit is a prestigious gathering of military leaders from across the African continent. This landmark event brings together the top defence officials from all 54 African nations to discuss critical security challenges, foster cooperation, and develop joint strategies for ensuring peace and stability across Africa.
               </p>
               <p className="text-base lg:text-xl">
                 The 2025 summit represents a significant opportunity for strengthening military diplomacy, sharing expertise, and building a unified approach to continental security. Through collaborative dialogue and strategic partnerships, the ACDS Summit aims to enhance the capacity of African nations to address both traditional and emerging security threats.
@@ -203,7 +203,7 @@ const Index = () => {
                 </h3>
                 <p className="text-gray-600 mb-4">Chief of Defence Staff, Federal Republic of Nigeria</p>
                 <p className="text-navy">
-                  Statement on the Inauguration of the Planning Committee for the African Chiefs of Defence Staff Summit 2025
+                  Statement on the Inauguration of the Planning Committee for the African Chiefs of Defence Summit 2025
                 </p>
               </div>
             </div>
@@ -213,13 +213,13 @@ const Index = () => {
                 Distinguished colleagues, esteemed officers, and members of the Planning Committee,
               </p>
               <p className="mb-4">
-                It is with great honor and a profound sense of responsibility that I address you today at the inauguration of the Planning Committee for the upcoming African Chiefs of Defence Staff Summit 2025. This summit represents a pivotal moment for our continent's collective security architecture.
+                It is with great honor and a profound sense of responsibility that I address you today at the inauguration of the Planning Committee for the upcoming African Chiefs of Defence Summit 2025. This summit represents a pivotal moment for our continent's collective security architecture.
               </p>
               <p className="mb-4">
                 Africa faces unique security challenges that transcend national borders. From transnational terrorism to maritime insecurity, from ethnic conflicts to climate-induced crises, the threats to our people's safety and wellbeing demand a unified and coordinated response. No single nation, regardless of its military strength or economic resources, can effectively address these challenges in isolation.
               </p>
               <p className="mb-4">
-                The African Chiefs of Defence Staff Summit is conceived as a platform where we, as military leaders responsible for our nations' defence, can forge stronger bonds of cooperation, share critical intelligence, develop joint capability frameworks, and harmonize our strategic approaches to continental security.
+                The African Chiefs of Defence Summit is conceived as a platform where we, as military leaders responsible for our nations' defence, can forge stronger bonds of cooperation, share critical intelligence, develop joint capability frameworks, and harmonize our strategic approaches to continental security.
               </p>
               <p className="mb-4">
                 To the distinguished members of the Planning Committee, I charge you with the important task of organizing a summit that will not merely be a gathering of military officials, but a transformative event that produces tangible outcomes for Africa's security landscape. I have full confidence in your abilities to deliver on this mandate.

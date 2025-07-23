@@ -150,7 +150,7 @@ const handleSubmit = async(e: React.FormEvent) => {
             Summit <span className="text-yellow-500">Registration</span>
           </h1>
           <p className="text-lg lg:text-2xl text-gray-300 max-w-3xl mx-auto">
-            Register to attend the African Chiefs of Defence Staff Summit 2025
+            Register to attend the African Chiefs of Defence Summit 2025
           </p>
         </div>
       </div>
@@ -167,7 +167,7 @@ const handleSubmit = async(e: React.FormEvent) => {
                 </svg>
                 <h2 className="text-2xl font-bold text-primary mb-4">Registration Submitted Successfully!</h2>
                 <p className="text-primary mb-6">
-                  Thank you for registering for the African Chiefs of Defence Staff Summit 2025. We have received your registration and will be in touch shortly with confirmation details.
+                  Thank you for registering for the African Chiefs of Defence Summit 2025. We have received your registration and will be in touch shortly with confirmation details.
                 </p>
                 <p className="text-primary">
                   A confirmation email has been sent to the address you provided.

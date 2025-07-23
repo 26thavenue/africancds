@@ -603,9 +603,6 @@ const Events = () => {
                   General Christopher Gwabin Musa
                 </h3>
                 <p className="text-gray-600 mb-0 lg:mb-4">Chief of Defence Staff, Federal Republic of Nigeria</p>
-                {/* <p className="text-navy">
-                  Statement on the Inauguration of the Planning Committee for the African Chiefs of Defence Staff Summit 2025
-                </p> */}
               </div>
             </div>
             
@@ -614,14 +611,11 @@ const Events = () => {
                 Distinguished colleagues, esteemed officers, and members of the Planning Committee,
               </p>
               <p className="mb-4">
-                It is with great honor and a profound sense of responsibility that I address you today at the inauguration of the Planning Committee for the upcoming African Chiefs of Defence Staff Summit 2025. This summit represents a pivotal moment for our continent's collective security architecture.
+                It is with great honor and a profound sense of responsibility that I address you today at the inauguration of the Planning Committee for the upcoming African Chiefs of Defence Summit 2025. This summit represents a pivotal moment for our continent's collective security architecture.
               </p>
               <p className="mb-4">
                 Africa faces unique security challenges that transcend national borders. From transnational terrorism to maritime insecurity, from ethnic conflicts to climate-induced crises, the threats to our people's safety and wellbeing demand a unified and coordinated response. No single nation, regardless of its military strength or economic resources, can effectively address these challenges in isolation.
               </p>
-              {/* <p className="mb-4">
-                The African Chiefs of Defence Staff Summit is conceived as a platform where we, as military leaders responsible for our nations' defence, can forge stronger bonds of cooperation, share critical intelligence, develop joint capability frameworks, and harmonize our strategic approaches to continental security.
-              </p> */}
               <p className="mb-4">
                 To the distinguished members of the Planning Committee, I charge you with the important task of organizing a summit that will not merely be a gathering of military officials, but a transformative event that produces tangible outcomes for Africa's security landscape. I have full confidence in your abilities to deliver on this mandate.
               </p>

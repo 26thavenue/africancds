@@ -1,11 +1,11 @@
 export const standardTicketEmail = {
-  subject: "Your Ticket to the African Chiefs of Defence Staff Summit 2025",
+  subject: "Your Ticket to the African Chiefs of Defence Summit 2025",
   html: `
     <h2 style="font-size: 24px; font-weight: bold; color: #1a2e4f; text-align: center;">
-      Welcome to the African Chiefs of Defence Staff Summit
+      Welcome to the African Chiefs of Defence Summit
     </h2>
     <p>
-      Thank you for registering for the African Chiefs of Defence Staff (ACDS) Summit 2025.
+      Thank you for registering for the African Chiefs of Defence Summit 2025.
       This prestigious summit brings together military leaders from across the African continent to foster unity, collaboration, and strategic discourse.
     </p>
     <p>

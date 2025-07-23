@@ -165,7 +165,7 @@ const Venue = () => {
           </p>
           
           <p className="text-lg lg:text-xl leading-relaxed">
-            Located in the heart of Abuja, Nigeria's federal capital, the Conference Centre has been transformed into a world-class venue that meets the highest international standards for diplomatic and military gatherings. As the host venue for the African Chiefs of Defence Staff Summit 2025, it offers cutting-edge facilities including advanced audiovisual systems, simultaneous interpretation capabilities, and comprehensive security infrastructure.
+            Located in the heart of Abuja, Nigeria's federal capital, the Conference Centre has been transformed into a world-class venue that meets the highest international standards for diplomatic and military gatherings. As the host venue for the African Chiefs of Defence Summit 2025, it offers cutting-edge facilities including advanced audiovisual systems, simultaneous interpretation capabilities, and comprehensive security infrastructure.
           </p>
           
           <p className="text-lg lg:text-xl leading-relaxed">
@@ -314,7 +314,7 @@ const Venue = () => {
                   Abuja features a unique blend of modern architecture, carefully planned districts, and natural landscapes. The city is home to numerous government buildings, diplomatic missions, cultural landmarks, and business centers.
                 </p>
                 <p className="text-lg lg:text-xl leading-relaxed">
-                  With its central location within Nigeria and excellent international connections through the Nnamdi Azikiwe International Airport, Abuja serves as an ideal host city for continental gatherings like the African Chiefs of Defence Staff Summit.
+                  With its central location within Nigeria and excellent international connections through the Nnamdi Azikiwe International Airport, Abuja serves as an ideal host city for continental gatherings like the African Chiefs of Defence Summit.
                 </p>
               </div>
               

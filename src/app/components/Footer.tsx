@@ -11,7 +11,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4 text-gold-light">ACDS Summit</h3>
             <p className="text-gray-300 mb-4">
-              African Chiefs of Defence Staff Summit 2025
+              African Chiefs of Defence Summit 2025
             </p>
             <p className="text-gray-300">August 25th- 27th 2025</p>
             <p className="text-gray-300">Bola Ahmed Tinubu International Conference Centre</p>
@@ -69,7 +69,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © 2025 African Chiefs of Defence Staff Summit. All rights reserved.
+            © 2025 African Chiefs of Defence Summit. All rights reserved.
           </p>
           <div className="mt-4 md:mt-0">
             <p className="text-gray-400 text-sm">
