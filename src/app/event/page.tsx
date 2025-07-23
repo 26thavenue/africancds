@@ -164,8 +164,416 @@ const Events = () => {
           <h2 className="text-2xl lg:text-3xl font-bold text-primary mb-10 text-center">
             Summit Schedule
           </h2>
-          
+           <div className="max-w-4xl mx-auto space-y-8 ">
+             <div className="bg-gray-100 rounded-lg overflow-hidden">
+              <div className="bg-primary p-4">
+                <div className="flex items-center">
+                  <CalendarDays size={20} className="text-yellow-500  mr-2" />
+                  <h3 className=" text-base lg:text-xl font-semibold text-yellow-500 ">Arrival - August 24th, 2025</h3>
+                </div>
+              </div>
+              <div className="p-6 space-y-4">
+                <div className="flex ">
+                  <div className=" flex-shrink-0 text-primary font-semibold w-48">
+                    05:00 AM - 5:00 PM
+                  </div>
+                  <div>
+                    
+                    <p className="text-gray-600 ">Arrival/Reception/Registration/Check in </p>
+                  </div>
+                </div>
+                <div className="flex ">
+                  <div className=" flex-shrink-0 text-primary font-semibold w-48">
+                    7:00 PM - 8:00 PM
+                  </div>
+                  <div>
+                   
+                    <p className="text-gray-600 ">Cocktail</p>
+                  </div>
+                </div>
+                
+                
+        
+              </div>
+            </div>
+            {/* Day 1 */}
+            <div className="bg-gray-100 rounded-lg overflow-hidden">
+              <div className="bg-primary p-4">
+                <div className="flex items-center">
+                  <CalendarDays size={20} className="text-yellow-500  mr-2" />
+                  <h3 className=" text-base lg:text-xl font-semibold text-yellow-500 ">Day 1 - August 25th, 2025</h3>
+                </div>
+              </div>
+              <div className="p-6 space-y-4">
+  <div className="flex ">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      08:00 AM – 09:30 AM
+    </div>
+    <div>
+      <p className="text-gray-600">Registration of Attendees</p>
+    </div>
+  </div>
+
+  <div className="flex ">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      09:30 AM – 10:00 AM
+    </div>
+    <div>
+      <p className="text-gray-600">Arrival of Special Guests/VIPs</p>
+    </div>
+  </div>
+
+  <div className="flex ">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      10:00 AM – 10:05 AM
+    </div>
+    <div>
+      <p className="text-gray-600">Arrival of Special Guest of Honour</p>
+    </div>
+  </div>
+
+  <div className="flex ">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      10:05 AM – 10:10 AM
+    </div>
+    <div>
+      <p className="text-gray-600">National Anthem</p>
+    </div>
+  </div>
+
+  <div className="flex ">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      10:10 AM – 10:15 AM
+    </div>
+    <div>
+      <p className="text-gray-600">AU Anthem</p>
+    </div>
+  </div>
+
+  <div className="flex ">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      10:15 AM – 10:20 AM
+    </div>
+    <div>
+      <p className="text-gray-600">Safety and Venue Orientation Brief</p>
+    </div>
+  </div>
+
+  <div className="flex ">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      10:20 AM – 10:35 AM
+    </div>
+    <div>
+      <p className="text-gray-600">Welcome Address by the CDS</p>
+    </div>
+  </div>
+
+  <div className="flex ">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      10:35 AM – 10:55 AM
+    </div>
+    <div>
+      <p className="text-gray-600">Goodwill Messages</p>
+      
+    </div>
+  </div>
+
+  <div className="flex ">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      10:55 AM – 11:10 AM
+    </div>
+    <div>
+      <p className="text-gray-600">Keynote Address</p>
+    </div>
+  </div>
+
+  <div className="flex ">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      11:10 AM – 11:35 AM
+    </div>
+    <div>
+      <p className="text-gray-600">Opening Remarks by the C-in-C (SGOH)</p>
+    </div>
+  </div>
+
+  <div className="flex ">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      11:35 AM – 11:50 AM
+    </div>
+    <div>
+      <p className="text-gray-600">Presentation of Souvenirs</p>
+    </div>
+  </div>
+
+  <div className="flex ">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      11:50 AM – 12:05 PM
+    </div>
+    <div>
+      <p className="text-gray-600">Group Photograph/ Tea Break</p>
+    </div>
+  </div>
+
+  <div className="flex ">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      12:05 PM – 01:30 PM
+    </div>
+    <div>
+      <p className="text-gray-600">Tour of Exhibition Stands by SGOH & Guests</p>
+    </div>
+  </div>
+
+  <div className="flex ">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      01:30 PM – 02:30 PM
+    </div>
+    <div>
+      <p className="text-gray-600">Lunch</p>
+    </div>
+  </div>
+
+  <div className="flex ">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">02:30 PM – 04:35 PM</div>
+    <div><p className="text-gray-600">First Plenary Session</p></div>
+  </div>
+
+  <div className="flex ">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">04:35 PM – 04:50 PM</div>
+    <div><p className="text-gray-600">Closing of Plenary (Presentation of Souvenirs)</p></div>
+  </div>
+
+  <div className="flex ">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">04:50 PM – 06:00 PM</div>
+    <div><p className="text-gray-600">Exhibition Continues</p></div>
+  </div>
+
+
+            </div>
+
+            </div>
+            
+            {/* Day 2 */}
+            <div className="bg-gray-100 rounded-lg overflow-hidden">
+              <div className="bg-primary p-4">
+                <div className="flex items-center">
+                  <CalendarDays size={20} className="text-yellow-500  mr-2" />
+                  <h3 className="text-base lg:text-xl font-semibold text-yellow-500 ">Day 2 - August 26th, 2025</h3>
+                </div>
+              </div>
+              <div className="p-6 space-y-4">
+  <div className="flex">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      9:00 AM - 9:10 AM
+    </div>
+    <div>
+      <p className="text-gray-600">Highlight of the Day’s Activities</p>
+    </div>
+  </div>
+
+  <div className="flex">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      9:10 AM - 11:00 AM
+    </div>
+    <div>
+      <p className="text-gray-600">Second Plenary</p>
+      
+    </div>
+  </div>
+
+  <div className="flex">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      11:00 AM - 11:30 AM
+    </div>
+    <div>
+      <p className="text-gray-600">Business Roundtable</p>
+    </div>
+  </div>
+
+  <div className="flex">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      11:30 AM - 12:00 PM
+    </div>
+    <div>
+      <p className="text-gray-600">Tea Break</p>
+    </div>
+  </div>
+
+  <div className="flex">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      12:00 PM - 1:50 PM
+    </div>
+    <div>
+      <p className="text-gray-600">Third Plenary</p>
+      
+    </div>
+  </div>
+
+  <div className="flex">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      1:50 PM - 2:00 PM
+    </div>
+    <div>
+      <p className="text-gray-600">Closing of Plenary (Presentation of Souvenirs)</p>
+    </div>
+  </div>
+
+  <div className="flex">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      2:00 PM - 3:00 PM
+    </div>
+    <div>
+      <p className="text-gray-600">Lunch</p>
+    </div>
+  </div>
+
+  <div className="flex">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      3:00 PM - 4:00 PM
+    </div>
+    <div>
+      <p className="text-gray-600">Exhibition / Business Meetings / CDS’ Closed Door Session</p>
+    </div>
+  </div>
+
+  <div className="flex">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      5:00 PM - 6:30 PM
+    </div>
+    <div>
+      <p className="text-gray-600">Bus Tour of Abuja//Exhibition Continues</p>
+    </div>
+  </div>
+</div>
+
+            </div>
+            
+            {/* Day 3 */}
+            <div className="bg-gray-100 rounded-lg overflow-hidden">
+              <div className="bg-primary p-4">
+                <div className="flex items-center">
+                  <CalendarDays size={20} className="text-yellow-500 mr-2" />
+                  <h3 className="text-base lg:text-xl font-semibold text-yellow-500 ">Day 3 - August 27th, 2025</h3>
+                </div>
+              </div>
+              <div className="p-6 space-y-4">
+  <div className="flex">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      09:00 AM - 09:10 AM
+    </div>
+    <div>
+      <p className="text-gray-600">Highlight of the Day’s Activities</p>
+    </div>
+  </div>
+
+  <div className="flex">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      09:10 AM - 11:00 AM
+    </div>
+    <div>
+      <p className="text-gray-600">Fourth Plenary Session</p>
+      
+    </div>
+  </div>
+
+  <div className="flex">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      11:00 AM - 12:00 PM
+    </div>
+    <div>
+      <p className="text-gray-600">Tea Break</p>
+    </div>
+  </div>
+
+  <div className="flex">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      12:00 PM - 1:50 PM
+    </div>
+    <div>
+      <p className="text-gray-600">Fifth Plenary Session</p>
+     
+    </div>
+  </div>
+
+  <div className="flex">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      1:50 PM - 2:00 PM
+    </div>
+    <div>
+      <p className="text-gray-600">Closing of Plenary (Presentation of Souvenirs)</p>
+    </div>
+  </div>
+
+  <div className="flex">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      2:00 PM - 3:00 PM
+    </div>
+    <div>
+      <p className="text-gray-600">Lunch</p>
+    </div>
+  </div>
+
+  <div className="flex">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      3:00 PM - 3:20 PM
+    </div>
+    <div>
+      <p className="text-gray-600">Presentation of Communique</p>
+    </div>
+  </div>
+
+  <div className="flex">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      3:20 PM - 3:35 PM
+    </div>
+    <div>
+      <p className="text-gray-600">Closing Remarks</p>
+    </div>
+  </div>
+
+  <div className="flex">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      3:35 PM - 7:00 PM
+    </div>
+    <div>
+      <p className="text-gray-600">Private Time</p>
+    </div>
+  </div>
+
+  <div className="flex">
+    <div className="flex-shrink-0 text-primary font-semibold w-48">
+      7:00 PM
+    </div>
+    <div>
+      <p className="text-gray-600">Dinner</p>
+    </div>
+  </div>
+</div>
+
+            </div>
+
+            <div className="bg-gray-100 rounded-lg overflow-hidden">
+              <div className="bg-primary p-4">
+                <div className="flex items-center">
+                  <CalendarDays size={20} className="text-yellow-500  mr-2" />
+                  <h3 className=" text-base lg:text-xl font-semibold text-yellow-500 ">Day 4 - August 28th, 2025</h3>
+                </div>
+              </div>
+              <div className="p-6 space-y-4">
+                <div className="flex ">
+                  <div className=" flex-shrink-0 text-primary font-semibold w-48">
+                    07:00 AM - 23:59 PM
+                  </div>
+                  <div>
+                    
+                    <p className="text-gray-600 ">Departure </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+       
          
+          
         </div>
       </section>
       
