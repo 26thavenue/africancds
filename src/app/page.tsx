@@ -82,7 +82,7 @@ const Index = () => {
                 The African Chiefs of Defence Summit is a prestigious gathering of military leaders from across the African continent. This landmark event brings together the top defence officials from all 54 African nations to discuss critical security challenges, foster cooperation, and develop joint strategies for ensuring peace and stability across Africa.
               </p>
               <p className="text-base lg:text-xl">
-                The 2025 summit represents a significant opportunity for strengthening military diplomacy, sharing expertise, and building a unified approach to continental security. Through collaborative dialogue and strategic partnerships, the ACDS Summit aims to enhance the capacity of African nations to address both traditional and emerging security threats.
+                The 2025 summit represents a significant opportunity for strengthening military diplomacy, sharing expertise, and building a unified approach to continental security. Through collaborative dialogue and strategic partnerships, the ACD Summit aims to enhance the capacity of African nations to address both traditional and emerging security threats.
               </p>
             </div>
           </div>

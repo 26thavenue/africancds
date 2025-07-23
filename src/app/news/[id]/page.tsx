@@ -183,7 +183,7 @@ export default function NewsArticle() {
                       <span className="text-white font-bold text-lg">A</span>
                     </div>
                     <div>
-                      <p className="font-semibold text-gray-900">ACDSS Committee</p>
+                      <p className="font-semibold text-gray-900">ACDS Committee</p>
                       <p className="text-gray-600 text-sm"> & Security News</p>
                     </div>
                   </div>

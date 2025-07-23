@@ -100,7 +100,7 @@ export default function NewsPage() {
         <div className="flex-1 flex items-center justify-center text-center px-6 container mx-auto relative z-10">
           <div className="container mx-auto px-6 text-center">      
             <h1 ref={titleRef} className="text-4xl md:text-6xl  font-black text-white mb-8 flex flex-wrap justify-center gap-4">
-              {"ACDSS News".split(" ").map((word, i) => (
+              {"ACDS News".split(" ").map((word, i) => (
                 <span key={i} className="word inline-block bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent drop-shadow-2xl">
                   {word}
                 </span>
