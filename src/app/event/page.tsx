@@ -72,8 +72,8 @@ const Events = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/eventSchedule2.jpg"; 
-    link.download = "eventSchedule2.jpg";
+    link.href = "/eventSchedule2.pdf"; 
+    link.download = "eventSchedule2.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
