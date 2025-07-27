@@ -1,7 +1,34 @@
 import { ArrowRight } from 'lucide-react'
 import React from 'react'
+import { useRef, useEffect } from 'react'
+import gsap from 'gsap'
 
 const Consultants = () => {
+
+   const sectionsRef = useRef<HTMLDivElement[]>([])
+  sectionsRef.current = [] 
+
+  const addToRefs = (el: HTMLDivElement) => {
+    if (el && !sectionsRef.current.includes(el)) {
+      sectionsRef.current.push(el)
+    }
+  }
+
+  useEffect(() => {
+    sectionsRef.current.forEach((section) => {
+      gsap.from(section, {
+        opacity: 0,
+        y: 50,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: section,
+          start: "top 85%",
+        },
+      })
+    })
+  }, [])
+
 
   const featuredConsultants = [
     {
@@ -14,7 +41,7 @@ const Consultants = () => {
     {
         "id": 2,
         "name":"Mediaczars Limited",
-        "icon":"",
+        "icon":"Mediajxnun",
         "specialty":"Media Consulting",
         "shortDesc":""
     },
@@ -29,15 +56,15 @@ const Consultants = () => {
 
   return (
     <div>
-        <section className="py-20 bg-gray-100">
+        <section ref={addToRefs} className="py-20 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
             Our Consultants
           </h2>
           
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
             Here are the esteemed consulting firms partnering with us to deliver strategic guidance and ensure the program’s success
           </p>
         </div>

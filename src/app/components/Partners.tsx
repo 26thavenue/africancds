@@ -1,15 +1,42 @@
 import React from 'react'
+import { useRef, useEffect } from 'react'
+import gsap from 'gsap'
 
 const Partners = () => {
+   const sectionsRef = useRef<HTMLDivElement[]>([])
+  sectionsRef.current = [] 
+
+  const addToRefs = (el: HTMLDivElement) => {
+    if (el && !sectionsRef.current.includes(el)) {
+      sectionsRef.current.push(el)
+    }
+  }
+
+  useEffect(() => {
+    sectionsRef.current.forEach((section) => {
+      gsap.from(section, {
+        opacity: 0,
+        y: 50,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: section,
+          start: "top 85%",
+        },
+      })
+    })
+  }, [])
+
+
   return (
-    <section className="py-16 lg:py-24 bg-gray-50">
+    <section ref={addToRefs} className="py-16 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-6">
            <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
             Our Partners
           </h2>
           
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
             These valued partners are committed to advancing the goals of our initiative. Their expertise and support make meaningful change possible.
           </p>
         </div>

@@ -8,6 +8,31 @@ export default function ParticipatingCountries() {
   const row1Ref = useRef<HTMLDivElement>(null);
   const row2Ref = useRef<HTMLDivElement>(null);
 
+   const sectionsRef = useRef<HTMLDivElement[]>([])
+  sectionsRef.current = [] 
+
+  const addToRefs = (el: HTMLDivElement) => {
+    if (el && !sectionsRef.current.includes(el)) {
+      sectionsRef.current.push(el)
+    }
+  }
+
+  useEffect(() => {
+    sectionsRef.current.forEach((section) => {
+      gsap.from(section, {
+        opacity: 0,
+        y: 50,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: section,
+          start: "top 85%",
+        },
+      })
+    })
+  }, [])
+
+
   useEffect(() => {
     if (row1Ref.current && row2Ref.current) {
       gsap.to(row1Ref.current, {
@@ -35,7 +60,7 @@ export default function ParticipatingCountries() {
   const duplicatedRow2 = [...secondHalf, ...secondHalf];
 
   return (
-    <section className="lg:py-48    py-12 bg-gray-100 overflow-hidden">
+    <section ref={addToRefs} className="lg:py-48    py-12 bg-gray-100 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
           Participating Countries
