@@ -40,6 +40,7 @@ export const africanCountries = [
   { name: "Nigeria", code: "NG" },
   { name: "Rwanda", code: "RW" },
   { name: "Sao Tome and Principe", code: "ST" },
+  { name: " Sahrawi Arab Democratic Republic", code: "EH" },
   { name: "Senegal", code: "SN" },
   { name: "Seychelles", code: "SC" },
   { name: "Sierra Leone", code: "SL" },
