@@ -246,14 +246,16 @@ const Index = () => {
       {/* Supporting Organizations */}
       <div className="text-center">
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
           {[
             { name: "African Business Roundtable", imageUrl: "AfricanBusinessRoundtable.jpg" },
-            { name: "Nigerian Airforce", imageUrl: "NAirforce2.jpg" },
+            { name: "Nigerian Air Force", imageUrl: "NAirforce2.jpg" },
             { name: "Nigerian Army", imageUrl: "NigerianArmy2.jpg" },
             { name: "Nigerian Navy", imageUrl: "NigerianNavy.jpg" },
+            { name: "ECOWAS", imageUrl: "ECOWAS.png" },
+            { name: "African Union", imageUrl: "AfricanUnion.svg" },
           ].map((partner, index) => (
-            <div key={index} className="bg-white  p-6 rounded-lg hover:shadow-md transition-shadow">
+            <div key={index} className="bg-white  p-6 rounded-lg hover:shadow-md transition-shadow flex items-center justify-center flex-col">
               <div className="w-32 h-32 lg:w-64 lg:h-64 rounded mb-4 flex items-center justify-center">
                 <img src={partner.imageUrl || "/placeholder.png"} alt={partner.name} className=" w-24 h-24 lg:h-48 lg:w-48 object-contain " />
               </div>
