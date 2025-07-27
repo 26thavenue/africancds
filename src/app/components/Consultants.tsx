@@ -41,7 +41,7 @@ const Consultants = () => {
     {
         "id": 2,
         "name":"Mediaczars Limited",
-        "icon":"Mediajxnun",
+        "icon":"Mediaczars.jpg",
         "specialty":"Media Consultant",
         "shortDesc":""
     },

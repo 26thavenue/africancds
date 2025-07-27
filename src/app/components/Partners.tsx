@@ -53,8 +53,9 @@ const Partners = () => {
             { name: "Nigerian Air Force", imageUrl: "NAirforce2.jpg" },
             { name: "Nigerian Army", imageUrl: "NigerianArmy2.jpg" },
             { name: "Nigerian Navy", imageUrl: "NigerianNavy.jpg" },
-            { name: "ECOWAS", imageUrl: "ECOWAS.png" },
             { name: "African Union", imageUrl: "AfricanUnion.svg" },
+            { name: "ECOWAS", imageUrl: "ECOWAS.png" },
+      
           ].map((partner, index) => (
             <div key={index} className="bg-white  p-6 rounded-lg hover:shadow-md transition-shadow flex items-center justify-center flex-col">
               <div className="w-32 h-32 lg:w-64 lg:h-64 rounded mb-4 flex items-center justify-center">
