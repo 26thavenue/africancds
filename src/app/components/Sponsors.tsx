@@ -2,19 +2,14 @@ import React from 'react'
 
 const Partners = () => {
   return (
-    <section className="py-16 lg:py-24 bg-gray-50">
+    <section className="py-16 lg:py-24 bg-gray-100">
         <div className="container mx-auto px-6">
-           <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Our Partners
-          </h2>
-          
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            These valued partners are committed to advancing the goals of our initiative. Their expertise and support make meaningful change possible.
-          </p>
-        </div>
+            <h2 className="text-2xl lg:text-3xl font-bold text-primary mb-12 text-center">
+            Our Sponsors 
+            </h2>
+            
             {/* Partner Categories */}
-          <div className="space-y-12">
+            <div className="space-y-12">
 
 
       {/* Supporting Organizations */}

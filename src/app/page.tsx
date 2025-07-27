@@ -11,8 +11,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import ParticipatingCountries from "./components/ParticipatingCountries";
 import Media from "./components/Media";
 import Exhibition from "./components/Exhibition";
-import { Pa } from "react-flags-select";
 import Partners from "./components/Partners";
+import Consultants from "./components/Consultants";
+
 
 
 const Index = () => {
@@ -240,6 +241,7 @@ const Index = () => {
       <ParticipatingCountries/>
 
       <Exhibition />
+      <Consultants/>
       <Media/>
 
       <VenueMap/>
