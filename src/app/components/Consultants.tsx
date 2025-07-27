@@ -35,21 +35,21 @@ const Consultants = () => {
         "id": 1,
         "name":"Lemorva Services",
         "icon":"https://levmoraservices.com/wp-content/uploads/2022/05/levmora.png",
-        "specialty":"Energy Consultants",
+        "specialty":"Sponsorhsip and Exhibition Consultants",
         "shortDesc":""
     },
     {
         "id": 2,
         "name":"Mediaczars Limited",
         "icon":"Mediajxnun",
-        "specialty":"Media Consulting",
+        "specialty":"Media Consultant",
         "shortDesc":""
     },
     {
         "id": 3,
         "name":"Emerging Africa Group",
         "icon":"https://emergingafricagroup.com/wp-content/uploads/2022/07/logo.png",
-        "specialty":"Fianancial Consultants",
+        "specialty":"Fianancial and Partnership Advisors",
         "shortDesc":""
     }
   ]
@@ -93,7 +93,7 @@ const Consultants = () => {
         </div>
 
         {/* View All Button */}
-        <div className="text-center">
+        {/* <div className="text-center">
           <button
             // onClick={onViewAll}
             className="inline-flex items-center px-8 py-4 bg-primary cursor-pointer text-white font-semibold rounded-full hover:bg-primary/90 transform hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl"
@@ -101,7 +101,7 @@ const Consultants = () => {
             View All Consultants
             <ArrowRight className="ml-2 w-5 h-5" />
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
     </div>
