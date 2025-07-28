@@ -49,12 +49,14 @@ const Partners = () => {
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
           {[
-            { name: "African Business Roundtable", imageUrl: "AfricanBusinessRoundtable.jpg" },
-            { name: "Nigerian Air Force", imageUrl: "NAirforce2.jpg" },
-            { name: "Nigerian Army", imageUrl: "NigerianArmy2.jpg" },
-            { name: "Nigerian Navy", imageUrl: "NigerianNavy.jpg" },
             { name: "African Union", imageUrl: "AfricanUnion.svg" },
             { name: "ECOWAS", imageUrl: "ECOWAS.png" },
+            { name: "African Business Roundtable", imageUrl: "AfricanBusinessRoundtable.jpg" },
+             { name: "Nigerian Army", imageUrl: "NigerianArmy2.jpg" },
+            { name: "Nigerian Navy", imageUrl: "NigerianNavy.jpg" },
+            { name: "Nigerian Air Force", imageUrl: "NAirforce2.jpg" },
+           
+          
       
           ].map((partner, index) => (
             <div key={index} className="bg-white  p-6 rounded-lg hover:shadow-md transition-shadow flex items-center justify-center flex-col">
