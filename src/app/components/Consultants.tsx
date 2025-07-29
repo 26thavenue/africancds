@@ -34,9 +34,9 @@ const Consultants = () => {
   const featuredConsultants = [
     {
         "id": 1,
-        "name":"Lemorva Services",
+        "name":"Levmora Services",
         "icon":"https://levmoraservices.com/wp-content/uploads/2022/05/levmora.png",
-        "specialty":"Sponsorhsip and Exhibition Consultants",
+        "specialty":"Sponsorship and Exhibition Consultants",
         "shortDesc":"https://levmoraservices.com/"
     },
     {
