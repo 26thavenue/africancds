@@ -50,7 +50,7 @@ const Consultants = () => {
         "id": 3,
         "name":"Emerging Africa Group",
         "icon":"https://emergingafricagroup.com/wp-content/uploads/2022/07/logo.png",
-        "specialty":"Fianancial and Partnership Advisors",
+        "specialty":"Financial and Partnership Advisors",
         "shortDesc":"https://emergingafricagroup.com/"
     }
   ]
