@@ -9,8 +9,30 @@ import Navbar from "../components/Navbar"
 import { useRef, useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { Metadata } from "next"
 
 gsap.registerPlugin(ScrollTrigger)
+
+export const metadata:Metadata = {
+  title: "Event Details",
+  description: "Advancing Africa’s Security with Strategic Defence Procurement & Cooperation",
+  openGraph: {
+    title: "Event Details | ACDS 2025",
+    description: "Advancing Africa’s Security with Strategic Defence Procurement & Cooperation",
+    url: "https://acdss.com/events",
+    siteName: "ACDS 2025",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Event Details",
+    description: "Advancing Africa’s Security with Strategic Defence Procurement & Cooperation"
+  },
+  alternates: {
+    canonical: "https://yourdomain.com/events"
+  }
+};
+
 
 
 const Events = () => {

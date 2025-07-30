@@ -34,8 +34,8 @@ const Consultants = () => {
   const featuredConsultants = [
     {
         "id": 1,
-        "name":"Levmora Services",
-        "icon":"https://levmoraservices.com/wp-content/uploads/2022/05/levmora.png",
+        "name":"Levmora Services Limited",
+        "icon":"Levmora.png",
         "specialty":"Sponsorship and Exhibition Consultants",
         "shortDesc":"https://levmoraservices.com/"
     },
@@ -78,7 +78,7 @@ const Consultants = () => {
               className="bg-white rounded-xl p-8 shadow-xs border border-gray-100 hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300"
             >
               <div className="text-center">
-                <img src={consultant.icon} alt={consultant.name} className="w-20 h-20 bg-white object-cover rounded-full   mb-6 mx-auto"/>
+                <img src={consultant.icon} alt={consultant.name} className="w-20 h-20 bg-white object-cover  mb-6 mx-auto"/>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   {consultant.name}
                 </h3>
