@@ -2,10 +2,10 @@ import { Metadata } from "next";
 import Consultants from "../pages/consultants";
 
 export const metadata:Metadata = {
-  title: "Our Consultants",
+  title: "Summit Consultants | ACDS",
   description: "Explore the list of top consultancy companies responsible for planning and executing our event. Learn more about their roles, expertise, and contributions to its success.",
   openGraph: {
-    title: "Summit Consultants",
+    title: "Summit Consultants| ACDS 2025",
     description: "Explore the list of top consultancy companies responsible for planning and executing our event. Learn more about their roles, expertise, and contributions to its success.",
     url: "https://acdss.com.ng/consultants",
     siteName: "ACDS",
@@ -13,7 +13,7 @@ export const metadata:Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Summit Consultants",
+    title: "Summit Consultants | ACDS 2025",
     description: "Explore the list of top consultancy companies responsible for planning and executing our event. Learn more about their roles, expertise, and contributions to its success."
   },
   alternates: {
