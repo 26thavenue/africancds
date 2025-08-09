@@ -7,7 +7,7 @@ import Navbar from "../components/Navbar";
 
 const Register = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const [delgeateOption, setDelegateOption] = useState<string>("");
+  const [delegateOption, setDelegateOption] = useState<string>("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   
@@ -42,19 +42,46 @@ const createPaystackPayment = async(data: any) => {
 };
 
 
-const submitEmail = async (data: any, type: "standard" | "vendor" ) => {
+const submitEmail = async (
+  data: any,
+  type: "standard" | "vendor" | "exhibitor" | "participant" | "sponsor"
+) => {
+
+  console.log(type)
   try {
-    const endpoint = type === "standard" ? "/api/standard-email" : "/api/vendor-email";
+    let endpoint = "";
+
+    if (type === "standard") {
+      endpoint = "/api/standard-email";
+    } 
+    else if (type === "vendor") {
+      endpoint = "/api/vendor-email";
+    } 
+    else {
+      endpoint = "/api/multipleUser-Email";
+    }
+
+    const body =
+      type === "standard" || type === "vendor"
+        ? { email: data.email }
+        : {
+            email: data.email,
+            emailType: type.charAt(0).toUpperCase() + type.slice(1), 
+          };
+
     const res = await fetch(endpoint, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: data.email }),
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
     });
 
     if (!res.ok) {
-      setError("An error occurred")
-
+      setError("An error occurred");
+      return;
     }
+
+    const result = await res.json();
+    console.log("Email Sent:", result);
 
   } catch (err) {
     console.error("Email Error:", err);
@@ -99,6 +126,8 @@ const addToDB = async(data:any) => {
 const handleSubmit = async(e: React.FormEvent) => {
     e.preventDefault();
 
+    console.log("Hit")
+
     setLoading(true);
     setError(null);
 
@@ -109,7 +138,7 @@ const handleSubmit = async(e: React.FormEvent) => {
     const delegationType = data.delegationType?.toString().toLowerCase();
 
   try {
-    
+     
 
     if (delegationType === "standard") {
       await addToDB(data);
@@ -119,6 +148,10 @@ const handleSubmit = async(e: React.FormEvent) => {
       if (typeof window !== "undefined") {
         createPaystackPayment(data); 
       }    
+    }else if (delegationType === 'exhibitor' || delegationType === 'participant' || delegationType === 'sponsor'){
+      await addToDB(data)
+      await submitEmail(data,delegationType)
+      setFormSubmitted(true)
     }
     
   } catch (err) {
@@ -349,17 +382,24 @@ const handleSubmit = async(e: React.FormEvent) => {
                           name="delegationType"
                           required
                           className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-navy focus:border-navy"
-                          value={delgeateOption}
-                          onChange={(e) => setDelegateOption(e.target.value)}
+                          value={delegateOption}
+                          
+                          onChange={(e) => {
+                            console.log(e.target.value)
+                            setDelegateOption(e.target.value)}}
                         >
                           <option value="">Select delegation type</option>
                           <option value="Standard">Standard</option>
+                          
+                          <option value="Sponsor">Sponsor</option>
+                          <option value="Exhibitor">Exhibitor</option>
+                          <option value="Participant">Participant</option>
                           <option value="Vendor">Vendor</option>
                           
                         </select>
                       </div>
 
-                      {delgeateOption === 'Vendor' && (
+                      {delegateOption === 'Vendor' && (
                         <div className="mt-4 p-4 bg-gray-50 border border-primary rounded-md md:col-span-2 text-center">
                           <p className="text-lg font-bold text-primary">
                             Vendorship fee is $3000
@@ -405,7 +445,7 @@ const handleSubmit = async(e: React.FormEvent) => {
                       type="submit"
                       className="bg-primary cursor-pointer hover:bg-primary/90 text-white font-medium px-8 py-3 rounded-lg transition-colors inline-block"
                     >
-                      {loading ? 'Submitting...' : delgeateOption == "Vendor" ?  "Payment and Registration" : "Register for Event"}
+                      {loading ? 'Submitting...' : delegateOption == "Vendor" ?  "Payment and Registration" : "Register for Event"}
                     </button>
                   </div>
                 </form>
