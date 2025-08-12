@@ -28,7 +28,7 @@ const AdminDashboard = () => {
 
         let query = supabase
           .from('registrations')
-          .select('*', { count: 'exact' }) // include count
+          .select('*', { count: 'exact' }) 
           .order('created_at', { ascending: false });
 
         if (range) {
@@ -151,7 +151,7 @@ const handleSendConfirmationMail = async(email:string, id:string) =>{
   return (
     <ProtectedRoute>
        <div className="min-h-screen bg-gray-50 flex flex-col md:flex-row">
-      {/* Sidebar */}
+     
      
       <aside className="w-full md:w-64 bg-primary/90 text-white p-6 hidden lg:block">
         <h2 className="text-2xl font-bold mb-6">Admin Panel</h2>
@@ -228,7 +228,7 @@ const handleSendConfirmationMail = async(email:string, id:string) =>{
         </div>
 
         {/* Table */}
-        <div className="overflow-auto rounded-lg shadow bg-white">
+        <div className="overflow-x-auto rounded-lg shadow bg-white">
           <table className="min-w-full text-sm">
             <thead className="bg-primary text-white">
               <tr>
@@ -240,6 +240,7 @@ const handleSendConfirmationMail = async(email:string, id:string) =>{
                 <th className="px-4 py-3 text-left font-medium">Position</th>
                 <th className="px-4 py-3 text-left font-medium">Delegation</th>
                 <th className="px-4 py-3 text-left font-medium">Actions</th>
+                <th className="px-4 py-3 text-left font-medium">Extra Detail</th>
               </tr>
             </thead>
             <tbody>
@@ -252,6 +253,7 @@ const handleSendConfirmationMail = async(email:string, id:string) =>{
                   <td className="px-4 py-3">{d.organization}</td>
                   <td className="px-4 py-3">{d.position || "-"}</td>
                   <td className="px-4 py-3">{d.delegation_type}</td>
+                  
                   <td>
                     {d.delegation_type == "Vendor" ? 
                    <button
@@ -275,12 +277,14 @@ const handleSendConfirmationMail = async(email:string, id:string) =>{
                     </span>
                   </button>
  : 
-                    <button disabled className="bg-gray-100 px-6 py-2 text-sm text-black cursor-not-allowed rounded-sm" >
+                    <button disabled className="bg-gray-100 px-6 py-2 text-sm text-black cursor-not-allowed rounded-sm max-h-sm" >
                         Send Confirmation Mail
                     </button>   
                     }
                     
                   </td>
+
+                  <td className="px-4 py-3">{d.exhibitItem }</td>
                 </tr>
               ))}
             </tbody>

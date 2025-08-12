@@ -5,6 +5,7 @@ import Link from "next/link"
 import supabase from "../lib/utils"
 import Navbar from "../components/Navbar";
 
+
 const Register = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [delegateOption, setDelegateOption] = useState<string>("");
@@ -106,13 +107,14 @@ const addToDB = async(data:any) => {
           delegation_type: data.delegationType,
           dietary_requirements: data.dietary,
           accessibility_requirements: data.accessibility,
+          exhibitItem: data.exhibitItem,
           created_at: new Date().toISOString()
         }])
         .select();
       if (error) {
         setError("An error occurred" +  error);
       }
-      console.log(error)
+      // console.log(error)
       
     } catch (err) {
       console.error("Registration error:", err);
@@ -126,7 +128,7 @@ const addToDB = async(data:any) => {
 const handleSubmit = async(e: React.FormEvent) => {
     e.preventDefault();
 
-    console.log("Hit")
+    // console.log("Hit")
 
     setLoading(true);
     setError(null);
@@ -149,6 +151,7 @@ const handleSubmit = async(e: React.FormEvent) => {
         createPaystackPayment(data); 
       }    
     }else if (delegationType === 'exhibitor' || delegationType === 'participant' || delegationType === 'sponsor'){
+      console.log(data)
       await addToDB(data)
       await submitEmail(data,delegationType)
       setFormSubmitted(true)
@@ -405,6 +408,21 @@ const handleSubmit = async(e: React.FormEvent) => {
                             Vendorship fee is $3000
                           </p>
                          
+                        </div>
+                      )}
+
+                      {delegateOption === 'Exhibitor' && (
+                        <div className="col-span-2">
+                           <label className="block mt-4  font-medium text-gray-700">
+                              What do you want to exhibit?
+                            </label>
+                            <textarea
+                              
+                              name="exhibitItem"
+                              
+                              placeholder="Describe your exhibition..."
+                              className="mt-1  min-h-40 block w-full border border-gray-300 rounded-md shadow-sm focus:border-primary focus:ring-primary sm:text-sm p-2 "
+                            />
                         </div>
                       )}
                     </div>
