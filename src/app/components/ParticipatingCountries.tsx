@@ -17,6 +17,8 @@ export default function ParticipatingCountries() {
     }
   }
 
+  
+
   useEffect(() => {
     sectionsRef.current.forEach((section) => {
       gsap.from(section, {
