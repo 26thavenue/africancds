@@ -9,6 +9,7 @@ import Navbar from "../components/Navbar"
 import { useRef, useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import ParticipantInfoSection from "../components/ParticipantInformation"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -626,7 +627,7 @@ const Events = () => {
         </div>
       </section>
 
-
+      <ParticipantInfoSection/>
       <VenueMap/>
 
       <Banner/>
