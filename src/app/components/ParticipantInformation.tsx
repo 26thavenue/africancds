@@ -50,7 +50,7 @@ const ParticipantInfoSection = () => {
   ];
 
   const dressCode = [
-    { event: "Summit", attire: "Military Service uniform for the Summit." },
+    { event: "Summit", attire: "Military Service uniform for the Summit (for just military personnel)." },
     { event: "Welcome Reception", attire: "Business casual (jacket without tie) for welcome reception." },
     { event: "Gala Night", attire: "Business formal (jacket with tie) for gala night." }
   ];
