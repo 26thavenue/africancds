@@ -6,6 +6,7 @@ import Papa from 'papaparse';
 import toast from 'react-hot-toast';
 import ProtectedRoute from "../components/ProtectedRoute";
 import LoadingSpinner from "../components/Spinner";
+import Select from 'react-select';
 
 
 
@@ -17,12 +18,15 @@ const AdminDashboard = () => {
   const [totalCount, setTotalCount] = useState(0);
   const [exporting,setExporting] = useState(false)
   const [mailSending, setMailSending] = useState<string | null>(null);
-  const [stats, setStats] = useState<{ total: number; standard: number; vendor: number } | null>(null);
+  const [stats, setStats] = useState<{ total: number; standard: number; vendor: number; exhibitor:number } | null>(null);
+  const [delegationFilter, setDelegationFilter] = useState<string>("All");
+
 
   const PAGE_SIZE = 10;
+  const ALL_TYPES = ["Standard", "Vendor", "Participant", "Exhibitor", "Speaker"];
 
 
-  const fetchRegistrations = async (range?: { from: number; to: number }) => {
+const fetchRegistrations = async (range?: { from: number; to: number }, filterValue?: string) => {
       try {
         setLoading(true);
 
@@ -30,6 +34,13 @@ const AdminDashboard = () => {
           .from('registrations')
           .select('*', { count: 'exact' }) 
           .order('created_at', { ascending: false });
+
+        const currentFilter = filterValue ?? delegationFilter;
+        
+        if (currentFilter !== "All") {
+          console.log(currentFilter);
+          query = query.eq("delegation_type", currentFilter);
+        }
 
         if (range) {
           query = query.range(range.from, range.to);
@@ -47,9 +58,9 @@ const AdminDashboard = () => {
       } finally {
         setLoading(false);
       }
-  };
+};
 
-  const fetchStats = async () => {
+const fetchStats = async () => {
     const { data, error } = await supabase
       .from('registrations')
       .select('*');
@@ -60,8 +71,9 @@ const AdminDashboard = () => {
       total: data.length,
       standard: data.filter(d => d.delegation_type === 'Standard').length,
       vendor: data.filter(d => d.delegation_type === 'Vendor').length,
+      exhibitor: data.filter(d => d.delegation_type === 'Exhibitor').length,
     }
-  };
+};
 
   useEffect(() => {
     const from = (currentPage - 1) * PAGE_SIZE;
@@ -164,14 +176,14 @@ const handleSendConfirmationMail = async(email:string, id:string) =>{
 
        <div className ="flex flex-col gap-4 w-full ">
         <main className="flex-1 p-6 sm:p-10">
-        <header className="mb-6 flex items-center justify-between">
+        <header className="mb-6 flex  flex-col lg:flex-row space-y-4 lg:space-y-0 items-center justify-between">
           <div className="flex flex-col gap-3">
             <h1 className="text-3xl font-bold text-gray-800">Delegates Overview</h1>
             <p className="text-gray-600">All registered participants</p>
           </div>
           
-
-          <button
+          <div className="flex items-center gap-8">
+            <button
             onClick={handleExportCSV}
             className={`relative font-medium px-8 py-3 rounded-lg inline-block h-[44px] overflow-hidden
               ${exporting
@@ -197,6 +209,28 @@ const handleSendConfirmationMail = async(email:string, id:string) =>{
             </span>
           </button>
 
+          <select
+            value={delegationFilter}
+            onChange={(e) => {
+              setDelegationFilter(e.target.value);
+              console.log(e.target.value)
+              setCurrentPage(1); 
+              fetchRegistrations({ from: 0, to: PAGE_SIZE - 1 },e.target.value);
+            }}
+            className="border px-3 py-2 rounded-md cursor-pointer"
+          >
+            <option value="All" className="cursor-pointer ">All Delegates</option>
+            {ALL_TYPES.map((type) => (
+              <option key={type} value={type} className="">
+                {type}
+              </option>
+            ))}
+           
+          </select>
+          </div>
+
+          
+
         </header>
 
         {
@@ -206,7 +240,7 @@ const handleSendConfirmationMail = async(email:string, id:string) =>{
          error ? <div className="border-l-4 border-red-600 p-4 bg-red-50 rounded-lg">{error}</div>  :
 
         <>
-           <div className="flex flex-wrap gap-4 mb-8">
+           <div className="flex flex-wrap  gap-4 mb-8 w-full ">
           <div className="shadow bg-white rounded-lg w-full sm:w-[250px] h-[150px] p-4 flex flex-col justify-between">
             <h1 className="text-lg font-bold">Number of Attendees</h1>
             <h3 className="text-6xl font-bold text-center text-primary">{stats && stats.total}</h3>
@@ -225,7 +259,17 @@ const handleSendConfirmationMail = async(email:string, id:string) =>{
               {stats && stats.vendor}
             </h3>
           </div>
+
+          <div className="shadow bg-white rounded-lg w-full sm:w-[250px] h-[150px] p-4 flex flex-col justify-between">
+            <h1 className="text-lg font-bold">Exhibitor</h1>
+            <h3 className="text-6xl font-bold text-center text-primary">
+              {stats && stats.exhibitor}
+            </h3>
         </div>
+        </div>
+
+        
+        
 
         {/* Table */}
         <div className="overflow-x-auto rounded-lg shadow bg-white">
@@ -287,8 +331,46 @@ const handleSendConfirmationMail = async(email:string, id:string) =>{
                   <td className="px-4 py-3">{d.exhibitItem }</td>
                 </tr>
               ))}
+
+             
             </tbody>
+
+            
           </table>
+
+           {registrations.length === 0 && (
+              <div className="bg-gray-100 rounded-lg shadow p-8 text-center w-full">
+                <div className="flex flex-col items-center gap-4">
+                  <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center">
+                    <svg className="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-medium text-gray-900 mb-4">
+                      No applications found
+                    </h3>
+                    <p className="text-gray-500">
+                      {delegationFilter === "All" 
+                        ? "No registrations available at the moment." 
+                        : `No ${delegationFilter.toLowerCase()} applications found.`
+                      }
+                    </p>
+                  </div>
+                  {delegationFilter !== "All" && (
+                    <button
+                      onClick={() => {
+                        setDelegationFilter("All");
+                        setCurrentPage(1);
+                        fetchRegistrations({ from: 0, to: PAGE_SIZE - 1 }, "All");
+                      }}
+                      className="text-primary cursor-pointer hover:text-primary/80 font-medium"
+                    >
+                      View all applications
+                    </button>
+                  )}
+                </div>
+              </div>)}
         </div>
         </>
         
