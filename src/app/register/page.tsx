@@ -187,10 +187,7 @@ const handleSubmit = async(e: React.FormEvent) => {
   
   return (
     <div className="min-h-screen flex flex-col">
-     
-      
-      
-      {/* Hero Section */}
+
       <div 
       style={{
         backgroundImage: "url('/pattern2.png')",

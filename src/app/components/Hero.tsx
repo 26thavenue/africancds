@@ -133,12 +133,20 @@ const Hero = () => {
             >
               Register Now
             </Link>
-            <button
-              onClick={handleDownload}
+
+            <Link
+              
+              href="https://docs.google.com/forms/d/e/1FAIpQLSd8txOnC3D-B_iJ232lWeqVI1d8lzEDyZVRtWUAdsHI2inZVA/viewform?usp=header"
+            >
+
+              <button
+              
               className="border border-yellow-700 cursor-pointer rounded text-white hover:bg-yellow-800 font-medium px-8 py-3 transition-colors"
             >
-              Download Schedule
+              Give Your Feedback
             </button>
+            </Link>
+            
           </div>
 
         </div>
