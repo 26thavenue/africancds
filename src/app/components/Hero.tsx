@@ -128,7 +128,7 @@ const Hero = () => {
             className="flex flex-col sm:flex-row justify-center gap-4"
           >
             <Link
-              href="/register"
+              href="/gallery"
               className="bg-yellow-500 hover:bg-yellow-700 text-navy-dark font-medium px-8 py-3 rounded transition-colors"
             >
               Watch Highlights
