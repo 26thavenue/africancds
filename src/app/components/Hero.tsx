@@ -131,7 +131,7 @@ const Hero = () => {
               href="/register"
               className="bg-yellow-500 hover:bg-yellow-700 text-navy-dark font-medium px-8 py-3 rounded transition-colors"
             >
-              Register Now
+              Watch Highlights
             </Link>
 
             <Link

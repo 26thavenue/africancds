@@ -8,6 +8,7 @@ import Navbar from "../components/Navbar";
 import { useRef, useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import VideoComponent from "../components/VideoComponent";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -161,6 +162,8 @@ const Gallery = () => {
 
         </div>
       </div>
+      
+      <VideoComponent/>
       
       {/* Gallery Filter */}
       <section className="pt-10 pb-4 bg-white">
