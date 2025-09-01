@@ -9,13 +9,6 @@ import Banner from '../components/Banner';
 import toast from 'react-hot-toast';
 
 
-// Custom images for news articles
-const newsImages = [
-  '/Media5.jpg',
-  '/media/Media11.jpg',
-  '/media/Media15.jpg',
-];
-
 export default function NewsPage() {
   const titleRef = useRef<HTMLHeadingElement | null>(null)
   const paragraphRef = useRef<HTMLParagraphElement | null>(null)
