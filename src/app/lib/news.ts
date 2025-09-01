@@ -1,5 +1,32 @@
 const newsData = [
   {
+  id: 'acdss-gala-night-2025',
+  title: 'Gala Night Celebrates African Unity at ACDSS 2025',
+  summary: 'The African Chiefs of Defence Staff Summit concluded with a memorable Gala Night at Transcorp Hilton Hotel Abuja, featuring captivating cultural performances and high-level attendance.',
+  content: `The inaugural African Chiefs of Defence Staff Summit (ACDSS) in Abuja reached its crescendo with a glamorous Gala Night held on 28 August 2025 at the Transcorp Hilton Hotel. The evening was marked by vibrant cultural performances that celebrated Africa’s rich heritage and unity, drawing enthusiastic applause from attendees.
+
+Distinguished guests included the President of DEPOWA, who graced the occasion, bringing additional prestige to the event. The gala provided a fitting closure to the summit’s multi-day engagements, reinforcing the spirit of collaboration and mutual respect among Africa’s top military leaders.
+
+The festivities not only honored the summit’s successful outcomes but also reaffirmed the continent-wide commitment to fostering stronger defence ties across Africa.`,
+  date: '2025-08-28',
+  imgAddress: '/Gala/Pic4.jpg',
+  images: ['Gala/Pic2.jpg', 'Gala/Pic3.jpg', 'Gala/Pic1.jpg', 'Gala/Pic5.jpg','Gala/Pic6.jpg','Gala/Pic7.jpg','Gala/Pic8.jpg','Gala/Pic9.jpg']
+},
+{
+  id: 'acdss-commencement-2025',
+  title: 'ACDSS 2025 Commencement Ushers in New Era of Continental Defence Cooperation',
+  summary: 'The maiden African Chiefs of Defence Staff Summit commenced in Abuja, setting the stage for collaborative defence strategies and addressing contemporary regional security threats.',
+  content: `The maiden African Chiefs of Defence Staff Summit (ACDSS) officially commenced in Abuja, bringing together defence leaders from across the continent for a landmark gathering focused on strengthening regional security collaboration.
+
+The summit’s opening ceremony, held at the Bola Ahmed Tinubu International Conference Centre, marked a significant milestone in African defence cooperation. It convened Chiefs of Defence Staff from numerous African nations, setting the tone for intensive discussions on emerging threats and strategic collaboration.
+
+The summit explored critical themes such as counter-terrorism, cyber vulnerability, maritime security, and the development of indigenous defence capabilities. This commencement signaled the beginning of a unified African effort toward addressing the evolving security landscape, laying the foundation for sustained continental engagement.`,
+  date: '2025-08-25',
+ imgAddress: '/Event/Pic1.jpg',
+  images: ['Event/Pic2.jpg', 'Event/Pic3.jpg', 'Event/Pic4.jpg', 'Event/Pic5.jpg','Event/Pic6.jpg','Event/Pic7.jpg','Event/Pic8.jpg','Event/Pic9.jpg']
+},
+  {
+
     id: 'acdss-committee-strategic-meeting',
     title: 'ACDS Committee Convenes Strategic Meeting to Address Continental Defence Priorities',
     summary: 'The African Continental Defence and Security Summit (ACDS) committee held a comprehensive strategic meeting in Abuja, bringing together defence experts, military strategists, and security analysts from across the continent to discuss emerging threats and collaborative defence mechanisms.',

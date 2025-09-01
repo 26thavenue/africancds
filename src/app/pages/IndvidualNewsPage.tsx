@@ -5,40 +5,24 @@ import { useParams, notFound } from 'next/navigation'
 import Link from 'next/link'
 import Navbar from "../components/Navbar"
 import newsData from '../lib/news'
-import { useRef, useEffect, useState } from 'react'
+import { useRef, useEffect } from 'react'
 import gsap from 'gsap'
 import Banner from '@/app/components/Banner'
 import toast from 'react-hot-toast'
 
-// Custom images for news articles
-const newsImages = [
-  '/Media5.jpg',
-  '/media/Media11.jpg',
-  '/media/Media15.jpg',
-];
-
 export default function NewsArticle() {
   const params = useParams()
-  const [isLoading, setIsLoading] = useState(true)
   const id = params?.id
   const titleRef = useRef(null)
   const contentRef = useRef(null)
-  const imageRef = useRef(null)
-
-  
+  const imageRef = useRef(null)  
   const article = newsData.find(news => news.id === id)
-  
-  
-  const articleIndex = newsData.findIndex(news => news.id === id)
-  const imageUrl = newsImages[articleIndex % newsImages.length]
-
   
   if (!article) {
     notFound()
   }
 
   useEffect(() => {
-    // Animation for the page elements
     if (titleRef.current) {
       gsap.from(titleRef.current, {
         opacity: 0,
@@ -135,13 +119,13 @@ export default function NewsArticle() {
 
       {/* Article Content */}
       <div className="container mx-auto px-6 py-16">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto ">
           {/* Featured Image */}
           <div ref={imageRef} className="mb-12">
             <img 
-              src={imageUrl} 
+              src={article.imgAddress} 
               alt={article.title}
-              className="w-full h-[400px] md:h-[600px] object-cover rounded-2xl shadow-md"
+              className="w-full h-[100px] md:h-[600px] object-cover rounded-2xl shadow-md"
             />
           </div>
 
@@ -170,11 +154,7 @@ export default function NewsArticle() {
                   </div>
                   
                   <div className="flex items-center gap-4">
-                    {/* <button className="p-2 text-gray-400 hover:text-blue-600 transition-colors">
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                      </svg>
-                    </button> */}
+                    
                     <button onClick={() => copyToClipboard()} className="p-2 cursor-pointer text-gray-400 hover:text-primary transition-colors">
                       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
@@ -230,9 +210,9 @@ export default function NewsArticle() {
               <Link key={relatedNews.id} href={`/news/${relatedNews.id}`}>
                 <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                   <img 
-                    src={newsImages[index % newsImages.length]} 
+                    src={relatedNews.imgAddress} 
                     alt={relatedNews.title}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-[300px] object-cover"
                   />
                   <div className="p-6">
                     <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">

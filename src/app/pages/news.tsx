@@ -8,6 +8,7 @@ import newsData from '../lib/news';
 import Banner from '../components/Banner';
 import toast from 'react-hot-toast';
 
+
 // Custom images for news articles
 const newsImages = [
   '/Media5.jpg',
@@ -134,7 +135,7 @@ export default function NewsPage() {
               <div className="bg-white max-w-3xl rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
                 <div className="relative overflow-hidden">
                   <img 
-                    src={newsImages[index % newsImages.length]} 
+                    src={news.imgAddress} 
                     alt={news.title} 
                     className="w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
                   />
