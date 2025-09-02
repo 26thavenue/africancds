@@ -12,6 +12,7 @@ import ParticipatingCountries from "./components/ParticipatingCountries";
 import Media from "./components/Media";
 import Partners from "./components/Partners";
 import Consultants from "./components/Consultants";
+import TestimonialCarousel from "./components/Testimonial";
 
 
 
@@ -180,6 +181,7 @@ const Index = () => {
           </div>
         </div>
       </section>
+      <TestimonialCarousel/>
 
        <section
        ref={statementRef} 
