@@ -1,78 +1,46 @@
 'use client'
-
-import { useState } from "react";
 import Banner from "../components/Banner";
-import MinisterJson from "../ministers.json"
 import VenueMap from "../components/VenueMap"
 import Navbar from "../components/Navbar";
 import { useRef, useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import VideoComponent from "../components/VideoComponent";
+import newsData from "../lib/news";
 
 gsap.registerPlugin(ScrollTrigger)
 
+const GALA_CONST = 'acdss-gala-night-2025'
+const COMMENCEMENT_CONST = 'acdss-commencement-2025'
+
 
 const Gallery = () => {
-  const [activeCategory, setActiveCategory] = useState("all");
 
   const titleRef = useRef<HTMLHeadingElement | null>(null)
   const paragraphRef = useRef<HTMLParagraphElement | null>(null)
   const filterRef = useRef<HTMLDivElement | null>(null)
   const galleryRef = useRef<HTMLDivElement | null>(null)
+  
+  // Gallery section refs
+  const preEventTitleRef = useRef<HTMLHeadingElement | null>(null)
+  const preEventGridRef = useRef<HTMLDivElement | null>(null)
+  const commencementTitleRef = useRef<HTMLHeadingElement | null>(null)
+  const commencementGridRef = useRef<HTMLDivElement | null>(null)
+  const galaTitleRef = useRef<HTMLHeadingElement | null>(null)
+  const galaGridRef = useRef<HTMLDivElement | null>(null)
 
 
-  const galleryImages = [
-    {
-      id: 61,
-      category: "officials",
-      title: "Chief of Defence Staff - Nigeria",
-      subtitle: "General Christopher Gwabin Musa",
-      imageUrl: "https://africacdssummit.com/wp-content/uploads/2025/03/image006.png",
-      country: "Nigeria"
-    },
-    {
-      id: 67,
-      category: "venues",
-      title: "Bola Ahmed Tinubu International Conference Centre - Exterior",
-      subtitle: "Summit Venue",
-      imageUrl: "https://www.julius-berger.com/fileadmin/_processed_/f/f/csm_25.06.13_news_release_commissioning_of_bola_ahmed_tinubu_international_conference_centre_790a022547.jpg",
-    },
-    {
-      id: 68,
-      category: "venues",
-      title: "Bola Ahmed Tinubu International Conference Centre - Interior",
-      subtitle: "Plenary Sessions Venue",
-      imageUrl: "https://www.julius-berger.com/fileadmin/_processed_/a/9/csm_25.06.13_news_release_commissioning_of_bola_ahmed_tinubu_international_conference_centre_2_5f30719d85.jpg",
-    },
-    {
-      id: 69,
-      category: "planning",
-      title: "Organizing Committee Meeting",
-      subtitle: "Defence Technology Showcase",
-      imageUrl: "/media/Media8.jpg",
-    },
-    {
-      id: 60,
-      category: "planning",
-      title: "Planning Committee Meeting",
-      subtitle: "Inaugural Session",
-      imageUrl: "Media1.jpg",
-    },
-    {
-      id: 72,
-      category: "planning",
-      title: "Press Conference",
-      subtitle: "Summit Announcement",
-      imageUrl: "/media/Media14.jpg",
-    }
-  ];
+  const newImagesArr=  newsData.filter(
+  (item) => item.id !== GALA_CONST && item.id !== COMMENCEMENT_CONST
+  );
 
-  const arr = [...galleryImages,...MinisterJson]
+  const galaNightImagesArr = newsData.find((item) =>item.id == GALA_CONST)
+  const commencementImagesArr = newsData.find((item) =>item.id == COMMENCEMENT_CONST)
 
-  const filteredImages = activeCategory === "all" 
-    ? arr 
-    : arr.filter(image => image.category === activeCategory);
+
+  
+
+
 
   useEffect(() => {
     const titleWords = titleRef.current?.querySelectorAll('.word') || []
@@ -123,6 +91,83 @@ const Gallery = () => {
         start: 'top 85%',
       },
     })
+
+    // Gallery section animations
+    
+    // Pre Event Section
+    gsap.from(preEventTitleRef.current, {
+      opacity: 0,
+      y: 60,
+      duration: 1,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: preEventTitleRef.current,
+        start: 'top 85%',
+      },
+    })
+
+    const preEventImages = preEventGridRef.current?.querySelectorAll('img') || []
+    gsap.from(preEventImages, {
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      stagger: 0.1,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: preEventGridRef.current,
+        start: 'top 85%',
+      },
+    })
+
+    // Commencement Section
+    gsap.from(commencementTitleRef.current, {
+      opacity: 0,
+      x: -100,
+      duration: 1,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: commencementTitleRef.current,
+        start: 'top 85%',
+      },
+    })
+
+    const commencementImages = commencementGridRef.current?.querySelectorAll('img') || []
+    gsap.from(commencementImages, {
+      opacity: 0,
+      duration: 0.9,
+      stagger: 0.12,
+      ease: 'back.out(1.7)',
+      scrollTrigger: {
+        trigger: commencementGridRef.current,
+        start: 'top 85%',
+      },
+    })
+
+    // Gala Night Section
+    gsap.from(galaTitleRef.current, {
+      opacity: 0,
+      x: 100,
+      duration: 1,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: galaTitleRef.current,
+        start: 'top 85%',
+      },
+    })
+
+    const galaImages = galaGridRef.current?.querySelectorAll('img') || []
+    gsap.from(galaImages, {
+      opacity: 0,
+      y: 80,
+      duration: 1,
+      stagger: 0.08,
+      ease: 'elastic.out(1, 0.75)',
+      scrollTrigger: {
+        trigger: galaGridRef.current,
+        start: 'top 85%',
+      },
+    })
+
   }, [])
 
 
@@ -153,7 +198,7 @@ const Gallery = () => {
         ref={paragraphRef}
         className="text-xl lg:text-2xl text-gray-200 max-w-3xl mx-auto flex flex-wrap justify-center gap-2"
       >
-        {"Meet the Defence Staff Chiefs and explore summit preparations".split(" ").map((word, i) => (
+        {"Experience the Event Story in Pictures and Highlights".split(" ").map((word, i) => (
           <span key={i} className="word inline-block">
             {word}
           </span>
@@ -165,106 +210,62 @@ const Gallery = () => {
       
       <VideoComponent/>
       
-      {/* Gallery Filter */}
-      <section className="pt-10 pb-4 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <button 
-              onClick={() => setActiveCategory("all")}
-              className={`px-6 py-2 rounded-full transition-colors ${
-                activeCategory === "all" 
-                  ? "bg-primary text-white" 
-                  : "bg-gray-100 hover:bg-gray-200 text-gray-700"
-              }`}
-            >
-              All Photos
-            </button>
-            <button 
-              onClick={() => setActiveCategory("officials")}
-              className={`px-6 py-2 rounded-full transition-colors ${
-                activeCategory === "officials" 
-                  ? "bg-primary text-white" 
-                  : "bg-gray-100 hover:bg-gray-200 text-gray-700"
-              }`}
-            >
-              Defence Staff Chiefs
-            </button>
-            <button 
-              onClick={() => setActiveCategory("venues")}
-              className={`px-6 py-2 rounded-full transition-colors ${
-                activeCategory === "venues" 
-                  ? "bg-primary text-white" 
-                  : "bg-gray-100 hover:bg-gray-200 text-gray-700"
-              }`}
-            >
-              Venue
-            </button>
-            <button 
-              onClick={() => setActiveCategory("planning")}
-              className={`px-6 py-2 rounded-full transition-colors ${
-                activeCategory === "planning" 
-                  ? "bg-primary text-white" 
-                  : "bg-gray-100 hover:bg-gray-200 text-gray-700"
-              }`}
-            >
-              Planning Committee
-            </button>
-          </div>
-          
-          {activeCategory === "officials" && (
-            <div className="text-center mb-8">
-              <h2 className="text-2xl font-semibold text-navy-dark">
-                Chiefs of Defence Staff
-              </h2>
-              <p className="text-gray-600">
-                Representing the 54 African Nations
-              </p>
-            </div>
-          )}
-        </div>
-      </section>
+     
+      
       
       {/* Gallery Grid */}
-      <section className="py-8 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredImages.map((image) => (
-              <div 
-                key={image.id} 
-                className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
-              >
-                <div className="h-64 overflow-hidden">
-                  <img 
-                    src={image.imageUrl == "" ? "https://media.istockphoto.com/id/1337144146/vector/default-avatar-profile-icon-vector.jpg?s=612x612&w=0&k=20&c=BIbFwuv7FxTWvh5S3vB6bkT0Qv8Vn8N5Ffseq84ClGI=" :image.imageUrl } 
-                    alt={image.title} 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="font-semibold text-navy-dark text-lg">
-                    {image.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm">
-                    {image.subtitle}
-                  </p>
-                  {image.country && (
-                    <span className="inline-block mt-2 bg-navy-light text-white text-xs px-3 py-1 rounded-full">
-                      {image.country}
-                    </span>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          {activeCategory === "officials" && filteredImages.length < 10 && (
-            <div className="mt-12 text-center">
-              <p className="text-gray-600">
-                More profiles of Chiefs of Defence Staff will be added as confirmations are received.
-              </p>
+      <section className="py-8  flex flex-col items-center w-full bg-white ">
+        
+            {/* Pre Event Grid */}
+            <h1 ref={preEventTitleRef} className='text-2xl lg:text-5xl font-bold my-2 lg:my-10'>Preparations for the Event</h1>
+            <div ref={preEventGridRef} className='grid grid-cols-1 px-4 max-w-7xl gap-4 md:grid-cols-3 lg:grid-cols-4 mb-10 lg:mb-24'>
+                {newImagesArr.map((i,k) =>(
+                  i.images?.map((img, imgIndex) => (
+                    <img 
+                      key={`${k}-${imgIndex}`} 
+                      src={img} 
+                      alt={`Pre event ${imgIndex}`} 
+                      className="w-[450px] h-[450px] rounded-lg object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  ))
+                ))}
+
             </div>
-          )}
-        </div>
+
+            {/* Commencement of Event Grid */}
+
+             <h1 ref={commencementTitleRef} className=' p-4 text-2xl lg:text-5xl font-bold my-2 lg:my-10 text-center'>Commencement of the African Chief of Defence Event</h1>
+            <div ref={commencementGridRef}  className='px-4 grid grid-cols-1 max-w-7xl gap-4 md:grid-cols-3 lg:grid-cols-4 mb-10 lg:mb-24'>
+                {commencementImagesArr?.images.map((img, imgIndex) => (
+                    <img 
+                      key={`commencement-${imgIndex}`} 
+                      src={img} 
+                      alt={`Commencement ${imgIndex}`} 
+                      className="w-[450px] h-[450px] rounded-lg object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  ))
+                }
+
+            </div>
+
+
+            {/* Gala Night */}
+
+             <h1 ref={galaTitleRef} className=' text-2xl lg:text-5xl font-bold  lg:my-10'>Images from Our Gala Night</h1>
+            <div ref={galaGridRef}  className='px-4 grid grid-cols-1 max-w-7xl gap-4 md:grid-cols-3 lg:grid-cols-4 mb-10 lg:mb-24'>
+                {galaNightImagesArr?.images.map((img, imgIndex) => (
+                    <img 
+                      key={`gala-${imgIndex}`} 
+                      src={img} 
+                      alt={`Gala night ${imgIndex}`} 
+                      className="w-[450px] h-[450px] rounded-lg object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  ))
+                }
+
+            </div>
+
+        
       </section>
       
      

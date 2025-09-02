@@ -10,7 +10,6 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import ParticipatingCountries from "./components/ParticipatingCountries";
 import Media from "./components/Media";
-import Exhibition from "./components/Exhibition";
 import Partners from "./components/Partners";
 import Consultants from "./components/Consultants";
 
@@ -240,7 +239,7 @@ const Index = () => {
 
       <ParticipatingCountries/>
 
-      <Exhibition />
+      {/* <Exhibition /> */}
       <Consultants/>
       <Media/>
 
