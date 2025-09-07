@@ -41,9 +41,9 @@ export default function TestimonialCarousel() {
 
   return (
     <div className=" bg-gray-100 w-full flex flex-col justify-center items-center  mx-auto p-6  lg:p-24">
-      <h1 className="text-2xl lg:text-5xl font-bold text-center mb-8 ">
+      <h2 className="text-2xl lg:text-4xl font-bold text-center mb-8 ">
         Testimonials From Participants, Sposnors and Exhibitors
-      </h1>
+      </h2>
 
       <div className="relative max-w-2xl bg-white   shadow-md rounded-2xl p-8 flex flex-col items-center">
         <img

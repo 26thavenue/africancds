@@ -76,12 +76,12 @@ const VideoComponent = () => {
     >
       <div className="max-w-5xl mx-auto">
         <div>
-          <h1 
+          <h2 
             ref={titleRef}
-            className='text-2xl lg:text-5xl font-bold my-10 text-center'
+            className='text-2xl lg:text-4xl font-bold my-10 text-center'
           >
             Video Highlight from African Chief of Defense Summit 2025
-          </h1>
+          </h2>
         </div>
 
         {/* Video Container */}
