@@ -21,6 +21,7 @@ const testimonials = [
     role: "Keynote Speaker",
     feedback:
       "Strategic defence collaboration is not a slogan, it is the bridge between the threats we face today and the peace we promise tomorrow. I have seen the challenge. I have also seen what's possible when we find common ground. The outcomes of this week must be heard beyond this room.",
+    image:"/testimonials/Deputy.jpg"
   },
 ]
 
