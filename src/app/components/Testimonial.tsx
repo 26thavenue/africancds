@@ -7,12 +7,14 @@ const testimonials = [
     role: "Summit Speaker",
     feedback:
       "This summit is more than a meeting it is a bold statement of our collective commitment to build a safer stronger more United Africa",
+    image:"/testimonials/Bello.jpg"
   },
   {
     name: "Vice President Kashmiri Shettima",
     role: "Summit Speaker",
     feedback:
       "This Summit, the first of its kind could not have happened at a better time",
+    image:"/testimonials/VP.jpg"
   },
   {
     name: "Deputy Secretary General United Nations",
@@ -40,11 +42,17 @@ export default function TestimonialCarousel() {
       </h2>
 
       <div className="relative max-w-lg bg-white shadow-md rounded-2xl p-8 flex flex-col items-center">
+        {testimonials[current].image ?  
+        <div className=" rounded-full ">
+          <img src={testimonials[current].image} alt={testimonials[current].name} className="w-24 h-24 rounded-full object-cover"/>
+        </div> :
         <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6">
           <span className="text-white font-bold text-xl">
             {testimonials[current].name.split(' ').map(word => word[0]).slice(0, 2).join('')}
           </span>
         </div>
+        }
+        
         
         <div className="flex flex-col  px-4">
            <p className="text-gray-700 text-base lg:text-lg italic text-center mb-6 leading-relaxed">

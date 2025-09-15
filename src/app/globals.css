@@ -9,6 +9,9 @@
   --font-instrument-serif: "Instrument Serif"
 }
 
+html, body {
+  overflow-x: hidden;
+}
 
 body {
   font-family: 'DM Sans', sans-serif;

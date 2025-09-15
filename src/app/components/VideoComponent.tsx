@@ -27,7 +27,7 @@ const VideoComponent = () => {
     "&color=9ca3af" +           
     "&transparent=0" +    
     "&responsive=1" +     
-    "&autoplay=1" +       
+    "&autoplay=0" +       
     "&muted=0" +         
     "&controls=1";        
 
@@ -72,7 +72,7 @@ const VideoComponent = () => {
   return (
     <div 
       ref={sectionRef}
-      className="bg-gray-100 p-4 md:p-16 mb-0 lg:mb-16 transition-all duration-1000"
+      className="bg-gray-100 p-4 md:p-16 mb-0 lg:mb-16 transition-all duration-1000 max-w-screen"
     >
       <div className="max-w-5xl mx-auto">
         <div>
@@ -101,26 +101,6 @@ const VideoComponent = () => {
                 title="African Defense Summit Video"
               />
             </div>
-
-            {/* Custom Controls Overlay */}
-            {/* <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between bg-black bg-opacity-50 backdrop-blur-sm rounded-lg px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <div className="flex items-center space-x-3">
-                <button 
-                  onClick={() => setIsMuted(!isMuted)}
-                  className="text-white hover:text-indigo-300 transition-colors"
-                >
-                  {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
-                </button>
-                <div className="flex items-center space-x-2 text-white text-sm">
-                  <Clock className="w-4 h-4" />
-                  <span>15:30</span>
-                </div>
-              </div>
-              
-              <button className="text-white hover:text-indigo-300 transition-colors">
-                <Maximize className="w-5 h-5" />
-              </button>
-            </div> */}
           </div>
         </div>
       </div>

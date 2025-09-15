@@ -124,7 +124,7 @@ const Gallery = () => {
   }, [])
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col max-w-screen">
       {/* Hero Section */}
       <div style={{
           backgroundImage: "url('/pic1.png')",
