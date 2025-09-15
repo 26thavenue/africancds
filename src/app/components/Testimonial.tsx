@@ -17,7 +17,7 @@ const testimonials = [
     image:"/testimonials/VP.jpg"
   },
   {
-    name: "Deputy Secretary General United Nations",
+    name: "Deputy Secretary General United Nations Amina J Mohammed",
     role: "Keynote Speaker",
     feedback:
       "Strategic defence collaboration is not a slogan, it is the bridge between the threats we face today and the peace we promise tomorrow. I have seen the challenge. I have also seen what's possible when we find common ground. The outcomes of this week must be heard beyond this room.",
