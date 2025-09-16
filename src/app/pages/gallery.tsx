@@ -160,7 +160,7 @@ const Gallery = () => {
         </div>
       </div>
       
-      <VideoComponent/>
+      
       
       {/* Gallery Carousels Section */}
       <section className="py-8 flex flex-col items-center w-full bg-white">

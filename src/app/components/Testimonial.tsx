@@ -10,7 +10,7 @@ const testimonials = [
     image:"/testimonials/VP.jpg"
   },
   {
-    name: "His Excellency Bello Matawalle",
+    name: "Minister of State Defence Bello Matawalle",
     role: "Summit Speaker",
     feedback:
       "This summit is more than a meeting it is a bold statement of our collective commitment to build a safer stronger more United Africa",
