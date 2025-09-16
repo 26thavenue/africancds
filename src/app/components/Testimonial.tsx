@@ -3,18 +3,18 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const testimonials = [
   {
+    name: "Vice President Kashim Shettima",
+    role: "Summit Speaker",
+    feedback:
+      "This Summit, the first of its kind could not have happened at a better time",
+    image:"/testimonials/VP.jpg"
+  },
+  {
     name: "His Excellency Bello Matawalle",
     role: "Summit Speaker",
     feedback:
       "This summit is more than a meeting it is a bold statement of our collective commitment to build a safer stronger more United Africa",
     image:"/testimonials/Bello.jpg"
-  },
-  {
-    name: "Vice President Kashmiri Shettima",
-    role: "Summit Speaker",
-    feedback:
-      "This Summit, the first of its kind could not have happened at a better time",
-    image:"/testimonials/VP.jpg"
   },
   {
     name: "Deputy Secretary General United Nations Amina J Mohammed",
